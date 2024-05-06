@@ -1,0 +1,40 @@
+.blockText {
+  display: flex;
+  justify-content: space-between;
+}
+.description {
+  font-family: var(--OpenSans);
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -0.01375rem;
+  padding-left: 12rem;
+  text-transform: initial;
+}
+.title {
+  font-family: var(--Superclarendon);
+  font-weight: 400;
+  font-size: 4.0625rem;
+  font-style: normal;
+  line-height: 3.25rem;
+  letter-spacing: -0.04063rem;
+  text-transform: uppercase;
+}
+.text-container {
+  display: flex;
+  text-align: justify;
+  padding: 3.58rem 2rem;
+  background-color: var(--beam-yellow);
+}
+.text-container > p {
+  flex-grow: 1;
+  flex-shrink: 0;
+  align-items: center;
+  display: flex;
+  width: calc(100% / 2);
+}
+.container-layout {
+  padding: 10.25rem 0;
+  background-color: var(--beam-yellow);
+}

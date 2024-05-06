@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+:root {
+  /* font */
+  --Superclarendon: "Superclarendon";
+  --OpenSans: "Open Sans", sans-serif;
+
+  /* color */
+  --beam-yellow: #f3f90a;
+  --pearl-white: #efeff9;
+  --millennium-silver: #7c809b;
+  --burnout-black: #02020b;
+  --gta-bourdeaux: #6b2c4c;
+}

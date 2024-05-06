@@ -1,0 +1,26 @@
+@import "standard.css";
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  font-family: var(--Superclarendon);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  letter-spacing: -0.01rem;
+  color: var(--burnout-black);
+}
+.bg-nav {
+  background-color: var(--beam-yellow);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+}
+v-list-item {
+  margin: 0 2rem;
+}
+.svg-logo > g > path,
+.svg-icon > g > path {
+  fill: var(--burnout-black);
+}

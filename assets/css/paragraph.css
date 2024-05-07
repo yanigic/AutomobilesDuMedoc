@@ -1,0 +1,9 @@
+.bg-description {
+  background-color: var(--beam-yellow);
+  margin: auto;
+  font-size: var(--font-size-text-one);
+}
+.bg-description img {
+  margin: auto;
+  padding: var(--margsix);
+}

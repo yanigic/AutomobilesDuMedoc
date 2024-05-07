@@ -2,7 +2,7 @@ div {
   color: var(--burnout-black);
   text-align: center;
   font-family: var(--Superclarendon);
-  font-size: 4.0625rem;
+  font-size: var(--font-size-text-one);
   font-style: normal;
   font-weight: 400;
   line-height: 3.875rem;
@@ -19,7 +19,7 @@ div {
   justify-content: center;
   align-items: center;
 }
-svg {
+.svg-banner {
   display: unset;
   margin-bottom: 1.8rem;
   margin-left: 0.8rem;
@@ -34,4 +34,9 @@ svg {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.text-container-banner {
+  width: 80%;
+  margin: auto;
 }

@@ -1,60 +1,105 @@
 <script setup lang="ts">
-const links = [
+import "../assets/css/footer.css";
+import tiktok from "../assets/img/svg/tiktok.svg";
+import Twitter from "../assets/img/svg/Twitter.svg";
+import LINKEDIN from "../assets/img/svg/LINKEDIN.svg";
+import FACEBOOK from "../assets/img/svg/FACEBOOK.svg";
+import admLogo from "../assets/img/svg/adm-logo.svg";
+import INSTAGRAM from "../assets/img/svg/INSTAGRAM.svg";
+const institutionalInformation = [
   {
-    label: "Community",
-    children: [
-      {
-        label: "Nuxters",
-        to: "https://nuxters.nuxt.com",
-        target: "_blank",
-      },
-      {
-        label: "Video Courses",
-        to: "https://masteringnuxt.com/nuxt3?ref=nuxt",
-        target: "_blank",
-      },
-      {
-        label: "Nuxt on GitHub",
-        to: "https://github.com/nuxt",
-        target: "_blank",
-      },
-    ],
+    logo: admLogo,
+    description: "Subscribe to our newsletter",
+  },
+];
+const titlesOne = [
+  {
+    label: "Projects",
   },
   {
-    label: "Solutions",
-    children: [
-      {
-        label: "Nuxt Content",
-        to: "https://content.nuxt.com/",
-        target: "_blank",
-      },
-      {
-        label: "Nuxt DevTools",
-        to: "https://devtools.nuxt.com/",
-        target: "_blank",
-      },
-      {
-        label: "Nuxt Image",
-        to: "https://image.nuxt.com/",
-        target: "_blank",
-      },
-      {
-        label: "Nuxt UI",
-        to: "https://ui.nuxt.com/",
-        target: "_blank",
-      },
-    ],
+    label: "Services",
+  },
+  {
+    label: "About",
+  },
+  {
+    label: "Contact",
+  },
+];
+const titleTwo = [
+  {
+    label: "Privacy Policy",
+  },
+  {
+    label: "Terms & Conditions",
+  },
+  {
+    label: "Cookie Policy",
+  },
+];
+const social = [
+  {
+    title: "TikTok",
+    icon: tiktok,
+  },
+  {
+    title: "Twitter",
+    icon: Twitter,
+  },
+  {
+    title: "Linkedin",
+    icon: LINKEDIN,
+  },
+  {
+    title: "Facebook",
+    icon: FACEBOOK,
+  },
+  {
+    title: "Instagram",
+    icon: INSTAGRAM,
   },
 ];
 </script>
-
+<!-- <div class="text-container" v-for="(title, index) in titles" :key="index">
+      <p class="title">{{ title.service }}</p> -->
 <template>
-  <div name="email" label="Subscribe to our newsletter" size="lg">
-    <div type="email" :ui="{ icon: { trailing: { pointer: '' } } }">
-      <div>
-        <UButton type="submit" size="2xs" color="black" label="Subscribe" />
-      </div>
-    </div>
+  <div class="bg-footer">
+    <ul class="cols-footer footer-font">
+      <li class="col-3">
+        <ul v-for="(title, index) in institutionalInformation" :key="index">
+          <li><img style="margin-bottom: 2rem" :src="title.logo" alt="" /></li>
+          <li>
+            {{ title.description }}
+          </li>
+        </ul>
+      </li>
+
+      <li class="col-2">
+        <ul v-for="(title, index) in titlesOne" :key="index">
+          <li>{{ title.label }}</li>
+        </ul>
+      </li>
+      <li class="col-2">
+        <ul v-for="(title, index) in titleTwo" :key="index">
+          <li>{{ title.label }}</li>
+        </ul>
+      </li>
+
+      <li class="col-2"></li>
+
+      <li
+        style="display: flex; justify-content: space-between"
+        class="col-3 cols-footer"
+      >
+        Follow us:
+        <ul v-for="(title, index) in social" :key="index">
+          <li>
+            <img style="margin-bottom: 1.8rem" :src="title.icon" alt="" />
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <p class="footer-p">© 2024 Automobiles du Médoc. All Rights Reserved</p>
   </div>
 </template>
 

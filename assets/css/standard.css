@@ -8,10 +8,31 @@ body {
   --Superclarendon: "Superclarendon";
   --OpenSans: "Open Sans", sans-serif;
 
+  /* font size */
+  --font-size-text-one: 4.0625rem;
+  --font-size-text-two: 1.25rem;
+  --font-size-text-three: 1rem;
+  --font-size-small-text: 0.8125rem;
+
   /* color */
   --beam-yellow: #f3f90a;
   --pearl-white: #efeff9;
   --millennium-silver: #7c809b;
   --burnout-black: #02020b;
   --gta-bourdeaux: #6b2c4c;
+
+  /* colums */
+  --col1: calc(100% / 12);
+  --col2: calc(100% / 12 * 2);
+  --col3: calc(100% / 12 * 3);
+  --col4: calc(100% / 12 * 4);
+  --col6: calc(100% / 2);
+
+  /* margin/pad */
+  --margsix: 6rem;
+  --twelve: 12rem;
+  --two: 2rem;
+  --eight: 8rem;
+  --margThree: 3rem;
+  --sixteen: 16rem;
 }

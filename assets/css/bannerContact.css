@@ -8,8 +8,8 @@
 .cta-banner-contact {
   color: var(--beam-yellow);
   text-align: center;
-  font-family: Superclarendon;
-  font-size: 1.35869rem;
+  font-family: var(--Superclarendon);
+  font-size: var(--font-size-text-two);
   font-style: normal;
   padding: 0.3rem 4rem;
   border: 0.2rem solid var(--beam-yellow);
@@ -21,8 +21,8 @@
 .title-banner-contact {
   color: var(--beam-yellow);
   text-align: center;
-  font-family: Superclarendon;
-  font-size: 4.0625rem;
+  font-family: var(--Superclarendon);
+  font-size: var(--font-size-text-one);
   font-style: normal;
   font-weight: 400;
   line-height: 3.875rem; /* 95.385% */

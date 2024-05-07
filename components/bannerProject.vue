@@ -7,6 +7,7 @@ import "../assets/css/bannerProject.css";
     <div class="title-banner">
       <h2>
         Alfa romeo superclassica<svg
+          class="svg-banner"
           xmlns="http://www.w3.org/2000/svg"
           width="36"
           height="35"

@@ -1,0 +1,40 @@
+@import "standard.css";
+.cols-footer {
+  display: flex;
+}
+.col-3 {
+  width: var(--col3);
+}
+.col-2 {
+  width: var(--col2);
+}
+.col-1 {
+  width: var(--col1);
+}
+.col-4 {
+  width: var(--col4);
+}
+.footer-font {
+  font-family: var(--Superclarendon);
+  font-size: var(--font-size-small-text);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1rem; /* 123.077% */
+  letter-spacing: -0.00813rem;
+  text-align: justify;
+  margin-bottom: 5rem;
+  margin-top: 3rem;
+}
+.bg-footer {
+  padding: 1rem 2rem;
+  background-color: var(--beam-yellow);
+}
+.footer-p {
+  font-family: var(--Superclarendon);
+  font-size: var(--font-size-small-text);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1rem; /* 123.077% */
+  letter-spacing: -0.00813rem;
+  text-align: center;
+}

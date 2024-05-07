@@ -2,7 +2,7 @@
 import Default from "../layouts/default.vue";
 
 import BannerProject from "../components/bannerProject.vue";
-import Services from "../components/services.vue";
+import titleDescription from "../components/titleDescription.vue";
 import Nav from "../components/nav.vue";
 import BannerContact from "../components/bannerContact.vue";
 const story = await useAsyncStoryblok(
@@ -19,8 +19,8 @@ const story = await useAsyncStoryblok(
     <BannerProject></BannerProject>
     <BannerProject></BannerProject>
     <BannerProject></BannerProject>
-    <Services></Services>
+    <titleDescription></titleDescription>
     <BannerContact></BannerContact>
   </div>
-  <StoryblokComponent v-if="story" :blok="story.content" />
+  <!-- <StoryblokComponent v-if="story" :blok="story.content" /> -->
 </template>

@@ -1,0 +1,9 @@
+.bg-img-about {
+  background-color: var(--beam-yellow);
+}
+.bg-img-about img {
+  width: 100%;
+}
+.height-hero-about {
+  height: 100vh;
+}

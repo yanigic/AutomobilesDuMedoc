@@ -4,7 +4,7 @@ import Paragraph from "../components/paragraph.vue";
 import "../assets/css/about.css";
 import TitleParagraph from "../components/titleParagraph.vue";
 import TitleDescription from "../components/titleDescription.vue";
-import Test from "../components/test.vue";
+import Slider from "../components/slider.vue";
 
 const titlesDescriptions = [
   {
@@ -30,9 +30,13 @@ const titlesDescriptions = [
     <HeroAbout></HeroAbout>
     <Paragraph></Paragraph>
     <TitleParagraph></TitleParagraph>
-    <!-- <TitleDescription></TitleDescription> -->
     <span v-for="(item, index) in titlesDescriptions" :key="index">
-      <Test :title="item.title" :description="item.description"></Test>
+      <TitleDescription
+        class="container-layout"
+        :title="item.title"
+        :description="item.description"
+      ></TitleDescription>
     </span>
+    <Slider></Slider>
   </div>
 </template>

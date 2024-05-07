@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import "../assets/css/titleDescription.css";
-const text = [
+/* const text = [
   {
     title: "Customization",
     description:
@@ -21,16 +21,20 @@ const text = [
     description:
       "Our auto restoration service revitalizes classic cars by combining  original features with modern enhancements, ensuring each vehicle is  authentically restored to its original condition for improved  performance and reliability.",
   },
-];
+]; */
+const props = defineProps({
+  title: String,
+  description: String,
+});
 </script>
 
 <template>
-  <div class="container-layout">
-    <div class="text-container" v-for="(title, index) in text" :key="index">
-      <p class="title">{{ title.title }}</p>
+  <div class="">
+    <div class="text-container">
+      <p class="title">{{ props.title }}</p>
 
       <p class="description">
-        {{ title.description }}
+        {{ props.description }}
       </p>
     </div>
   </div>

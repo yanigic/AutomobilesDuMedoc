@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css?family=Fredoka+One);
+
+* {
+  box-sizing: border-box;
+}
+.bg-slider {
+  background-color: var(--burnout-black);
+  padding: var(--eight) 0;
+}
+.text-big-title {
+  font-family: var(--Superclarendon);
+  font-size: var(--font-size-text-one);
+  color: var(--beam-yellow);
+  text-transform: capitalize;
+  margin-bottom: var(--four);
+}
+
+#wrapper {
+  width: 100%;
+}
+
+#carousel {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.square {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #bbbbbb;
+  font-size: 50px;
+
+  background-color: #ffffff;
+
+  margin-right: 20px;
+  transition: 100ms ease-in-out;
+
+  min-width: 37.8125rem;
+  height: 25.25rem;
+  flex-shrink: 0;
+}
+.square:last-child {
+  margin-right: 0px;
+}
+
+.square:hover {
+  background-color: #ffffff27;
+  border-color: #f4f4f4;
+  color: #d2d2d2;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+button {
+  cursor: pointer;
+  width: 60px;
+  transition: 60ms ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button:first-child {
+  transform: rotateY(180deg);
+}
+
+button:hover {
+  border-color: #f4f4f4;
+  color: #f4f4f4;
+}

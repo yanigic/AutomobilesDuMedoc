@@ -24,7 +24,7 @@
 .text-container {
   display: flex;
   text-align: justify;
-  padding: 3.58rem 2rem;
+  padding: var(--Three) var(--two);
   background-color: var(--beam-yellow);
 }
 .text-container > p {

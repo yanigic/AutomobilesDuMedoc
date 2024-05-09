@@ -52,11 +52,11 @@ const handleClickGoBack = () => {
         <div class="square">7</div>
       </div>
     </div>
-    <div class="buttons">
-      <button @click="handleClickGoBack()">
+    <div class="buttons-slider">
+      <button class="btn-slider" @click="handleClickGoBack()">
         <img :src="arrow" alt="" />
       </button>
-      <button @click="handleClickGoAhead()">
+      <button class="btn-slider" @click="handleClickGoAhead()">
         <img :src="arrow" alt="" />
       </button>
     </div>

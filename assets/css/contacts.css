@@ -1,0 +1,106 @@
+.title-contacts {
+  font-family: var(--Superclarendon);
+  font-size: var(--font-size-text-one);
+  color: var(--gta-bourdeaux);
+  text-transform: uppercase;
+  margin-bottom: var(--four);
+  width: var(--col8);
+  margin: auto;
+}
+
+.label-title {
+  color: var(--gta-bourdeaux);
+  font-family: var(--Superclarendon);
+  font-size: var(--font-size-text-three);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5rem; /* 150% */
+  letter-spacing: -0.01rem;
+  text-align: left;
+  text-transform: none;
+}
+.form-box {
+  display: flex;
+  width: var(--col6);
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.container-contacts {
+  text-align: left;
+}
+.box-label-input {
+  flex-shrink: 0;
+  width: calc(50% - 0.5rem);
+
+  display: flex;
+  flex-direction: column;
+}
+.box-label-input input {
+  border: 1.5px solid var(--gta-bourdeaux);
+
+  padding: 12px 20px;
+  height: 2.4rem;
+  cursor: pointer;
+  font-family: var(--OpenSans);
+  font-size: var(--font-size-text-three);
+  text-transform: none;
+}
+.box-textarea {
+  flex-shrink: 0;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.box-textarea-text {
+  border: 0.1rem solid var(--gta-bourdeaux);
+
+  padding: 40px 20px;
+  height: 2rem;
+  cursor: pointer;
+  font-family: var(--OpenSans);
+  font-size: var(--font-size-text-three);
+  text-transform: none;
+}
+
+.btn-contacts {
+  border: 0.1rem solid var(--gta-bourdeaux);
+
+  width: var(--col4);
+  padding: 5px 0;
+  text-align: center;
+}
+
+.box-permission {
+  color: var(--gta-bourdeaux);
+
+  font-family: var(--OpenSans);
+  font-size: var(--font-size-small-text);
+  text-align: start;
+  font-weight: 400;
+  line-height: 100%; /* 0.9375rem */
+  letter-spacing: -0.00938rem;
+  text-transform: none;
+  flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+.service-btn-box {
+  display: flex;
+  justify-content: space-between;
+  width: var(--col6);
+  gap: 1rem;
+  /*  width: calc(50% - 0.5rem);
+ */
+}
+.btn-contacts {
+  width: var(--col4);
+  color: var(--gta-bourdeaux);
+
+  font-family: var(--OpenSans);
+
+  font-size: var(--font-size-text-three);
+}

@@ -2,7 +2,10 @@
 body {
   overflow-x: hidden;
   overflow-y: auto;
+
+  box-sizing: border-box;
 }
+
 :root {
   /* font */
   --Superclarendon: "Superclarendon";
@@ -13,6 +16,7 @@ body {
   --font-size-text-two: 1.25rem;
   --font-size-text-three: 1rem;
   --font-size-small-text: 0.8125rem;
+  --font-size-big-title: 11.6rem;
 
   /* color */
   --beam-yellow: #f3f90a;
@@ -26,7 +30,9 @@ body {
   --col2: calc(100% / 12 * 2);
   --col3: calc(100% / 12 * 3);
   --col4: calc(100% / 12 * 4);
-  --col6: calc(100% / 2);
+  --col6: calc(100% / 12 * 6);
+  --col8: calc(100% / 12 * 8);
+  --col10: calc(100% / 12 * 10);
 
   /* margin/pad */
   --margsix: 6rem;

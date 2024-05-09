@@ -7,3 +7,7 @@
   margin: auto;
   padding: var(--margsix);
 }
+.p-description {
+  width: var(--col10);
+  margin: auto;
+}

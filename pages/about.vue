@@ -5,6 +5,8 @@ import "../assets/css/about.css";
 import TitleParagraph from "../components/titleParagraph.vue";
 import TitleDescription from "../components/titleDescription.vue";
 import Slider from "../components/slider.vue";
+import CardImageText from "../components/cardImageText.vue";
+import PartnersCard from "../components/partnersCard.vue";
 
 const titlesDescriptions = [
   {
@@ -37,6 +39,9 @@ const titlesDescriptions = [
         :description="item.description"
       ></TitleDescription>
     </span>
+
+    <CardImageText></CardImageText>
+    <PartnersCard></PartnersCard>
     <Slider></Slider>
   </div>
 </template>

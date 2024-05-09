@@ -10,12 +10,14 @@
   line-height: 1.5rem;
   letter-spacing: -0.01rem;
   color: var(--burnout-black);
+  text-transform: none;
 }
 .bg-nav {
   background-color: var(--beam-yellow);
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 v-list-item {
   margin: 0 2rem;

@@ -6,8 +6,10 @@ export default {
     drawer: false,
     menuItems: [
       { title: "Projects", href: "/" },
-      { title: "Services", href: "/" },
-      { title: "About", href: "/" },
+      { title: "Cars for sale", href: "/" },
+      { title: "Conciergerie", href: "/" },
+      /* { title: "Services", href: "/" }, */
+      { title: "About", href: "/About" },
       { title: "Contact", href: "/" },
     ],
   }),

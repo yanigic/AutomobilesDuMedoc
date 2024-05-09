@@ -5,7 +5,7 @@ import "../assets/css/bannerProject.css";
 <template>
   <div class="bg-banner">
     <div class="title-banner">
-      <h2>
+      <h2 class="title-bannerProject">
         Alfa romeo superclassica<svg
           class="svg-banner"
           xmlns="http://www.w3.org/2000/svg"

@@ -5,7 +5,8 @@
   text-transform: uppercase;
   margin-bottom: var(--four);
   width: var(--col8);
-  margin: auto;
+  margin: var(--eight) auto;
+  text-align: center;
 }
 
 .label-title {
@@ -18,10 +19,11 @@
   letter-spacing: -0.01rem;
   text-align: left;
   text-transform: none;
+  margin-bottom: 0.5rem;
 }
 .form-box {
   display: flex;
-  width: var(--col6);
+  width: var(--col12);
   gap: 1rem;
   flex-wrap: wrap;
 }
@@ -32,13 +34,11 @@
 .box-label-input {
   flex-shrink: 0;
   width: calc(50% - 0.5rem);
-
   display: flex;
   flex-direction: column;
 }
 .box-label-input input {
-  border: 1.5px solid var(--gta-bourdeaux);
-
+  border: 2px solid var(--gta-bourdeaux);
   padding: 12px 20px;
   height: 2.4rem;
   cursor: pointer;
@@ -49,14 +49,12 @@
 .box-textarea {
   flex-shrink: 0;
   width: 100%;
-
   display: flex;
   flex-direction: column;
 }
 
 .box-textarea-text {
-  border: 0.1rem solid var(--gta-bourdeaux);
-
+  border: 2px solid var(--gta-bourdeaux);
   padding: 40px 20px;
   height: 2rem;
   cursor: pointer;
@@ -66,11 +64,21 @@
 }
 
 .btn-contacts {
-  border: 0.1rem solid var(--gta-bourdeaux);
-
+  border: 2px solid var(--gta-bourdeaux);
+  color: var(--gta-bourdeaux);
   width: var(--col4);
   padding: 5px 0;
   text-align: center;
+  font-family: var(--Superclarendon);
+  font-size: var(--font-size-text-three);
+}
+.btn-contacts:hover {
+  background-color: var(--beam-yellow);
+  border: var(--beam-yellow);
+}
+.btn-selected {
+  background-color: var(--beam-yellow);
+  border: var(--beam-yellow);
 }
 
 .box-permission {
@@ -91,16 +99,86 @@
 .service-btn-box {
   display: flex;
   justify-content: space-between;
-  width: var(--col6);
+  width: var(--col12);
   gap: 1rem;
-  /*  width: calc(50% - 0.5rem);
- */
+  margin-bottom: 1.5rem;
 }
-.btn-contacts {
-  width: var(--col4);
-  color: var(--gta-bourdeaux);
 
+.box-information-contacts {
+  display: flex;
+  width: var(--col10);
+  margin: 0 auto;
+  gap: 1rem;
+  padding-bottom: 4rem;
+}
+
+.contactDetails {
+  width: var(--col3);
+}
+.contactForm {
+  width: var(--col8);
+}
+.col-one {
+  width: var(--col1);
+}
+
+.contact-details-info {
   font-family: var(--OpenSans);
+  color: var(--gta-bourdeaux);
+  font-size: var(--font-size-text-two);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -0.0125rem;
+}
+.contact-details-info-title {
+  color: var(--gta-bourdeaux);
+  font-family: var(--OpenSans);
+  font-size: var(--font-size-text-two);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.0125rem;
+}
+.contactDetails > div {
+  margin-top: 1rem;
+}
 
-  font-size: var(--font-size-text-three);
+.box-permission {
+  position: relative;
+  padding-left: 3rem;
+  cursor: pointer;
+  display: inline-block;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.box-permission input[type="checkbox"] {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  position: absolute;
+}
+
+.box-permission .checkmark {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  border: 2px solid var(--gta-bourdeaux);
+  transition: background-color 0.3s;
+  transition: border 0.3s;
+}
+.box-permission .checkmark:hover {
+  background-color: rgb(149, 0, 0) !important;
+  border: 2px solid rgb(149, 0, 0) !important;
+}
+
+.active {
+  background-color: rgb(12, 0, 149); /* Verde */
+  border: 2px solid rgb(12, 0, 149) !important;
 }

@@ -35,7 +35,13 @@ body {
   --col7: calc(100% / 12 * 7);
   --col8: calc(100% / 12 * 8);
   --col10: calc(100% / 12 * 10);
+  --col12: calc(100% / 12 * 12);
 
+  /* laterl */
+
+  --laterl-space: 2.5rem;
+  --laterl-bottom: 2.5rem;
+  --laterl-top: 2.5rem;
   /* margin/pad */
   --margsix: 6rem;
   --twelve: 12rem;

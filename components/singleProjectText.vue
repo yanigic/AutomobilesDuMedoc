@@ -2,7 +2,9 @@
 import "../assets/css/singleProjectText.css";
 const props = defineProps({
   title: String,
-  description: String,
+  descriptionOne: String,
+  descriptionTwo: String,
+  descriptionThree: String,
   year: String,
   model: String,
   typeOfCustomization: String,
@@ -18,7 +20,13 @@ const props = defineProps({
           {{ props.title }}
         </div>
         <div class="description-singleProjectText">
-          {{ props.description }}
+          {{ props.descriptionOne }}
+        </div>
+        <div class="description-singleProjectText">
+          {{ props.descriptionTwo }}
+        </div>
+        <div class="description-singleProjectText">
+          {{ props.descriptionThree }}
         </div>
       </div>
       <div></div>
@@ -27,13 +35,13 @@ const props = defineProps({
           {{ props.year }}
         </div>
         <div>
+          {{ props.client }}
+        </div>
+        <div>
           {{ props.model }}
         </div>
-        <div>
+        <div class="typeOfcustomization">
           {{ props.typeOfCustomization }}
-        </div>
-        <div>
-          {{ props.client }}
         </div>
       </div>
     </div>

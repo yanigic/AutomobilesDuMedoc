@@ -1,0 +1,17 @@
+.container-imgTwoColumns {
+  width: var(--col12);
+  display: flex;
+}
+.main-imgTwoColumns:first-child {
+  width: var(--col8);
+}
+.main-imgTwoColumns:nth-child(n + 2) {
+  width: var(--col4);
+}
+
+/* .sidebar-imgTwoColumns {
+  width: var(--col4);
+} */
+/* .sidebar-imgTwoColumns > div {
+  width: var(--col6);
+} */

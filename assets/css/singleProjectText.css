@@ -1,0 +1,35 @@
+.title-singleProjectText {
+  color: var(--gta-bourdeaux);
+  font-family: var(--OpenSans);
+  font-size: var(--font-size-text-three);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5rem;
+  letter-spacing: -0.01rem;
+  text-align: left;
+  text-transform: none;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.description-singleProjectText,
+.sidebar-singleProjectText > div {
+  color: var(--gta-bourdeaux);
+  font-family: var(--OpenSans);
+  font-size: var(--font-size-text-three);
+
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 1.25rem */
+  letter-spacing: -0.0125rem;
+}
+
+.container-singleProjectText {
+  display: flex;
+}
+.main-singleProjectText {
+  width: var(--col3);
+}
+.sidebar-singleProjectText {
+  width: var(--col3);
+}

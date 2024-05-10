@@ -16,17 +16,19 @@ const text = [
 </script>
 
 <template>
-  <div class="container-layout-paragraph">
-    <div
-      class="text-container-paragraph"
-      v-for="(title, index) in text"
-      :key="index"
-    >
-      <p class="titleParagraph">{{ title.title }}</p>
+  <div class="bg-paragraph">
+    <div class="container-layout-paragraph">
+      <div
+        class="text-container-paragraph"
+        v-for="(title, index) in text"
+        :key="index"
+      >
+        <p class="titleParagraph">{{ title.title }}</p>
 
-      <p class="descriptionParagraph">
-        {{ title.description }}
-      </p>
+        <p class="descriptionParagraph">
+          {{ title.description }}
+        </p>
+      </div>
     </div>
   </div>
 </template>

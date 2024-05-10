@@ -3,18 +3,20 @@
   padding: var(--eight) 0;
 }
 .img-card-box {
-  margin: var(--four) 0;
+  margin-top: var(--four);
 }
 .img-card-imgText {
   width: var(--col8);
   margin: auto;
 }
 .title-card-imgText {
+  font-family: var(--Superclarendon);
   font-size: var(--font-size-big-title);
   color: var(--beam-yellow);
   text-transform: capitalize;
   position: relative;
-  top: -3rem;
+  text-align: center;
+  top: -10rem;
 }
 
 .text-card-imgText {
@@ -26,7 +28,7 @@
   letter-spacing: -0.0125rem;
   text-transform: none;
 
-  text-align: justify;
+  text-align: left;
   margin: var(--four) 0;
 }
 

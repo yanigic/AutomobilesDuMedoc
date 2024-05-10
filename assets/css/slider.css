@@ -8,6 +8,7 @@
   color: var(--beam-yellow);
   text-transform: capitalize;
   margin-bottom: var(--four);
+  text-align: center;
 }
 
 #wrapper {

@@ -10,4 +10,13 @@
 .p-description {
   width: var(--col10);
   margin: auto;
+
+  font-family: var(--Superclarendon);
+  font-size: var(--font-size-text-one);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.75rem; /* 92.308% */
+  letter-spacing: -0.04063rem;
+  text-transform: uppercase;
+  text-align: center;
 }

@@ -25,11 +25,17 @@
   display: flex;
   flex-direction: column;
   padding: var(--eight) var(--two);
-  background-color: var(--beam-yellow);
+
   width: var(--col6);
+  text-align: center;
 }
 
 .container-layout-paragraph {
-  padding-bottom: var(--sixteen);
   display: flex;
+  width: var(--col10);
+  margin: 0 auto;
+}
+.bg-paragraph {
+  margin-bottom: var(--sixteen);
+  background-color: var(--beam-yellow);
 }

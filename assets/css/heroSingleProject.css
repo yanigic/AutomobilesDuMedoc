@@ -1,0 +1,22 @@
+.heroSingleProject-container {
+  width: var(--col8);
+  margin: 6rem auto;
+  text-align: center;
+}
+
+.title-singleProject {
+  text-align: center;
+  font-family: var(--Superclarendon);
+  font-size: var(--font-size-big-title);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 9.5rem;
+  letter-spacing: -0.225rem;
+  color: var(--gta-bourdeaux);
+
+  position: relative;
+  top: -6rem;
+}
+.svg-heroSingleProject {
+  margin: auto;
+}

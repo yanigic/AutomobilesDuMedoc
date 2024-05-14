@@ -1,0 +1,8 @@
+.container-singleImg {
+  width: var(--col12);
+  margin-top: 2rem;
+}
+.container-singleImg > img {
+  width: 100%;
+  object-fit: cover;
+}

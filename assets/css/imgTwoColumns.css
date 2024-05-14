@@ -1,12 +1,23 @@
 .container-imgTwoColumns {
   width: var(--col12);
   display: flex;
+  gap: 1rem;
 }
 .main-imgTwoColumns:first-child {
   width: var(--col8);
 }
-.main-imgTwoColumns:nth-child(n + 2) {
+.sidebar-imgTwoColumns {
   width: var(--col4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.img-col {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
 }
 
 /* .sidebar-imgTwoColumns {

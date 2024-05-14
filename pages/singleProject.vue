@@ -36,24 +36,6 @@ const SingleProjectInfoText = [
       "Full restoration, custom wheels, custom enhanced powertrain",
   },
 ];
-
-const imagesTwoColumns = [
-  {
-    id: 1,
-    src: imgTwoColumsOne,
-    alt: "testo",
-  },
-  {
-    id: 2,
-    src: imgTwoColumsTwo,
-    alt: "testo",
-  },
-  {
-    id: 3,
-    src: imgTwoColumsThree,
-    alt: "testo",
-  },
-];
 </script>
 
 <template>
@@ -77,12 +59,7 @@ const imagesTwoColumns = [
       ></SingleProjectText>
     </span>
     <span class="container-imgTwoColumns">
-      <ImgTwoColumns
-        v-for="(item, index) in imagesTwoColumns"
-        :key="index"
-        :img="item.src"
-        ><div></div
-      ></ImgTwoColumns>
+      <ImgTwoColumns> ></ImgTwoColumns>
     </span>
     <span v-for="(item, index) in SingleProjectInfoText" :key="index">
       <SingleProjectText

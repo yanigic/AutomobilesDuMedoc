@@ -14,7 +14,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="container-banner">
+  <div class="">
     <div class="text-container-banner">
       <p class="title-banner-contact">{{ props.paragraph }}</p>
 

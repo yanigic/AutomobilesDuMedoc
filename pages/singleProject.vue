@@ -89,6 +89,7 @@ const singleImg = [{ img: imgTwoColumsOne }, { img: imgTwoColumsOne }];
     ></SingleImg>
 
     <BannerContact
+      class="container-banner-single-project"
       v-for="(text, index) in ctaContent"
       :key="index"
       :paragraph="text.paragraph"

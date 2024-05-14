@@ -1,27 +1,40 @@
-.container-banner {
+.container-banner-home,
+.container-banner-single-project {
   padding: 10.25rem 0;
-  background-color: var(--burnout-black);
   height: 95vh;
   display: flex;
   align-items: center;
   text-align: center;
 }
-.cta-banner-contact {
+
+.container-banner-home {
   color: var(--beam-yellow);
+  background-color: var(--burnout-black);
+}
+.container-banner-home .cta-banner-contact {
+  border: 0.2rem solid var(--beam-yellow);
+}
+
+.container-banner-single-project {
+  color: var(--gta-bourdeaux);
+  background-color: var(--pearl-white);
+}
+.container-banner-single-project .cta-banner-contact {
+  border: 0.2rem solid var(--gta-bourdeaux);
+}
+
+.cta-banner-contact {
   margin-top: 2rem;
   font-family: var(--Superclarendon);
   font-size: var(--font-size-text-two);
   font-style: normal;
   padding: 0.3rem 4rem;
-  border: 0.2rem solid var(--beam-yellow);
   font-weight: 700;
   line-height: 2.03806rem;
   letter-spacing: -0.01356rem;
 }
 
 .title-banner-contact {
-  color: var(--beam-yellow);
-
   font-family: var(--Superclarendon);
   font-size: var(--font-size-text-one);
   font-style: normal;

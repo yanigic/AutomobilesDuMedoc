@@ -56,6 +56,7 @@ const ctaContent = [
       ></titleDescription>
     </span>
     <BannerContact
+      class="container-banner-home"
       v-for="(text, index) in ctaContent"
       :key="index"
       :paragraph="text.paragraph"

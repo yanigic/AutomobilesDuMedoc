@@ -33,6 +33,13 @@ const titlesDescriptions = [
       "Our auto restoration service revitalizes classic cars by combining  original features with modern enhancements, ensuring each vehicle is  authentically restored to its original condition for improved  performance and reliability.",
   },
 ];
+
+const ctaContent = [
+  {
+    paragraph: "Discover all the possibilities for your car",
+    cta: "CONTACT US",
+  },
+];
 </script>
 
 <template>
@@ -48,7 +55,12 @@ const titlesDescriptions = [
         :description="item.description"
       ></titleDescription>
     </span>
-    <BannerContact></BannerContact>
+    <BannerContact
+      v-for="(text, index) in ctaContent"
+      :key="index"
+      :paragraph="text.paragraph"
+      :cta="text.cta"
+    ></BannerContact>
   </div>
   <!-- <StoryblokComponent v-if="story" :blok="story.content" /> -->
 </template>

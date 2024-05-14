@@ -8,6 +8,8 @@ import HeroSingleProject from "../components/heroSingleProject.vue";
 import ImgTwoColumns from "../components/imgTwoColumns.vue";
 import SingleProjectText from "../components/singleProjectText.vue";
 import Slider from "../components/slider.vue";
+import SingleImg from "../components/singleImg.vue";
+import BannerContact from "../components/bannerContact.vue";
 const heroSingleProjectInfo = [
   {
     title: "Cherry Countach",
@@ -40,6 +42,15 @@ const SingleProjectInfoText = [
       "The wheels, custom-designed for this model, have been engineered to perfectly integrate with the aerodynamic and performance needs. Every component has been meticulously selected to optimize both functionality and aesthetics, contributing significantly to the improvement of the driving dynamics.",
   },
 ];
+
+const ctaContent = [
+  {
+    paragraph: "Want to customize yours?",
+    cta: "CONTACT US",
+  },
+];
+
+const singleImg = [{ img: imgTwoColumsOne }, { img: imgTwoColumsOne }];
 </script>
 
 <template>
@@ -71,6 +82,18 @@ const SingleProjectInfoText = [
         :descriptionTwo="item.descriptionOne"
       ></SingleProjectText>
     </span>
+    <SingleImg
+      v-for="(item, index) in singleImg"
+      :key="index"
+      :img="item.img"
+    ></SingleImg>
+
+    <BannerContact
+      v-for="(text, index) in ctaContent"
+      :key="index"
+      :paragraph="text.paragraph"
+      :cta="text.cta"
+    ></BannerContact>
 
     <Slider></Slider>
   </div>

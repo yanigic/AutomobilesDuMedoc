@@ -34,6 +34,10 @@ const SingleProjectInfoText = [
     model: "Lamborghini Countach 25th Anniversary LP 400 S Turbo (1989) ",
     typeOfCustomization:
       "Full restoration, custom wheels, custom enhanced powertrain",
+    descriptionTest:
+      "The wheels, custom-designed for this model, have been engineered to perfectly integrate with the aerodynamic and performance needs. Every component has been meticulously selected to optimize both functionality and aesthetics, contributing significantly to the improvement of the driving dynamics.",
+    descriptionTestone:
+      "The wheels, custom-designed for this model, have been engineered to perfectly integrate with the aerodynamic and performance needs. Every component has been meticulously selected to optimize both functionality and aesthetics, contributing significantly to the improvement of the driving dynamics.",
   },
 ];
 </script>
@@ -63,8 +67,8 @@ const SingleProjectInfoText = [
     </span>
     <span v-for="(item, index) in SingleProjectInfoText" :key="index">
       <SingleProjectText
-        :descriptionFour="item.descriptionFour"
-        :descriptionFive="item.descriptionFive"
+        :descriptionThree="item.descriptionTest"
+        :descriptionTwo="item.descriptionOne"
       ></SingleProjectText>
     </span>
 

@@ -2,6 +2,8 @@
   width: var(--col12);
   display: flex;
   gap: 1rem;
+  padding-right: var(--laterl-space);
+  padding-left: var(--laterl-space);
 }
 .main-imgTwoColumns:first-child {
   width: var(--col8);

@@ -37,6 +37,6 @@
 }
 
 .text-container-banner {
-  width: 80%;
+  width: var(--col8);
   margin: auto;
 }

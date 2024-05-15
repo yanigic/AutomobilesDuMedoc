@@ -1,4 +1,7 @@
 <script setup>
+/* Modal Image per far comparire l'immagine tipo pop up
+ */
+
 import "../assets/css/sliderGrid.css";
 import imgtest from "../assets/img/image3.jpg";
 

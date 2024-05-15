@@ -1,0 +1,104 @@
+.row-imgGrid {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+  justify-content: space-around;
+}
+
+/* Create four equal columns that sits next to each other */
+.column-imgGrid {
+  /*  -ms-flex: 35%; */ /* IE10 */
+  -ms-flex: calc(100% / 3); /* IE10 */
+  flex: 25%;
+  /* max-width: 35%; */
+  max-width: calc(100% / 3);
+  padding: 0 4px;
+}
+
+.column-imgGrid img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column-imgGrid {
+    display: none;
+  }
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* In modo che l'SVG non intercetti gli eventi del mouse */
+  opacity: 0; /* Inizialmente nascosto */
+  transition: opacity 0.3s ease; /* Effetto di dissolvenza */
+}
+
+/* Stili CSS per mostrare l'SVG quando il mouse passa sopra l'immagine */
+.image-wrapper:hover .overlay {
+  opacity: 1; /* Mostra l'SVG */
+}
+.container-imgGrid {
+  position: relative;
+}
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+.container-imgGrid:hover .middle {
+  opacity: 0.3;
+}
+.container-imgGrid:hover .middle {
+  opacity: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name-project {
+  background-image: url("../img/Exclude.png");
+  background-repeat: no-repeat;
+  position: relative;
+
+  /*  background-color: black; */
+  color: white;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-nameProject {
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  right: 0;
+}

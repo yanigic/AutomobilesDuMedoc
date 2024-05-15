@@ -75,7 +75,7 @@ const singleImg = [{ img: imgTwoColumsOne }, { img: imgTwoColumsOne }];
         :typeOfCustomization="item.typeOfCustomization"
       ></SingleProjectText>
     </span>
-    <span class="container-imgTwoColumns">
+    <span >
       <ImgTwoColumns> ></ImgTwoColumns>
     </span>
     <span v-for="(item, index) in SingleProjectInfoText" :key="index">

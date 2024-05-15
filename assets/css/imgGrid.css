@@ -83,22 +83,30 @@
   background-image: url("../img/Exclude.png");
   background-repeat: no-repeat;
   position: relative;
-
-  /*  background-color: black; */
-  color: white;
-  font-size: 16px;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-position: center;
 }
 
 .box-nameProject {
+  font-family: var(--Superclarendon);
+  font-size: var(--font-size-text-two);
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--beam-yellow);
+  font-size: 16px;
   position: absolute;
   bottom: 2rem;
   display: flex;
   justify-content: center;
   left: 0;
   right: 0;
+
+  width: 50%;
+
+  margin: auto;
 }

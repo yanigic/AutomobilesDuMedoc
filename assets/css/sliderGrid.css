@@ -28,11 +28,11 @@
   width: var(--col12);
   padding: 0 2rem;
   flex-shrink: 0;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .square-SliderGrid > div {
-  width: calc((100% - (4 - 1) * 1rem) / 4);
+  width: calc((100% - (4 - 1) * 1.5rem) / 4);
   height: 15rem;
   background-color: aqua;
 }

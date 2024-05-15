@@ -70,31 +70,31 @@ const goToSlide = (index) => {
         </div>
         <div class="square-SliderGrid">
           <div><img :src="imgtest" alt="" /></div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
         </div>
         <div class="square-SliderGrid">
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
         </div>
       </div>
     </div>

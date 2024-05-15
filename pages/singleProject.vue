@@ -10,6 +10,8 @@ import SingleProjectText from "../components/singleProjectText.vue";
 import Slider from "../components/slider.vue";
 import SingleImg from "../components/singleImg.vue";
 import BannerContact from "../components/bannerContact.vue";
+import Grid from "../components/grid.vue";
+import SliderGrid from "../components/sliderGrid.vue";
 const heroSingleProjectInfo = [
   {
     title: "Cherry Countach",
@@ -87,6 +89,7 @@ const singleImg = [{ img: imgTwoColumsOne }, { img: imgTwoColumsOne }];
       :key="index"
       :img="item.img"
     ></SingleImg>
+     <SliderGrid></SliderGrid>
 
     <BannerContact
       class="container-banner-single-project"
@@ -95,6 +98,10 @@ const singleImg = [{ img: imgTwoColumsOne }, { img: imgTwoColumsOne }];
       :paragraph="text.paragraph"
       :cta="text.cta"
     ></BannerContact>
+   <!--  <Grid></Grid> -->
+  
+
+    
 
     <Slider></Slider>
   </div>

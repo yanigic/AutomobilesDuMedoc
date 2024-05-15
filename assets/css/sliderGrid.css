@@ -76,3 +76,30 @@
   border-color: #f4f4f4;
   color: #f4f4f4;
 }
+.bullet-SliderGrid {
+  width: 20px;
+  height: 10px;
+  margin: 0 1.5rem;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+/* Utilizzo di un'icona come bullet */
+.bullet-SliderGrid::before {
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-image: url("../img/svg/iconBullet.svg");
+  /*  background-size: cover; */
+  background-size: contain; /* Ridimensiona l'immagine per adattarla al contenitore mantenendone le proporzioni */
+  background-repeat: no-repeat;
+}
+.bullets-SliderGrid {
+  display: flex;
+  justify-content: center;
+}
+
+.bullet-SliderGrid.activeB::before {
+  background-image: url("../img/svg/iconBulletActive.svg"); /* Nuova immagine del bullet quando è attivo */
+}

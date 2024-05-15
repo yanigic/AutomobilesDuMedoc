@@ -1,12 +1,14 @@
 <script setup>
 import "../assets/css/sliderGrid.css";
-import arrow from "../assets/img/svg/arrowRight.svg";
 import imgtest from "../assets/img/image3.jpg";
 
 const carousel = ref(null); // Assicurati di usare ref se `carousel` è un elemento DOM
+const items = ref([]); // Array di elementi nello slider
+const activeIndex = ref(0); // Indice dello slide attivo
 
 onMounted(() => {
   carousel.value = document.getElementById("carousel-SliderGrid"); // Assumi che `#carousel` sia l'ID del div da scrollare
+  items.value = document.querySelectorAll(".square-SliderGrid"); // Array di elementi nello slider
 });
 
 const willLeftLessThan40pxToScrollEnd = (nextStep) => {
@@ -37,6 +39,15 @@ const handleClickGoBack = () => {
     left: carousel.value.scrollLeft - nextStep,
     behavior: "smooth",
   });
+};
+
+const goToSlide = (index) => {
+  const slideWidth = carousel.value.offsetWidth;
+  carousel.value.scroll({
+    left: index * slideWidth,
+    behavior: "smooth",
+  });
+  activeIndex.value = index;
 };
 </script>
 <template>
@@ -87,13 +98,16 @@ const handleClickGoBack = () => {
         </div>
       </div>
     </div>
-    <div class="buttons-SliderGrid">
-      <button class="btn-SliderGrid" @click="handleClickGoBack()">
-        <img :src="arrow" alt="" />
-      </button>
-      <button class="btn-SliderGrid" @click="handleClickGoAhead()">
-        <img :src="arrow" alt="" />
-      </button>
-    </div>
+
+    <ul class="bullets-SliderGrid">
+      <!-- Utilizzo degli li con un'icona come bullet -->
+      <li
+        class="bullet-SliderGrid"
+        :class="{ activeB: index === activeIndex }"
+        v-for="(item, index) in items"
+        :key="index"
+        @click="goToSlide(index)"
+      ></li>
+    </ul>
   </div>
 </template>

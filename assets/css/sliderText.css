@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container-SliderText {
+  position: relative;
+  text-align: center;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+.mySlidesimg {
+  height: 150px;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  /*  position: absolute; */
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: rgb(52, 245, 18);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.prev > svg,
+.next > svg {
+  margin: auto;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover > svg > path,
+.next:hover > svg > path {
+  stroke: var(--beam-yellow);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+.row-SliderText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row-SliderText:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column-SliderText {
+  float: left;
+  width: var(--col10);
+  margin: auto;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  color: var(--millennium-silver);
+
+  font-family: var(--Superclarendon);
+  font-size: var(--font-size-text-one);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 5.125rem; /* 91.111% */
+  letter-spacing: -0.05625rem;
+  text-transform: uppercase;
+}
+
+.activeSliderText,
+.demo:hover {
+  opacity: 1;
+  color: var(--beam-yellow);
+}
+.activeSliderText {
+  color: #fff; /* Testo bianco */
+  background-color: #000; /* Sfondo nero */
+}

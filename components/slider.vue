@@ -1,6 +1,6 @@
-<script setup>
-import "../assets/css/slider.css";
+<script  >
 import arrow from "../assets/img/svg/arrowRight.svg";
+import "../assets/css/slider.css";
 
 const carousel = ref(null); // Assicurati di usare ref se `carousel` è un elemento DOM
 

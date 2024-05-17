@@ -103,7 +103,7 @@ function toggleActivePrivacy() {
               </div>
 
               <input
-                class="label-title btn-contacts"
+                class="label-title btn-contacts submit"
                 type="submit"
                 value="Send Email"
               />
@@ -111,7 +111,7 @@ function toggleActivePrivacy() {
           </div>
         </form>
       </div>
-      <div class="col-one"></div>
+      <!-- <div class="col-one"></div> -->
       <div class="contactDetails">
         <div class="contact-details-info-title">Automobiles du Médoc</div>
 

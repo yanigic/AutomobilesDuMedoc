@@ -18,6 +18,13 @@ body {
   --font-size-small-text: 0.8125rem;
   --font-size-big-title: 11.6rem;
 
+   --font-size-title-mobile-s: 0.9rem;
+
+  --font-size-title-mobile: 2.1875rem;;
+
+
+
+
   /* color */
   --beam-yellow: #f3f90a;
   --pearl-white: #efeff9;
@@ -50,4 +57,9 @@ body {
   --eight: 8rem;
   --Three: 3rem;
   --sixteen: 16rem;
+
+
+
+  --vertical-space-small:1.5rem;
+  --vertical-space-medium:2.5rem;
 }

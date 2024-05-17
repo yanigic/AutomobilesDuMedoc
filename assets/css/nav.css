@@ -21,6 +21,7 @@
 }
 v-list-item {
   margin: 0 2rem;
+      cursor: pointer;
 }
 .svg-logo > g > path,
 .svg-icon > g > path {

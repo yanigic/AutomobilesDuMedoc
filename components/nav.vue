@@ -4,16 +4,23 @@ import "../assets/css/nav.css";
 export default {
   data: () => ({
     drawer: false,
-    menuItems: [
-      { title: "Projects", href: "/" },
+    pages: [
+      { title: "Projects", href: "/project" },
       { title: "Cars for sale", href: "/" },
       { title: "Conciergerie", href: "/" },
       /* { title: "Services", href: "/" }, */
       { title: "About", href: "/About" },
-      { title: "Contact", href: "/" },
+      { title: "Contact", href: "/contacts" },
     ],
   }),
+  methods: {
+    navigateToPage(href) {
+      // Reindirizza alla pagina corrispondente al link cliccato
+      window.location.href = href;
+    },
+  },
 };
+
 </script>
 
 <template>
@@ -22,9 +29,9 @@ export default {
       <v-app class="navContainer">
         <v-app-bar app>
           <v-app-bar-nav-icon
-            @click.stop="drawer = !drawer"
+            @click.stop="drawer = !drawer" 
           ></v-app-bar-nav-icon>
-          <v-toolbar-logo>
+          <v-toolbar-logo @click="navigateToPage('/')">
             <svg
               class="svg-logo"
               xmlns="http://www.w3.org/2000/svg"
@@ -53,9 +60,9 @@ export default {
           <v-list dense>
             <v-list-item
               link
-              v-for="item in menuItems"
+              v-for="item in pages"
               :key="item.title"
-              :href="item.href"
+              @click="navigateToPage(item.href)"
             >
               <v-list-item-content>
                 <v-list-item-title>{{ item.title }}</v-list-item-title>

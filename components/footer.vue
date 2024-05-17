@@ -12,21 +12,23 @@ const institutionalInformation = [
     description: "Subscribe to our newsletter",
   },
 ];
-const titlesOne = [
+
+
+const pages = [
   {
-    label: "Projects",
+    label: "Projects", path: '/project'
+  },
+  /* {
+    label: "Services",  path: '/services'
+  }, */
+  {
+    label: "About", path: '/about'
   },
   {
-    label: "Services",
-  },
-  {
-    label: "About",
-  },
-  {
-    label: "Contact",
+    label: "Contact", path: '/contacts'
   },
 ];
-const titleTwo = [
+const policy = [
   {
     label: "Privacy Policy",
   },
@@ -59,6 +61,13 @@ const social = [
     icon: INSTAGRAM,
   },
 ];
+
+
+
+
+
+
+
 </script>
 <!-- <div class="text-container" v-for="(title, index) in titles" :key="index">
       <p class="title">{{ title.service }}</p> -->
@@ -75,12 +84,12 @@ const social = [
       </li>
 
       <li class="col-2">
-        <ul v-for="(title, index) in titlesOne" :key="index">
-          <li>{{ title.label }}</li>
+        <ul v-for="(title, index) in pages" :key="index">
+           <router-link :to="title.path">{{ title.label }}</router-link>
         </ul>
       </li>
       <li class="col-2">
-        <ul v-for="(title, index) in titleTwo" :key="index">
+        <ul v-for="(title, index) in policy" :key="index">
           <li>{{ title.label }}</li>
         </ul>
       </li>

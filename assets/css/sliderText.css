@@ -10,6 +10,7 @@ img {
 .container-SliderText {
   position: relative;
   text-align: center;
+  background-color: var(--burnout-black);
 }
 
 /* Hide the images by default */
@@ -88,33 +89,64 @@ img {
 
 /* Six columns side by side */
 .column-SliderText {
-  float: left;
   width: var(--col10);
   margin: auto;
-  overflow-y: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none; /* Firefox */
+  height: calc(
+    100px * 4
+  ); /* Ad esempio, se ogni nome immagine ha un'altezza di 100px */
+  display: flex; /* Utilizza Flexbox per una gestione più flessibile del layout */
+  flex-direction: column; /* Elementi disposti in colonna */
+  overflow-y: auto; /* Permetti lo scorrimento verticale se gli elementi superano l'altezza del contenitore */
+  scrollbar-width: none;
 }
 
 /* Add a transparency effect for thumnbail images */
-.demo {
+/* .demo {
   color: var(--millennium-silver);
 
   font-family: var(--Superclarendon);
   font-size: var(--font-size-text-one);
   font-style: normal;
   font-weight: 300;
-  line-height: 5.125rem; /* 91.111% */
+  line-height: 5.125rem; 
   letter-spacing: -0.05625rem;
   text-transform: uppercase;
+} */
+
+.scroll-container {
+  max-height: 300px; /* Adatta in base all'altezza desiderata */
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  flex-direction: column;
+}
+
+.demo {
+  color: var(--millennium-silver);
+  font-family: var(--Superclarendon);
+  font-size: var(--font-size-text-one);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 5.125rem;
+  letter-spacing: -0.05625rem;
+  text-transform: uppercase;
+  flex: 0 0 auto; /* Gli elementi non si espandono né si comprimono, ma mantengono le dimensioni definite */
+  height: 100px; /* Imposta un'altezza fissa per ciascun nome */
+  box-sizing: border-box; /* Include padding e border nel calcolo della larghezza e dell'altezza */
+  display: block; /* Ogni elemento è un blocco a sé */
+  text-align: center; /* Centra il testo all'interno dell'elemento */
+  padding: 10px; /* Distanziamento interno per leggibilità */
 }
 
 .activeSliderText,
 .demo:hover {
   opacity: 1;
   color: var(--beam-yellow);
+  background-color: #000;
 }
-.activeSliderText {
-  color: #fff; /* Testo bianco */
-  background-color: #000; /* Sfondo nero */
+
+.numbertext,
+.mySlides {
+  text-align: center;
 }

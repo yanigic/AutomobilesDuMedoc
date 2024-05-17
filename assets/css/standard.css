@@ -62,4 +62,6 @@ body {
 
   --vertical-space-small:1.5rem;
   --vertical-space-medium:2.5rem;
+  --vertical-space-larg:3.5rem;
+  --vertical-space-xlarg:6.5rem;
 }

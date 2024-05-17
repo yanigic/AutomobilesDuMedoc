@@ -39,3 +39,25 @@
   margin-bottom: var(--sixteen);
   background-color: var(--beam-yellow);
 }
+@media only screen and (max-width: 600px) {
+
+  .container-layout-paragraph {
+    flex-wrap: wrap;
+    width: var(--col12);
+  }
+  .text-container-paragraph{
+    width: var(--col12);
+    align-items: start;
+  }
+  .descriptionParagraph{
+    text-align: start;
+  }
+  .titleParagraph{
+    margin-bottom: var(--vertical-space-medium);
+  }
+  .text-container-paragraph{
+    padding: var(--vertical-space-larg) var(--two);
+
+  
+  }
+}

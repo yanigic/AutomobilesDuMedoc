@@ -38,3 +38,46 @@
   padding: 0 0 5rem 0;
   background-color: var(--beam-yellow);
 }
+
+
+
+@media only screen and (max-width: 600px) {
+  .text-container{
+    flex-direction: column;
+    text-align: start;
+   
+  }
+  .text-container > p {
+    width:var(--col12);
+    margin-bottom: var(--vertical-space-xsmall);
+  }
+  .text-container > p.title{
+    font-size: var(--font-size-title-mobile);
+     text-align: start;
+  }
+  .height-hero-about{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.container-layout-paragraph{
+  flex-direction: column;
+  width: var(--col12);
+}
+
+.text-container-paragraph {
+    display: flex;
+    flex-direction: column;
+   
+    width: var(--col12);
+    text-align:start ;
+}
+.description{
+      padding: 0;
+
+}
+.container-layout {
+    padding: 0 ;}
+
+}
+

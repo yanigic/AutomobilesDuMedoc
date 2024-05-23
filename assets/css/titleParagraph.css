@@ -53,7 +53,9 @@
     text-align: start;
   }
   .titleParagraph{
-    margin-bottom: var(--vertical-space-medium);
+    margin-bottom: var(--vertical-space-xsmall);
+     font-size: var(--font-size-title-mobile);
+     text-align: start;
   }
   .text-container-paragraph{
     padding: var(--vertical-space-larg) var(--two);

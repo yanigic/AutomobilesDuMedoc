@@ -72,3 +72,21 @@
   border-color: #f4f4f4;
   color: #f4f4f4;
 }
+.square > img{
+  object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .text-big-title{
+    font-size: var(--font-size-text-two);
+    margin:var( --vertical-space-small) 0;
+  }
+  .square {
+    min-width: var(--col10);
+  }
+  .buttons-slider{
+    display: none;
+  }
+}

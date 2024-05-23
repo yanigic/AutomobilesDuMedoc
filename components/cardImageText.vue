@@ -10,10 +10,10 @@ const contents = [
 ];
 const texts = [
   {
+    description:"Bordeaux, located in the southwest of France, is world-renowned for its wines, with vineyards stretching for thousands of kilometers throughout the surrounding countryside. Besides its viticultural heritage, Bordeaux is also a cultural and commercial hub, hosting numerous artistic and historical institutions."  },
+   {
     description:
-      "Bordeaux, located in the southwest of France, is world-renowned for its wines, with vineyards stretching for thousands of kilometers throughout the surrounding countryside. Besides its viticultural heritage, Bordeaux is also a cultural and commercial hub, hosting numerous artistic and historical institutions. Automobiles du Médoc establishes its main operations in the Bordeaux region, leveraging not only the strategic geographical position, which provides immediate access to major European routes, but also the extensive network of trade and distribution that the city offers.",
-  },
-  {
+     "Automobiles du Médoc establishes its main operations in the Bordeaux region, leveraging not only the strategic geographical position, which provides immediate access to major European routes, but also the extensive network of trade and distribution that the city offers."},{
     description:
       "Recognizing the importance of expanding its network and operational  capabilities, Automobiles du Médoc also establishes a base in Milan,  Italy. With its central position in Europe and its dynamic economic  environment, Milan serves as a crucial point for the company's  international operations, facilitating the expansion of the business and  the logistic management of vehicles.",
   },

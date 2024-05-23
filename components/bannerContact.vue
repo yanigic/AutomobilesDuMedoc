@@ -16,7 +16,9 @@ const props = defineProps({
 <template>
   <div class="">
     <div class="text-container-banner">
-      <p class="title-banner-contact">{{ props.paragraph }}</p>
+      <!-- <h3 v-html="paragraph" class="title-banner-contact">{{ props.paragraph }} </h3> -->
+       <h3 v-html="paragraph" class="title-banner-contact"></h3>
+
 
       <button class="cta-banner-contact">
         {{ props.cta }}

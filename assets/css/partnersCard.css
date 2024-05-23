@@ -36,3 +36,27 @@
   width: var(--col10);
   margin: auto;
 }
+@media only screen and (max-width: 735px){
+  .title-partnersCard{
+    font-size: var(--font-size-title-mobile);
+        text-align: start;
+        margin: var(--vertical-space-small) 0;
+  }
+  .description-partnersCard{
+    margin: 0;
+    width: var(--col12);
+    text-align: start;
+    margin-bottom: var(--vertical-space-larg);
+
+  }
+  .bg-partnersCard{
+    padding: var(--Three) var(--two);
+  }
+  .box-img-partnersCard{
+        display: flex;
+    flex-direction: column;
+}
+.box-img-partnersCard > img{ 
+  margin: var(--vertical-space-medium) 0;
+  }
+}

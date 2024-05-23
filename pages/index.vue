@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import Default from "../layouts/default.vue";
 
 import BannerProject from "../components/bannerProject.vue";
@@ -34,9 +34,9 @@ const titlesDescriptions = [
   },
 ];
 
-const ctaContent = [
+const ctaContent = [ 
   {
-    paragraph: "Discover all the possibilities for your car",
+    paragraph:  `Discover <br> all the possibilities for your car`,
     cta: "CONTACT US",
   },
 ];
@@ -49,11 +49,12 @@ const ctaContent = [
    <!--  <BannerProject></BannerProject>
     <BannerProject></BannerProject> -->
     <BannerProject></BannerProject>
-    <span v-for="(item, index) in titlesDescriptions" :key="index">
+    <span v-for="(item, index) in titlesDescriptions" :key="index"> 
       <titleDescription
         :title="item.title"
         :description="item.description"
       ></titleDescription>
+      
     </span>
     <BannerContact
       class="container-banner-home"

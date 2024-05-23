@@ -31,6 +31,8 @@
 } */
 .bg-banner {
   background-color: var(--beam-yellow);
+      display: flex;
+    flex-direction: column;
 }
 .img-container {
   height: 80vh;
@@ -44,6 +46,9 @@
 .text-container-banner {
   width: var(--col8);
   margin: auto;
+}
+.btn-bannerProject-cta{
+  display: none;
 }
 
 @media only screen and (max-width: 635px) {
@@ -60,5 +65,21 @@
       vertical-align: middle;
   height: 0.91544rem;
   }
+  .bg-banner {
+    display: flex;
+  flex-direction: column-reverse;
+}
+.btn-bannerProject-cta{
+  text-align: center; 
+  color: #02020B; 
+  font-size: var(--font-size-small-text); 
+  font-family: var(--Superclarendon); 
+  font-weight: 700;
+  border: 0.15rem solid var(--burnout-black);
+  padding: 0.3rem 1rem;
+  display: unset;
+}
+
 
 }
+

@@ -37,6 +37,7 @@ const projects = [
           />
         </svg>
       </h2>
+      <div class="btn-bannerProject-cta" >SEE THE PROJECT</div>
     </div>
     <div class="img-container"><img :src="project.img" alt="" /></div>
   </div>

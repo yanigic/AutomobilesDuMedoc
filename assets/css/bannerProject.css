@@ -12,9 +12,9 @@
 .title-banner {
   margin: auto;
   display: flex;
-  width: 90rem;
+  
   height: 17.75rem;
-  padding: 9rem 23rem 4rem 23rem;
+  /* padding: 9rem 23rem 4rem 23rem; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -24,6 +24,11 @@
   margin-bottom: 1.8rem;
   margin-left: 0.8rem;
 }
+
+/* .svg-banner > svg{
+  vertical-align: middle;
+ height: 100px;
+} */
 .bg-banner {
   background-color: var(--beam-yellow);
 }
@@ -39,4 +44,21 @@
 .text-container-banner {
   width: var(--col8);
   margin: auto;
+}
+
+@media only screen and (max-width: 635px) {
+  .title-bannerProject{
+  font-size: var(--font-size-title-mobile);
+  }
+  .title-banner{
+        padding: 0;
+  }
+  .svg-banner {
+  
+    margin-bottom: 0.6rem;
+    margin-left: 0;
+      vertical-align: middle;
+  height: 0.91544rem;
+  }
+
 }

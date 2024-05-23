@@ -46,8 +46,8 @@ const ctaContent = [
   <div class="container-layouts">
     <!--  <Default></Default> -->
 
-    <BannerProject></BannerProject>
-    <BannerProject></BannerProject>
+   <!--  <BannerProject></BannerProject>
+    <BannerProject></BannerProject> -->
     <BannerProject></BannerProject>
     <span v-for="(item, index) in titlesDescriptions" :key="index">
       <titleDescription

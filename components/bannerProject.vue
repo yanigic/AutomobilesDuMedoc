@@ -1,12 +1,28 @@
 <script lang="ts" setup>
 import "../assets/css/bannerProject.css";
+import img1 from "../assets/img/img1.png";
+
+const projects = [
+  {
+    title: "alfa romeo superclassica",
+    img: img1,
+       },
+       {
+    title: "abarth 695 corsa",
+    img: img1,
+       },
+       {
+    title: "cherry countach",
+    img: img1,
+       },
+];
 </script>
 
 <template>
-  <div class="bg-banner">
+  <div class="bg-banner"  v-for="project in projects">
     <div class="title-banner">
       <h2 class="title-bannerProject">
-        Alfa romeo superclassica<svg
+        {{ project.title }}<svg
           class="svg-banner"
           xmlns="http://www.w3.org/2000/svg"
           width="36"
@@ -22,6 +38,6 @@ import "../assets/css/bannerProject.css";
         </svg>
       </h2>
     </div>
-    <div class="img-container"><img src="../assets/img/img1.png" alt="" /></div>
+    <div class="img-container"><img :src="project.img" alt="" /></div>
   </div>
 </template>

@@ -21,8 +21,8 @@ function toggleActivePrivacy() {
 </script>
 
 <template>
-  <div class="">
-    <h3 class="title-contacts">Ready to start something unique?</h3>
+  <div class=" bg-contacts">
+    <h3 class="title-contacts "> <span class="mobile-line-break">Ready</span>  to start something unique?</h3>
     <div class="box-information-contacts">
       <div class="contactForm">
         <form action="action_page.php">

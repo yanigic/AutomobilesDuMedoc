@@ -23,3 +23,25 @@
 .img-singleProject {
   margin: auto;
 }
+
+@media only screen and (max-width: 735px){
+
+  .heroSingleProject-container{
+        margin: 0 auto;
+         
+        width: 100%;
+  }
+  .title-singleProject{
+    font-size: var(--font-size-title-mobile-m);
+    text-align: start;
+    line-height: normal;
+    letter-spacing: unset;
+    position: unset;
+  }
+
+  .heroSingleProject-container > img{
+    width: var(--col12);
+    height: 70vh;
+    object-fit: cover;
+  }
+}

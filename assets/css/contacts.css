@@ -1,16 +1,22 @@
+.bg-contacts, .box-label-input input,.box-textarea-text{
+  background-color: var(--beam-yellow);
+}
+
 .title-contacts {
   font-family: var(--Superclarendon);
   font-size: var(--font-size-text-one);
-  color: var(--gta-bourdeaux);
+  color: var(--burnout-black);
   text-transform: uppercase;
   margin-bottom: var(--four);
   width: var(--col8);
-  margin: var(--eight) auto;
+  padding-top: var(--eight) ;
+  padding-bottom: var(--eight) ;
+  margin: auto;
   text-align: center;
 }
 
 .label-title {
-  color: var(--gta-bourdeaux);
+  color: var(--burnout-black);
   font-family: var(--Superclarendon);
   font-size: var(--font-size-text-three);
   font-style: normal;
@@ -38,7 +44,7 @@
   flex-direction: column;
 }
 .box-label-input input {
-  border: 2px solid var(--gta-bourdeaux);
+  border: 2px solid var(--burnout-black);
   padding: 12px 20px;
   height: 2.4rem;
   cursor: pointer;
@@ -54,7 +60,7 @@
 }
 
 .box-textarea-text {
-  border: 2px solid var(--gta-bourdeaux);
+  border: 2px solid var(--burnout-black);
   padding: 40px 20px;
   height: 2rem;
   cursor: pointer;
@@ -64,8 +70,8 @@
 }
 
 .btn-contacts {
-  border: 2px solid var(--gta-bourdeaux);
-  color: var(--gta-bourdeaux);
+  border: 2px solid var(--burnout-black);
+  color: var(--burnout-black);
   width: var(--col4);
   padding: 5px 0;
   text-align: center;
@@ -82,7 +88,7 @@
 }
 
 .box-permission {
-  color: var(--gta-bourdeaux);
+  color: var(--burnout-black);
 
   font-family: var(--OpenSans);
   font-size: var(--font-size-small-text);
@@ -126,7 +132,7 @@
 
 .contact-details-info {
   font-family: var(--OpenSans);
-  color: var(--gta-bourdeaux);
+  color: var(--burnout-black);
   font-size: var(--font-size-text-two);
   font-style: normal;
   font-weight: 400;
@@ -134,7 +140,7 @@
   letter-spacing: -0.0125rem;
 }
 .contact-details-info-title {
-  color: var(--gta-bourdeaux);
+  color: var(--burnout-black);
   font-family: var(--OpenSans);
   font-size: var(--font-size-text-two);
   font-style: normal;
@@ -171,7 +177,7 @@
   margin: auto 0;
   height: 1.5rem;
   width: 1.5rem;
-  border: 2px solid var(--gta-bourdeaux);
+  border: 2px solid var(--burnout-black);
   transition: background-color 0.3s;
   transition: border 0.3s;
 }
@@ -185,36 +191,39 @@
   border: 2px solid rgb(12, 0, 149) !important;
 }
 @media only screen and (max-width: 735px) {
+  .mobile-line-break {
+    width: 100%;
+    display: block;}
   .title-contacts{
     font-size: var(--font-size-title-mobile);
-        width: var(--col10);
-        text-align: center;
+    width: var(--col10);
+    text-align: center;
+    line-height: 1.88125rem;
+        padding-top: var(--vertical-space-larg);
+    padding-bottom: var(--vertical-space-larg);
   }
 
   .box-information-contacts {
   flex-wrap: wrap-reverse;
-}
+  }
 
   .contactDetails,.contactForm {
     width: var(--col12);
     margin-top: var(--vertical-space-small);
   }
   .box-label-input{
-        width: var(--col12);
-
+    width: var(--col12);
   }
   .btn-contacts {
     margin-left: auto;
     margin-right: auto;
-  font-size: var( --font-size-title-mobile-s);}
-
-
-    .box-textarea{
-  margin-bottom: var(--vertical-space-small);
- 
-    }
-    .btn-contacts.submit{
-        margin-top: var(--vertical-space-medium) ;
-    }
+    font-size: var( --font-size-title-mobile-s);
+  }
+  .box-textarea{
+    margin-bottom: var(--vertical-space-small);
+  }
+  .btn-contacts.submit{
+    margin-top: var(--vertical-space-medium) ;
+  }
  
 }

@@ -29,6 +29,7 @@
 
 .container-singleProjectText {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   margin-left: var(--laterl-space);
   margin-right: var(--laterl-space);
@@ -47,4 +48,33 @@
 
 .typeOfcustomization {
   margin-top: 3.5rem;
+}
+
+
+@media only screen and (max-width: 735px){
+ .container-singleProjectText{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .sidebar-singleProjectText,.main-singleProjectText{
+    width: var(--col12);
+  }
+  .title-singleProjectText{
+    padding-top: var(--vertical-space-larg);
+  }
+  .typeOfcustomization{
+    margin-top: var(    --vertical-space-small);
+  }
+  .description-singleProjectText{
+    padding-top: 0;
+    
+  }
+  .title-singleProjectText:empty, 
+  .sidebar-singleProjectText:empty, 
+  .typeOfcustomization:empty {
+    display: none;
+  }
+  .container-singleProjectText{
+    margin-bottom:0;
+  }
 }

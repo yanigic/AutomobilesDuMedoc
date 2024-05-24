@@ -16,6 +16,9 @@ body {
   --font-size-text-two: 1.25rem;
   --font-size-text-three: 1rem;
   --font-size-small-text: 0.8125rem;
+  --font-size-medium-title: 7.6rem;
+
+  --font-size-larg-title: 9.6rem;
   --font-size-big-title: 11.6rem;
 
    --font-size-title-mobile-s: 0.9rem;

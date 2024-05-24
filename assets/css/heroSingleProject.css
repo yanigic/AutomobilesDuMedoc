@@ -1,6 +1,8 @@
 .heroSingleProject-container {
-  width: var(--col8);
-  margin: 6rem auto;
+  width: var(--col10);
+  margin: auto;
+  padding-top:var(--vertical-space-xlarg) ;
+  padding-bottom:var(--vertical-space-xlarg) ;
   text-align: center;
 }
 
@@ -23,6 +25,18 @@
 .img-singleProject {
   margin: auto;
 }
+@media only screen and (max-width: 1150px){
+  .title-singleProject{
+    line-height: 8.5rem;
+    font-size:var(--font-size-larg-title)
+  }
+}
+@media only screen and (min-width: 735px) and (max-width: 900px) {
+  .title-singleProject{
+    line-height: 6.5rem;
+    font-size:var( --font-size-medium-title)
+  }
+}
 
 @media only screen and (max-width: 735px){
 
@@ -34,9 +48,12 @@
   .title-singleProject{
     font-size: var(--font-size-title-mobile-m);
     text-align: start;
-    line-height: normal;
+    line-height: 103%;
     letter-spacing: unset;
     position: unset;
+    margin-left: var(--laterl-space);
+    margin-right: var(--laterl-space);
+    padding-top:var(    --vertical-space-medium);
   }
 
   .heroSingleProject-container > img{
@@ -44,4 +61,12 @@
     height: 70vh;
     object-fit: cover;
   }
+  .heroSingleProject-container{
+    padding-top: 0;
+    padding-bottom:var(    --vertical-space-medium);
+  }
+  .svg-heroSingleProject{
+    display: none;
+  }
+ 
 }

@@ -14,7 +14,7 @@ import Grid from "../components/grid.vue";
 import SliderGrid from "../components/sliderGrid.vue";
 const heroSingleProjectInfo = [
   {
-    title: "Cherry Superleggera",
+    title: "Cherry Countach",
     img: imgHeroPro,
   },
 ];

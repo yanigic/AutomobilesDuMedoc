@@ -15,7 +15,7 @@
   width: 100%;
 }
 
-#carousel {
+#carousel, #carousel-imgTwoColumns {
   position: relative;
   display: flex;
   overflow: hidden;
@@ -28,13 +28,10 @@
   align-items: center;
   color: #bbbbbb;
   font-size: 50px;
-
   background-color: #ffffff;
-
   margin-right: 20px;
   transition: 100ms ease-in-out;
-
-  min-width: 37.8125rem;
+  /* min-width: 37.8125rem; */
   height: 25.25rem;
   flex-shrink: 0;
 }
@@ -84,7 +81,7 @@
     margin:var( --vertical-space-small) 0;
   }
   .square {
-    min-width: var(--col10);
+    max-width: var(--col10);
   }
   .buttons-slider{
     display: none;

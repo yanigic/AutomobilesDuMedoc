@@ -103,3 +103,12 @@
 .bullet-SliderGrid.activeB::before {
   background-image: url("../img/svg/iconBulletActive.svg"); /* Nuova immagine del bullet quando è attivo */
 }
+@media only screen and (max-width: 768px) {
+  .square-SliderGrid > div {
+    width: calc((100% - (4 - 1) * 1.5rem) / 2);
+    height: 15rem;
+  }
+  .square-SliderGrid {
+    padding: 0;
+  }
+}

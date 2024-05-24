@@ -49,10 +49,10 @@
     line-height: 1.875rem; /* 85.714% */
 
   }
-  .text-container-banner{
+  /* .text-container-banner{
     width: var(--col10);
 
-  }
+  } */
   .cta-banner-contact{
     font-size: var( --font-size-title-mobile-s);
   }

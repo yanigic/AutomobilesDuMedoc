@@ -1,16 +1,51 @@
-<script setup>
+<script setup lang="ts">
 /* Modal Image per far comparire l'immagine tipo pop up
  */
+import { onMounted } from "vue";
 
 import "../assets/css/sliderGrid.css";
 import imgtest from "../assets/img/image3.jpg";
 
-const carousel = ref(null); // Assicurati di usare ref se `carousel` è un elemento DOM
+import img1 from "../assets/img/img1.png";
+
+const projects = [
+  { img: img1 },
+  { img: img1 },
+  { img: img1 },
+  { img: img1 },
+  { img: img1 },
+  { img: img1 },
+  { img: img1 },
+  { img: img1 },
+  { img: img1 },
+  { img: img1 },
+  { img: img1 },
+  { img: img1 },
+  { img: img1 },
+  { img: img1 },
+  { img: img1 },
+  { img: img1 },
+  { img: img1 },
+  { img: img1 },
+  { img: img1 },
+  { img: img1 },
+  { img: img1 },
+  { img: img1 },
+  { img: img1 },
+  { img: img1 },
+];
+
+const carousel = ref(null);
 const items = ref([]); // Array di elementi nello slider
 const activeIndex = ref(0); // Indice dello slide attivo
 
+let numImagesPerSlide = 12; // Numero di immagini per slide
+const numSlides = Math.ceil(projects.length / numImagesPerSlide); // Calcola il numero di slide necessarie
+
 onMounted(() => {
-  carousel.value = document.getElementById("carousel-SliderGrid"); // Assumi che `#carousel` sia l'ID del div da scrollare
+  calculateNumImagesPerSlide(); // Inizializza il numero di immagini per slide
+
+  carousel.value = document.getElementById("carousel-SliderGrid");
   items.value = document.querySelectorAll(".square-SliderGrid"); // Array di elementi nello slider
 });
 
@@ -52,12 +87,34 @@ const goToSlide = (index) => {
   });
   activeIndex.value = index;
 };
+const calculateNumImagesPerSlide = () => {
+  numImagesPerSlide = window.innerWidth < 768 ? 4 : 12; // Cambia il numero di immagini per slide in base alla larghezza della finestra
+};
 </script>
 <template>
   <div class="bg-SliderGrid">
     <div id="wrapper-SliderGrid">
       <div id="carousel-SliderGrid">
-        <div class="square-SliderGrid">
+        <div class="square-SliderGrid" v-for="slide in numSlides" :key="slide">
+          <div v-for="index in numImagesPerSlide" :key="index">
+            <img
+              :src="projects[(slide - 1) * numImagesPerSlide + index - 1]?.img"
+              alt=""
+            />
+          </div>
+          <!-- <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div>
+          <div><img :src="imgtest" alt="" /></div> -->
+        </div>
+        <!-- <div class="square-SliderGrid">
           <div><img :src="imgtest" alt="" /></div>
           <div><img :src="imgtest" alt="" /></div>
           <div><img :src="imgtest" alt="" /></div>
@@ -84,21 +141,7 @@ const goToSlide = (index) => {
           <div><img :src="imgtest" alt="" /></div>
           <div><img :src="imgtest" alt="" /></div>
           <div><img :src="imgtest" alt="" /></div>
-        </div>
-        <div class="square-SliderGrid">
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-        </div>
+        </div> -->
       </div>
     </div>
 

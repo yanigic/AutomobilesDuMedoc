@@ -31,15 +31,16 @@ const props = defineProps({
       </div>
       <div></div>
       <div class="sidebar-singleProjectText">
+          <div>
+          {{ props.model }}
+        </div>
         <div>
           {{ props.year }}
         </div>
         <div>
           {{ props.client }}
         </div>
-        <div>
-          {{ props.model }}
-        </div>
+      
         <div class="typeOfcustomization">
           {{ props.typeOfCustomization }}
         </div>

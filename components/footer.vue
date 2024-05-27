@@ -72,43 +72,87 @@ const social = [
 <!-- <div class="text-container" v-for="(title, index) in titles" :key="index">
       <p class="title">{{ title.service }}</p> -->
 <template>
-  <div class="bg-footer">
-    <ul class="cols-footer footer-font">
-      <li class="col-3">
-        <ul v-for="(title, index) in institutionalInformation" :key="index">
-          <li><img style="margin-bottom: 2rem" :src="title.logo" alt="" /></li>
-          <li>
-            {{ title.description }}
-          </li>
-        </ul>
-      </li>
+  <div>
+    <div class="bg-footer-desktop">
+      <ul class="cols-footer footer-font">
+        <li class="col-3">
+          <ul v-for="(title, index) in institutionalInformation" :key="index">
+            <li><img style="margin-bottom: 2rem" :src="title.logo" alt="" /></li>
+            <li>
+              {{ title.description }}
+            </li>
+          </ul>
+        </li>
 
-      <li class="col-2">
-        <ul v-for="(title, index) in pages" :key="index">
-           <router-link :to="title.path">{{ title.label }}</router-link>
-        </ul>
-      </li>
-      <li class="col-2">
-        <ul v-for="(title, index) in policy" :key="index">
-          <li>{{ title.label }}</li>
-        </ul>
-      </li>
+        <li class="col-2">
+          <ul v-for="(title, index) in pages" :key="index">
+            <router-link :to="title.path">{{ title.label }}</router-link>
+          </ul>
+        </li>
+        <li class="col-2">
+          <ul v-for="(title, index) in policy" :key="index">
+            <li>{{ title.label }}</li>
+          </ul>
+        </li>
 
-      <li class="col-2"></li>
+        <li class="col-2"></li>
 
-      <li
-        style="display: flex; justify-content: space-between"
-        class="col-3 cols-footer"
-      >
-        Follow us:
-        <ul v-for="(title, index) in social" :key="index">
-          <li>
-            <img style="margin-bottom: 1.8rem" :src="title.icon" alt="" />
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <p class="footer-p">© 2024 Automobiles du Médoc. All Rights Reserved</p>
+        <li
+          style="display: flex; justify-content: space-between"
+          class="col-3 cols-footer"
+        >
+          Follow us:
+          <ul v-for="(title, index) in social" :key="index">
+            <li>
+              <img style="margin-bottom: 1.8rem" :src="title.icon" alt="" />
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p class="footer-p">© 2024 Automobiles du Médoc. All Rights Reserved</p>
+    </div>
+
+    <div class="bg-footer-mobile">
+      <ul class="cols-footer footer-font">
+       
+        <li
+          
+          class="cols-footer-mobile social"
+        >
+         
+          <ul v-for="(title, index) in social" :key="index">
+            <li>
+              <img style="margin-bottom: 1.8rem" :src="title.icon" alt="" />
+            </li>
+          </ul>
+        </li>
+
+
+        <li class="cols-footer-mobile information">
+          <ul v-for="(title, index) in pages" :key="index">
+            <router-link :to="title.path">{{ title.label }}</router-link>
+          </ul>
+        </li>
+        <li class="cols-footer-mobile information">
+          <ul v-for="(title, index) in policy" :key="index">
+            <li>{{ title.label }}</li>
+          </ul>
+        </li>
+         <li class="cols-footer-mobile">
+          <ul v-for="(title, index) in institutionalInformation" :key="index">
+            <li><img  :src="title.logo" alt="" /></li>
+            <li>
+              {{ title.description }}
+            </li>
+          </ul>
+        </li>
+
+       
+
+        
+      </ul>
+      <p class="footer-p">© 2024 Automobiles du Médoc. All Rights Reserved</p>
+    </div>
   </div>
 </template>
 

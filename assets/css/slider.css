@@ -74,11 +74,24 @@
     height: 100%;
     width: 100%;
 }
+.singleProject-slider.bg-slider {
+background-color: var( --pearl-white);
+padding-bottom: var(--vertical-space-larg);
+padding-top: var(--vertical-space-larg);
+}
+
+.singleProject-slider >.text-big-title, .singleProject-slider path{
+  color: var(--gta-bourdeaux);
+  fill: var(--gta-bourdeaux);
+
+}
+
+
 
 @media only screen and (max-width: 600px) {
   .text-big-title{
     font-size: var(--font-size-text-two);
-    margin:var( --vertical-space-small) 0;
+    padding:var( --vertical-space-small) 0;
   }
   .square {
     max-width: var(--col10);

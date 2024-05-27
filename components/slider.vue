@@ -90,10 +90,21 @@ const handleClickGoBack = () => {
     </div>
     <div class="buttons-slider">
       <button class="btn-slider" @click="handleClickGoBack()">
-        <img src="../assets/img/svg/arrowRight.svg" alt="" />
+        <!-- <img src="../assets/img/svg/arrowRight.svg" alt="" /> -->
+         <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g id="Group 1775">
+          <path id="Vector 7 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M31.7695 19.3406L16.4645 4.03553L20 0.5L38.8406 19.3406L19.7106 38.4705L16.1751 34.9349L31.7695 19.3406Z" fill="#F3F90A"/>
+          </g>
+        </svg>
       </button>
       <button class="btn-slider" @click="handleClickGoAhead()">
-        <img src="../assets/img/svg/arrowRight.svg" alt="" />
+        <!-- <img src="../assets/img/svg/arrowRight.svg" alt="" /> -->
+        <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g id="Group 1775">
+          <path id="Vector 7 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M31.7695 19.3406L16.4645 4.03553L20 0.5L38.8406 19.3406L19.7106 38.4705L16.1751 34.9349L31.7695 19.3406Z" fill="#F3F90A"/>
+          </g>
+        </svg>
+
       </button>
     </div>
   </div>

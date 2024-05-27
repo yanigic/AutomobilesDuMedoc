@@ -12,7 +12,7 @@
   color: var(--burnout-black);
   text-transform: none;
 }
-.bg-nav {
+.bg-nav-desktop {
   background-color: var(--beam-yellow);
   padding: 1rem 2rem;
   position: sticky;
@@ -26,4 +26,61 @@ v-list-item {
 .svg-logo > g > path,
 .svg-icon > g > path {
   fill: var(--burnout-black);
+}
+
+.hambugerMenu svg{
+    width: 1.5rem;
+}
+
+.bg-nav-mobile{
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .bg-nav-mobile{
+  color: var(--burnout-black);
+  background-color: var(--beam-yellow);
+  padding: 3rem 2rem;
+  align-items: center;
+  display: block;
+}
+.bg-nav-desktop{
+  display: none;
+}
+#myLinks{
+  position: relative;
+  top: var(--vertical-space-medium);
+}
+#myLinks v-list{ 
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: space-evenly;
+
+}
+#myLinks svg{
+  display: inline; 
+   
+}
+.topnav{
+  text-align: center;
+}
+
+.topnav a.hambugerMenu {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: var(--vertical-space-medium);
+}
+
+.svg-logo {
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: var(--vertical-space-small);
+}
+.navContainer{display: inline;}
+v-list-item{
+  font-size: var(--font-size-title-mobile);
+ }
 }

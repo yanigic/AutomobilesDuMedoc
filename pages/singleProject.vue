@@ -103,6 +103,6 @@ const singleImg = [{ img: imgTwoColumsOne }, { img: imgTwoColumsOne }];
 
     
 
-    <Slider></Slider>
+    <Slider class="singleProject-slider"></Slider>
   </div>
 </template>

@@ -149,7 +149,7 @@
   letter-spacing: -0.0125rem;
 }
 .contactDetails > div {
-  margin-top: 1rem;
+  margin-top: var(--vertical-space-xsmall);
 }
 
 .box-permission {
@@ -190,6 +190,12 @@
   background-color: rgb(12, 0, 149); /* Verde */
   border: 2px solid rgb(12, 0, 149) !important;
 }
+.select-service-btn-box{
+  display: none;
+ }
+ .service-btn-box{
+  display: inline-flex;
+}
 @media only screen and (max-width: 735px) {
   .mobile-line-break {
     width: 100%;
@@ -226,4 +232,27 @@
     margin-top: var(--vertical-space-medium) ;
   }
  
+ .contact-details-info:nth-of-type(2){
+      margin-top: 2rem;
+ }
+  .select-service-btn-box{
+    display: block;
+    width: var(--col12);
+    border: 2px solid var(--burnout-black);
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: var(--Superclarendon);
+    font-size: var(--font-size-text-three);
+    text-transform: none;
+    background-color: var(--beam-yellow);
+    margin-bottom: 1.5rem;
 }
+
+.service-btn-box{
+  display: none;
+}
+
+
+}
+
+

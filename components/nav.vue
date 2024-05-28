@@ -16,6 +16,7 @@ export default {
   methods: {
     navigateToPage(href) {
       // Reindirizza alla pagina corrispondente al link cliccato
+      
       window.location.href = href;
     },
 
@@ -82,7 +83,7 @@ export default {
                     @click="navigateToPage(item.href)"
                   >
                     <v-list-item-content>
-                      <v-list-item-title>{{ item.title }}</v-list-item-title>
+                      <v-list-item-title >{{ item.title }}</v-list-item-title>
                     </v-list-item-content>
                   </v-list-item>
                 </v-list>
@@ -156,14 +157,14 @@ export default {
     
               <v-navigation-drawer id="myLinks" v-model="drawer" app>
                 <v-list dense>
-                  <v-list-item
+                  <v-list-item 
                     link
                     v-for="item in pages"
                     :key="item.title"
                     @click="navigateToPage(item.href)"
                   >
                     <v-list-item-content>
-                      <v-list-item-title>{{ item.title }}</v-list-item-title>
+                      <v-list-item-title >{{ item.title }}</v-list-item-title>
                     </v-list-item-content>
                   </v-list-item>
                   <v-app-bar app>

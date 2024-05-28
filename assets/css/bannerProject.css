@@ -31,8 +31,8 @@
 } */
 .bg-banner {
   background-color: var(--beam-yellow);
-      display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .img-container {
   height: 80vh;
@@ -53,21 +53,24 @@
 
 @media only screen and (max-width: 635px) {
   .title-bannerProject{
-  font-size: var(--font-size-title-mobile);
+    font-size: var(--font-size-title-mobile);
+    line-height: 1.875rem;
+
   }
   .title-banner{
-        padding: 0;
+    padding: 0;
+    width: var(--col10);
+    
   }
   .svg-banner {
-  
     margin-bottom: 0.6rem;
     margin-left: 0;
-      vertical-align: middle;
-  height: 0.91544rem;
+    vertical-align: middle;
+    height: 0.91544rem;
   }
   .bg-banner {
     display: flex;
-  flex-direction: column-reverse;
+    flex-direction: column-reverse;
 }
 .btn-bannerProject-cta{
   text-align: center; 
@@ -78,6 +81,7 @@
   border: 0.15rem solid var(--burnout-black);
   padding: 0.3rem 1rem;
   display: unset;
+  margin-top: var(--vertical-space-small);
 }
 
 

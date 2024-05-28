@@ -32,9 +32,9 @@ const titlesDescriptions = [
     <HeroAbout></HeroAbout>
     <Paragraph></Paragraph>
     <TitleParagraph></TitleParagraph>
-    <span v-for="(item, index) in titlesDescriptions" :key="index">
+    <span class="title-description-about" v-for="(item, index) in titlesDescriptions" :key="index">
       <TitleDescription
-        class="container-layout"
+        class="container-layout "
         :title="item.title"
         :description="item.description"
       ></TitleDescription>

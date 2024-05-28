@@ -39,9 +39,14 @@
   background-color: var(--beam-yellow);
 }
 
+.title-description-about:nth-of-type(odd)   .text-container, .title-description-about:nth-of-type(odd)  .container-layout {
+
+  background-color:var(--burnout-black);
+  color: var(--beam-yellow);
+} 
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width:  768px) {
   .text-container{
     flex-direction: column;
     text-align: start;

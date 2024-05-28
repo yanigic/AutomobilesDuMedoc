@@ -1,5 +1,5 @@
 <template>
-  <div style="height: 80vh">
+  <div>
     <div class="container-SliderText">
       <div v-for="(image, index) in images" :key="index" class="mySlides">
         <div class="numbertext">{{ index + 1 }} / {{ images.length }}</div>

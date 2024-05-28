@@ -13,22 +13,28 @@ const projects = [
   { img: img1 },
   { img: img1 },
   { img: img1 },
+
   { img: img1 },
   { img: img1 },
   { img: img1 },
   { img: img1 },
   { img: img1 },
+
   { img: img1 },
   { img: img1 },
   { img: img1 },
   { img: img1 },
+
   { img: img1 },
   { img: img1 },
   { img: img1 },
   { img: img1 },
+
   { img: img1 },
   { img: img1 },
   { img: img1 },
+  { img: img1 },
+
   { img: img1 },
   { img: img1 },
   { img: img1 },
@@ -102,51 +108,11 @@ const calculateNumImagesPerSlide = () => {
               alt=""
             />
           </div>
-          <!-- <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div> -->
         </div>
-        <!-- <div class="square-SliderGrid">
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-        </div>
-        <div class="square-SliderGrid">
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-          <div><img :src="imgtest" alt="" /></div>
-        </div> -->
       </div>
     </div>
 
     <ul class="bullets-SliderGrid">
-      <!-- Utilizzo degli li con un'icona come bullet -->
       <li
         class="bullet-SliderGrid"
         :class="{ activeB: index === activeIndex }"

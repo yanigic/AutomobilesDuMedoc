@@ -27,6 +27,12 @@ function toggleActivePrivacy() {
       <div class="contactForm">
         <form action="action_page.php">
           <div class="label-title">What can we do for you?*</div>
+          <select  class="select-service-btn-box" name="cars" id="cars">
+            
+             <option v-for="option in options" :value="option.label">{{ option.label }}</option>
+          </select>
+          
+
           <div class="service-btn-box">
             <button
               v-for="option in options"

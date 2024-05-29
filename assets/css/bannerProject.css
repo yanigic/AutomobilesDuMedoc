@@ -14,6 +14,7 @@
   display: flex;
   
   height: 17.75rem;
+  width: var(--col10);
   /* padding: 9rem 23rem 4rem 23rem; */
   flex-direction: column;
   justify-content: center;
@@ -50,6 +51,17 @@
 .btn-bannerProject-cta{
   display: none;
 }
+.BannerProject-container{
+  overflow: auto;
+  display: flow-root;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+.bg-banner{
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
 
 @media only screen and (max-width: 635px) {
   .title-bannerProject{
@@ -71,6 +83,7 @@
   .bg-banner {
     display: flex;
     flex-direction: column-reverse;
+    
 }
 .btn-bannerProject-cta{
   text-align: center; 

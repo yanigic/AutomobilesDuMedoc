@@ -1,5 +1,4 @@
 <script setup>
-import imgHeroPro from "../assets/img/imgSinglePro.jpeg";
 import imgTwoColumsOne from "../assets/img/imgone.jpg";
 import imgTwoColumsTwo from "../assets/img/imagetwo.jpg";
 import imgTwoColumsThree from "../assets/img/imagethree.jpg";
@@ -12,14 +11,9 @@ import SingleImg from "../components/singleImg.vue";
 import BannerContact from "../components/bannerContact.vue";
 import Grid from "../components/grid.vue";
 import SliderGrid from "../components/sliderGrid.vue";
-const heroSingleProjectInfo = [
-  {
-    title: "Cherry Countach",
-    img: imgHeroPro,
-  },
-];
 
-const SingleProjectInfoText = [
+
+/* const SingleProjectInfoText = [
   {
     title: "a bespoke approach to restore and enhance this countach",
     descriptionOne:
@@ -43,7 +37,7 @@ const SingleProjectInfoText = [
     descriptionTestone:
       "The wheels, custom-designed for this model, have been engineered to perfectly integrate with the aerodynamic and performance needs. Every component has been meticulously selected to optimize both functionality and aesthetics, contributing significantly to the improvement of the driving dynamics.",
   },
-];
+]; */
 
 const ctaContent = [
   {
@@ -57,23 +51,11 @@ const singleImg = [{ img: imgTwoColumsOne }, { img: imgTwoColumsOne }];
 
 <template>
   <div class="">
-    <span v-for="(item, index) in heroSingleProjectInfo" :key="index">
-      <HeroSingleProject
-        :title="item.title"
-        :img="item.img"
-      ></HeroSingleProject>
-    </span>
-    <span v-for="(item, index) in SingleProjectInfoText" :key="index">
-      <SingleProjectText
-        :title="item.title"
-        :descriptionOne="item.descriptionOne"
-        :descriptionTwo="item.descriptionTwo"
-        :descriptionThree="item.descriptionThree"
-        :year="item.year"
-        :client="item.client"
-        :model="item.model"
-        :typeOfCustomization="item.typeOfCustomization"
-      ></SingleProjectText>
+  
+      <HeroSingleProject></HeroSingleProject>
+ 
+    <span>
+      <SingleProjectText></SingleProjectText>
     </span>
     <span >
       <ImgTwoColumns> ></ImgTwoColumns>

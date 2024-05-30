@@ -5,11 +5,11 @@ import BannerProject from "../components/bannerProject.vue";
 import titleDescription from "../components/titleDescription.vue";
 import Nav from "../components/nav.vue";
 import BannerContact from "../components/bannerContact.vue";
-const story = await useAsyncStoryblok(
+/* const story = await useAsyncStoryblok(
   "home",
   { version: "draft" },
   { customParent: "https://app.storyblok.com" }
-);
+); */
 
 const titlesDescriptions = [
   {

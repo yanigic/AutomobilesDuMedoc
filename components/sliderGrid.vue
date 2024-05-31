@@ -8,7 +8,7 @@ import imgtest from "../assets/img/image3.jpg";
 
 import img1 from "../assets/img/img1.png";
 
-const projects = [
+const imgContainer = [
   { img: img1 },
   { img: img1 },
   { img: img1 },
@@ -46,7 +46,7 @@ const items = ref([]); // Array di elementi nello slider
 const activeIndex = ref(0); // Indice dello slide attivo
 
 let numImagesPerSlide = 12; // Numero di immagini per slide
-const numSlides = Math.ceil(projects.length / numImagesPerSlide); // Calcola il numero di slide necessarie
+const numSlides = Math.ceil(imgContainer.length / numImagesPerSlide); // Calcola il numero di slide necessarie
 
 onMounted(() => {
   calculateNumImagesPerSlide(); // Inizializza il numero di immagini per slide
@@ -104,7 +104,9 @@ const calculateNumImagesPerSlide = () => {
         <div class="square-SliderGrid" v-for="slide in numSlides" :key="slide">
           <div v-for="index in numImagesPerSlide" :key="index">
             <img
-              :src="projects[(slide - 1) * numImagesPerSlide + index - 1]?.img"
+              :src="
+                imgContainer[(slide - 1) * numImagesPerSlide + index - 1]?.img
+              "
               alt=""
             />
           </div>

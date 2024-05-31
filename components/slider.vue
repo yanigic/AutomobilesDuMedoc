@@ -7,6 +7,7 @@ const carousel = ref(null); // Assicurati di usare ref se `carousel` è un eleme
 const isDragging = ref(false);
 const startX = ref(0);
 const scrollLeft = ref(0);
+const projects = ref([]);
 
 
 function handleMouseDown(event) {
@@ -28,13 +29,33 @@ function handleMouseUp() {
 }
 
 
-onMounted(() => {
-  carousel.value = document.getElementById("carousel"); // Assumi che `#carousel` sia l'ID del div da scrollare
+onMounted(async() => {
+  await fetchData();
 
+  carousel.value = document.getElementById("carousel"); // Assumi che `#carousel` sia l'ID del div da scrollare
   carousel.value.addEventListener('mousedown', handleMouseDown);
   document.addEventListener('mousemove', handleMouseMove);
   document.addEventListener('mouseup', handleMouseUp);
 });
+
+const fetchData = async () => {
+  try {
+    const response = await fetch("https://api.storyblok.com/v2/cdn/stories/singleproject?version=draft&token=CgdxbCXc3SKuMrQjSOH0NAtt");
+    const { story } = await response.json();
+    const content = story.content;
+
+   projects.value = content.body.filter(project => project.imgSlider).map((project) => {
+      console.log(" imgSlider Mapping project:", project.imgSlider);
+      return {
+       imgSlider: project.imgSlider.map(img => img.filename),
+    
+      };
+    });
+    
+  } catch (error) {
+    console.error("Errore nel recupero dei dati da Storyblok:", error);
+  }
+};
 
 onUnmounted(() => {
   carousel.value.removeEventListener('mousedown', handleMouseDown);
@@ -76,16 +97,17 @@ const handleClickGoBack = () => {
   <div class="bg-slider">
     <h3 class="text-big-title">Explore More</h3>
     <div id="wrapper">
-      <div id="carousel">
-        <div class="square"><img src="../assets/img/grid/image73.jpg" alt=""></div>
-        <div class="square"><img src="../assets/img/grid/image142.jpg" alt=""></div>
+      <div id="carousel" v-for="(project, index) in projects" :key="index">
+        <div class="square" v-for="(img, idx) in project.imgSlider" :key="idx"  >
+          <img :src="img" alt=""></div>
+        <!-- <div class="square"><img src="../assets/img/grid/image142.jpg" alt=""></div>
         <div class="square"><img src="../assets/img/grid/image140.jpg" alt=""></div>
         <div class="square"><img src="../assets/img/grid/image135.jpg" alt=""></div>
         <div class="square"><img src="../assets/img/grid/image171.jpg" alt=""></div>
         <div class="square"><img src="../assets/img/grid/image142.jpg" alt=""></div>
         <div class="square"><img src="../assets/img/grid/image73.jpg" alt=""></div>
         <div class="square"><img src="../assets/img/grid/image142.jpg" alt=""></div>
-       
+        -->
       </div>
     </div>
     <div class="buttons-slider">

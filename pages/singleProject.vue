@@ -46,8 +46,8 @@ const ctaContent = [
   },
 ];
 
-const singleImg = [{ img: imgTwoColumsOne }, { img: imgTwoColumsOne }];
-</script>
+/* const singleImg = [{ img: imgTwoColumsOne }, { img: imgTwoColumsOne }];
+ */</script>
 
 <template>
   <div class="">
@@ -66,11 +66,12 @@ const singleImg = [{ img: imgTwoColumsOne }, { img: imgTwoColumsOne }];
         :descriptionTwo="item.descriptionOne"
       ></SingleProjectText>
     </span>
-    <SingleImg
+   <!--  <SingleImg
       v-for="(item, index) in singleImg"
       :key="index"
       :img="item.img"
-    ></SingleImg>
+    ></SingleImg> -->
+    <SingleImg></SingleImg>
      <SliderGrid></SliderGrid>
 
     <BannerContact

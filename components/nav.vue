@@ -16,35 +16,52 @@ export default {
   methods: {
     navigateToPage(href) {
       // Reindirizza alla pagina corrispondente al link cliccato
-      
+
       window.location.href = href;
     },
 
- closedOpen() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-    
+    closedOpen() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    },
+  },
+  setup() {
+    const isScrolled = ref(false);
+
+    const handleScroll = () => {
+      isScrolled.value = window.scrollY > 0;
+    };
+
+    onMounted(() => {
+      window.addEventListener("scroll", handleScroll);
+    });
+
+    onUnmounted(() => {
+      window.removeEventListener("scroll", handleScroll);
+    });
+
+    return {
+      isScrolled,
+    };
   },
 };
-
-
 </script>
 
 <template>
   <div>
-
-
-    <div class="bg-nav-desktop">
+    <div
+      class="bg-nav-desktop"
+      :class="['navbar', isScrolled ? 'navbar-scrolled' : 'navbar-initial']"
+    >
       <div>
         <v-app class="navContainer">
           <v-app-bar app>
             <v-app-bar-nav-icon
-              @click.stop="drawer = !drawer" 
+              @click.stop="drawer = !drawer"
             ></v-app-bar-nav-icon>
             <v-toolbar-logo @click="navigateToPage('/')">
               <svg
@@ -71,26 +88,20 @@ export default {
             </v-toolbar-logo>
           </v-app-bar>
 
-      
-
-    
-              <v-navigation-drawer v-model="drawer" app>
-                <v-list dense>
-                  <v-list-item
-                    link
-                    v-for="item in pages"
-                    :key="item.title"
-                    @click="navigateToPage(item.href)"
-                  >
-                    <v-list-item-content>
-                      <v-list-item-title >{{ item.title }}</v-list-item-title>
-                    </v-list-item-content>
-                  </v-list-item>
-                </v-list>
-              </v-navigation-drawer>
-
-              
-        
+          <v-navigation-drawer v-model="drawer" app>
+            <v-list dense>
+              <v-list-item
+                link
+                v-for="item in pages"
+                :key="item.title"
+                @click="navigateToPage(item.href)"
+              >
+                <v-list-item-content>
+                  <v-list-item-title>{{ item.title }}</v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list>
+          </v-navigation-drawer>
 
           <v-app-bar app>
             <v-app-bar-nav-icon
@@ -115,7 +126,6 @@ export default {
               </svg>
             </v-toolbar-logo>
           </v-app-bar>
-          
         </v-app>
       </div>
     </div>
@@ -125,7 +135,7 @@ export default {
         <v-app class="navContainer">
           <v-app-bar app>
             <v-app-bar-nav-icon
-              @click.stop="drawer = !drawer" 
+              @click.stop="drawer = !drawer"
             ></v-app-bar-nav-icon>
             <v-toolbar-logo @click="navigateToPage('/')">
               <svg
@@ -153,59 +163,71 @@ export default {
           </v-app-bar>
 
           <span class="topnav">
+            <v-navigation-drawer id="myLinks" v-model="drawer" app>
+              <v-list dense>
+                <v-list-item
+                  link
+                  v-for="item in pages"
+                  :key="item.title"
+                  @click="navigateToPage(item.href)"
+                >
+                  <v-list-item-content>
+                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+                <v-app-bar app>
+                  <v-app-bar-nav-icon
+                    @click.stop="drawer = !drawer"
+                  ></v-app-bar-nav-icon>
+                  <v-toolbar-logo>
+                    <svg
+                      class="svg-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                    >
+                      <g id="Instagram Logo">
+                        <path
+                          id="Vector"
+                          d="M7.25 0H17.75C21.75 0 25 3.25 25 7.25V17.75C25 19.6728 24.2362 21.5169 22.8765 22.8765C21.5169 24.2362 19.6728 25 17.75 25H7.25C3.25 25 0 21.75 0 17.75V7.25C0 5.32718 0.763837 3.48311 2.12348 2.12348C3.48311 0.763837 5.32718 0 7.25 0ZM7 2.5C5.80653 2.5 4.66193 2.97411 3.81802 3.81802C2.97411 4.66193 2.5 5.80653 2.5 7V18C2.5 20.4875 4.5125 22.5 7 22.5H18C19.1935 22.5 20.3381 22.0259 21.182 21.182C22.0259 20.3381 22.5 19.1935 22.5 18V7C22.5 4.5125 20.4875 2.5 18 2.5H7ZM19.0625 4.375C19.4769 4.375 19.8743 4.53962 20.1674 4.83265C20.4604 5.12567 20.625 5.5231 20.625 5.9375C20.625 6.3519 20.4604 6.74933 20.1674 7.04235C19.8743 7.33538 19.4769 7.5 19.0625 7.5C18.6481 7.5 18.2507 7.33538 17.9576 7.04235C17.6646 6.74933 17.5 6.3519 17.5 5.9375C17.5 5.5231 17.6646 5.12567 17.9576 4.83265C18.2507 4.53962 18.6481 4.375 19.0625 4.375ZM12.5 6.25C14.1576 6.25 15.7473 6.90848 16.9194 8.08058C18.0915 9.25269 18.75 10.8424 18.75 12.5C18.75 14.1576 18.0915 15.7473 16.9194 16.9194C15.7473 18.0915 14.1576 18.75 12.5 18.75C10.8424 18.75 9.25269 18.0915 8.08058 16.9194C6.90848 15.7473 6.25 14.1576 6.25 12.5C6.25 10.8424 6.90848 9.25269 8.08058 8.08058C9.25269 6.90848 10.8424 6.25 12.5 6.25ZM12.5 8.75C11.5054 8.75 10.5516 9.14509 9.84835 9.84835C9.14509 10.5516 8.75 11.5054 8.75 12.5C8.75 13.4946 9.14509 14.4484 9.84835 15.1517C10.5516 15.8549 11.5054 16.25 12.5 16.25C13.4946 16.25 14.4484 15.8549 15.1517 15.1517C15.8549 14.4484 16.25 13.4946 16.25 12.5C16.25 11.5054 15.8549 10.5516 15.1517 9.84835C14.4484 9.14509 13.4946 8.75 12.5 8.75Z"
+                          fill="#6B2C4C"
+                        />
+                      </g>
+                    </svg>
+                  </v-toolbar-logo>
+                </v-app-bar>
+              </v-list>
+            </v-navigation-drawer>
 
-    
-              <v-navigation-drawer id="myLinks" v-model="drawer" app>
-                <v-list dense>
-                  <v-list-item 
-                    link
-                    v-for="item in pages"
-                    :key="item.title"
-                    @click="navigateToPage(item.href)"
-                  >
-                    <v-list-item-content>
-                      <v-list-item-title >{{ item.title }}</v-list-item-title>
-                    </v-list-item-content>
-                  </v-list-item>
-                  <v-app-bar app>
-            <v-app-bar-nav-icon
-              @click.stop="drawer = !drawer"
-            ></v-app-bar-nav-icon>
-            <v-toolbar-logo>
+            <a class="hambugerMenu" @click="closedOpen()">
               <svg
-                class="svg-icon"
                 xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="25"
-                viewBox="0 0 25 25"
+                width="32"
+                height="31"
+                viewBox="0 0 32 31"
                 fill="none"
               >
-                <g id="Instagram Logo">
-                  <path
-                    id="Vector"
-                    d="M7.25 0H17.75C21.75 0 25 3.25 25 7.25V17.75C25 19.6728 24.2362 21.5169 22.8765 22.8765C21.5169 24.2362 19.6728 25 17.75 25H7.25C3.25 25 0 21.75 0 17.75V7.25C0 5.32718 0.763837 3.48311 2.12348 2.12348C3.48311 0.763837 5.32718 0 7.25 0ZM7 2.5C5.80653 2.5 4.66193 2.97411 3.81802 3.81802C2.97411 4.66193 2.5 5.80653 2.5 7V18C2.5 20.4875 4.5125 22.5 7 22.5H18C19.1935 22.5 20.3381 22.0259 21.182 21.182C22.0259 20.3381 22.5 19.1935 22.5 18V7C22.5 4.5125 20.4875 2.5 18 2.5H7ZM19.0625 4.375C19.4769 4.375 19.8743 4.53962 20.1674 4.83265C20.4604 5.12567 20.625 5.5231 20.625 5.9375C20.625 6.3519 20.4604 6.74933 20.1674 7.04235C19.8743 7.33538 19.4769 7.5 19.0625 7.5C18.6481 7.5 18.2507 7.33538 17.9576 7.04235C17.6646 6.74933 17.5 6.3519 17.5 5.9375C17.5 5.5231 17.6646 5.12567 17.9576 4.83265C18.2507 4.53962 18.6481 4.375 19.0625 4.375ZM12.5 6.25C14.1576 6.25 15.7473 6.90848 16.9194 8.08058C18.0915 9.25269 18.75 10.8424 18.75 12.5C18.75 14.1576 18.0915 15.7473 16.9194 16.9194C15.7473 18.0915 14.1576 18.75 12.5 18.75C10.8424 18.75 9.25269 18.0915 8.08058 16.9194C6.90848 15.7473 6.25 14.1576 6.25 12.5C6.25 10.8424 6.90848 9.25269 8.08058 8.08058C9.25269 6.90848 10.8424 6.25 12.5 6.25ZM12.5 8.75C11.5054 8.75 10.5516 9.14509 9.84835 9.84835C9.14509 10.5516 8.75 11.5054 8.75 12.5C8.75 13.4946 9.14509 14.4484 9.84835 15.1517C10.5516 15.8549 11.5054 16.25 12.5 16.25C13.4946 16.25 14.4484 15.8549 15.1517 15.1517C15.8549 14.4484 16.25 13.4946 16.25 12.5C16.25 11.5054 15.8549 10.5516 15.1517 9.84835C14.4484 9.14509 13.4946 8.75 12.5 8.75Z"
-                    fill="#6B2C4C"
-                  />
-                </g>
+                <rect
+                  x="1.4541"
+                  y="8.72656"
+                  width="29.0909"
+                  height="2.90909"
+                  fill="#02020B"
+                />
+                <rect
+                  x="1.4541"
+                  y="18.9082"
+                  width="29.0909"
+                  height="2.90909"
+                  fill="#02020B"
+                />
               </svg>
-            </v-toolbar-logo>
-          </v-app-bar>
-                </v-list>
-              </v-navigation-drawer>
-              
-
-              <a class="hambugerMenu" @click="closedOpen()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="31" viewBox="0 0 32 31" fill="none">
-                  <rect x="1.4541" y="8.72656" width="29.0909" height="2.90909" fill="#02020B"/>
-                  <rect x="1.4541" y="18.9082" width="29.0909" height="2.90909" fill="#02020B"/>
-                </svg>
-              </a>
-        
-
-          
-            </span>
+            </a>
+          </span>
         </v-app>
       </div>
     </div>
-    </div>
+  </div>
 </template>

@@ -24,9 +24,9 @@
 .text-container-paragraph {
   display: flex;
   flex-direction: column;
-  padding: var(--eight) var(--two);
+  padding: var(--eight) 0;
 
-  width: var(--col6);
+  width: var(--col5);
   text-align: center;
 }
 
@@ -34,32 +34,30 @@
   display: flex;
   width: var(--col10);
   margin: 0 auto;
+  justify-content: space-between;
 }
 .bg-paragraph {
   margin-bottom: var(--sixteen);
   background-color: var(--beam-yellow);
 }
 @media only screen and (max-width: 600px) {
-
   .container-layout-paragraph {
     flex-wrap: wrap;
     width: var(--col12);
   }
-  .text-container-paragraph{
+  .text-container-paragraph {
     width: var(--col12);
     align-items: start;
   }
-  .descriptionParagraph{
+  .descriptionParagraph {
     text-align: start;
   }
-  .titleParagraph{
+  .titleParagraph {
     margin-bottom: var(--vertical-space-xsmall);
-     font-size: var(--font-size-title-mobile);
-     text-align: start;
+    font-size: var(--font-size-title-mobile);
+    text-align: start;
   }
-  .text-container-paragraph{
+  .text-container-paragraph {
     padding: var(--vertical-space-larg) var(--two);
-
-  
   }
 }

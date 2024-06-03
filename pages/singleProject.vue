@@ -11,7 +11,7 @@ import SingleImg from "../components/singleImg.vue";
 import BannerContact from "../components/bannerContact.vue";
 import Grid from "../components/grid.vue";
 import SliderGrid from "../components/sliderGrid.vue";
-
+import Test from "../components/test.vue";
 
 /* const SingleProjectInfoText = [
   {
@@ -39,52 +39,51 @@ import SliderGrid from "../components/sliderGrid.vue";
   },
 ]; */
 
-const ctaContent = [
+/* const ctaContent = [
   {
     paragraph: "Want to customize yours?",
     cta: "CONTACT US",
   },
-];
+]; */
 
 /* const singleImg = [{ img: imgTwoColumsOne }, { img: imgTwoColumsOne }];
- */</script>
+ */
+</script>
 
 <template>
   <div class="">
-  
-      <HeroSingleProject></HeroSingleProject>
- 
+    <Test></Test>
+    <HeroSingleProject></HeroSingleProject>
+
     <span>
       <SingleProjectText></SingleProjectText>
     </span>
-    <span >
+    <span>
       <ImgTwoColumns> ></ImgTwoColumns>
     </span>
-    <span v-for="(item, index) in SingleProjectInfoText" :key="index">
+    <!--  <span v-for="(item, index) in SingleProjectInfoText" :key="index">
       <SingleProjectText
         :descriptionThree="item.descriptionTest"
         :descriptionTwo="item.descriptionOne"
       ></SingleProjectText>
-    </span>
-   <!--  <SingleImg
+    </span> -->
+    <!--  <SingleImg
       v-for="(item, index) in singleImg"
       :key="index"
       :img="item.img"
     ></SingleImg> -->
     <SingleImg></SingleImg>
-     <SliderGrid></SliderGrid>
+    <SliderGrid></SliderGrid>
 
-    <BannerContact
+    <!--  <BannerContact
       class="container-banner-single-project"
       v-for="(text, index) in ctaContent"
       :key="index"
       :paragraph="text.paragraph"
       :cta="text.cta"
-    ></BannerContact>
-   <!--  <Grid></Grid> -->
-  
-
-    
+    ></BannerContact> -->
+    <BannerContact class="container-banner-single-project"></BannerContact>
+    <!--  <Grid></Grid> -->
 
     <Slider class="singleProject-slider"></Slider>
   </div>

@@ -12,6 +12,7 @@ import BannerContact from "../components/bannerContact.vue";
 import Grid from "../components/grid.vue";
 import SliderGrid from "../components/sliderGrid.vue";
 import Test from "../components/test.vue";
+import SingleProjectParagraph from "../components/singleProjectParagraph.vue";
 
 /* const SingleProjectInfoText = [
   {
@@ -48,11 +49,34 @@ import Test from "../components/test.vue";
 
 /* const singleImg = [{ img: imgTwoColumsOne }, { img: imgTwoColumsOne }];
  */
+const isScrolled = ref(false);
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 0;
+  console.log("isScrolled:", isScrolled.value); // Aggiungi questo per verificare lo scroll
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <template>
-  <div class="">
-    <Test></Test>
+  <div class="backgroundLight">
+    <Nav
+      class="nav-position"
+      :class="[
+        'backgroundLight',
+        isScrolled
+          ? 'navbar-scrolled-beam-yellow'
+          : 'navbar-scrolled-burnout-black',
+      ]"
+    ></Nav>
+    <!-- <Test></Test> -->
     <HeroSingleProject></HeroSingleProject>
 
     <span>
@@ -72,6 +96,7 @@ import Test from "../components/test.vue";
       :key="index"
       :img="item.img"
     ></SingleImg> -->
+    <SingleProjectParagraph></SingleProjectParagraph>
     <SingleImg></SingleImg>
     <SliderGrid></SliderGrid>
 

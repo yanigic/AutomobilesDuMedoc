@@ -24,9 +24,9 @@ const fetchData = async () => {
     projects.value = content.body
       .filter((project) => project.paragraph && project.cta)
       .map((project) => {
-        console.log("banner Mapping project:", project);
+        /*  console.log("banner Mapping project:", project);
         console.log("banner Mapping project:", project.cta);
-        return {
+       */ return {
           paragraph: project.paragraph,
           cta: project.cta,
         };

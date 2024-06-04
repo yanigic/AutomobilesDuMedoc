@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from "vue";
 import Default from "../layouts/default.vue";
 
 import BannerProject from "../components/bannerProject.vue";
@@ -34,30 +35,50 @@ const titlesDescriptions = [
   },
 ];
 
-const ctaContent = [ 
+const ctaContent = [
   {
-    paragraph:  `Discover <br> all the possibilities for your car`,
+    paragraph: `Discover <br> all the possibilities for your car`,
     cta: "CONTACT US",
   },
 ];
+
+const isScrolled = ref(false);
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 0;
+  console.log("isScrolled:", isScrolled.value); // Aggiungi questo per verificare lo scroll
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <template>
   <div class="container-layouts">
+    <Nav
+      class="nav-position"
+      :class="[
+        'navbar',
+        isScrolled ? 'navbar-scrolled-beam-yellow' : 'navbar-initial',
+      ]"
+    ></Nav>
     <!--  <Default></Default> -->
 
-   <!--  <BannerProject></BannerProject>
+    <!--  <BannerProject></BannerProject>
     <BannerProject></BannerProject> -->
     <span class="BannerProject-container">
-
       <BannerProject></BannerProject>
     </span>
-    <span v-for="(item, index) in titlesDescriptions" :key="index"> 
+    <span v-for="(item, index) in titlesDescriptions" :key="index">
       <titleDescription
         :title="item.title"
         :description="item.description"
       ></titleDescription>
-      
     </span>
     <BannerContact
       class="container-banner-home"

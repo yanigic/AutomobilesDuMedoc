@@ -12,20 +12,10 @@
   color: var(--burnout-black);
   text-transform: none;
 }
-.bg-nav-desktop {
-  background-color: var(--beam-yellow);
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 2;
-}
+
 v-list-item {
   margin: 0 2rem;
   cursor: pointer;
-}
-.svg-logo > g > path,
-.svg-icon > g > path {
-  fill: var(--burnout-black);
 }
 
 .hambugerMenu svg {
@@ -40,13 +30,94 @@ v-list-item {
   top: 0;
   z-index: 1;
 }
+.bg-nav-desktop {
+  /* background-color: var(--beam-yellow); */
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* .projects > .bg-nav-desktop {
+  color: var(--beam-yellow);
+  background-color: var(--burnout-black);
+} */
+.navbar-initial,
+.svg-logo > g > path,
+.svg-icon > g > path {
+  fill: var(--burnout-black);
+  background-color: var(--beam-yellow);
+}
 
 /* .navbar-initial {
   box-shadow: none;
 }
  */
-.navbar-scrolled {
-  background-color: #ffffff;
+/* 
+.bg-nav-desktop {
+  background-color: #ffffff !important;
+}
+.bg-nav-desktop > .navbar-scrolled {
+  background-color: #333;
+}
+
+.navbar-scrolled-beam-yellow {
+  color: var(--burnout-black);
+  background-color: var(--beam-yellow);
+}
+ */
+.backgroundLight .navbar-scrolled-beam-yellow .bg-nav-desktop,
+.backgroundLight .navbar-scrolled-beam-yellow .navContainer,
+.backgroundLight .navbar-scrolled-beam-yellow .svg-logo > g > path,
+.backgroundLight .svg-icon > g > path {
+  color: var(--burnout-black);
+  background-color: var(--burnout-black);
+  fill: var(--burnout-black);
+}
+
+/* .navbar-scrolled-beam-yellow .navContainer,
+.navbar-scrolled-beam-yellow .svg-logo > g > path,
+.svg-icon > g > path {
+  color: var(--burnout-black);
+  fill: var(--burnout-black);
+} */
+
+.backgroundLight .svg-logo > g > path,
+.backgroundLight .svg-icon > g > path {
+  background-color: var(--beam-yellow);
+  fill: var(--burnout-black);
+  color: var(--burnout-black);
+}
+.backgroundLight {
+  background-color: #efeff9;
+}
+.backgroundLight .navbar-scrolled-beam-yellow .svg-logo.adm #Vector {
+  display: none;
+}
+.backgroundLight .navbar-scrolled-beam-yellow .bg-nav-desktop,
+.backgroundLight .navbar-scrolled-beam-yellow .navContainer,
+.backgroundLight .navbar-scrolled-beam-yellow .svg-icon > g > path {
+  color: var(--burnout-black);
+  background-color: var(--beam-yellow);
+  fill: var(--burnout-black);
+}
+.navbar-scrolled-beam-yellow .svg-logo.adm #Vector_2 {
+  fill: var(--burnout-black);
+}
+.backgroundLight .svg-logo.adm {
+  height: 3.3125rem;
+}
+.backgroundLight .navbar-scrolled-beam-yellow .svg-logo.adm {
+  height: 1.3125rem;
+}
+
+.backgroundLight .bg-nav-desktop,
+.backgroundLight .navContainer,
+.backgroundLight .svg-icon > g > path,
+.backgroundLight .svg-logo > g > path {
+  color: var(--gta-bourdeaux);
+  background-color: var(--pearl-white);
+  fill: var(--gta-bourdeaux);
 }
 
 @media only screen and (max-width: 768px) {

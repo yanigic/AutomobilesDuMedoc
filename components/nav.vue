@@ -29,7 +29,7 @@ export default {
       }
     },
   },
-  setup() {
+  /* setup() {
     const isScrolled = ref(false);
 
     const handleScroll = () => {
@@ -47,16 +47,13 @@ export default {
     return {
       isScrolled,
     };
-  },
+  }, */
 };
 </script>
 
 <template>
   <div>
-    <div
-      class="bg-nav-desktop"
-      :class="['navbar', isScrolled ? 'navbar-scrolled' : 'navbar-initial']"
-    >
+    <div class="bg-nav-desktop">
       <div>
         <v-app class="navContainer">
           <v-app-bar app>
@@ -65,7 +62,7 @@ export default {
             ></v-app-bar-nav-icon>
             <v-toolbar-logo @click="navigateToPage('/')">
               <svg
-                class="svg-logo"
+                class="svg-logo adm"
                 xmlns="http://www.w3.org/2000/svg"
                 width="70"
                 height="53"

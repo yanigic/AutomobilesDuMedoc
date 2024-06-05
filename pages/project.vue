@@ -7,7 +7,8 @@ import Test from "../components/test.vue";
 <template>
   <div>
     <Nav class="nav-position"></Nav>
-    <SliderText></SliderText>
-    <ImgGrid></ImgGrid>
+    <Test></Test>
+    <!--  <SliderText></SliderText>
+    <ImgGrid></ImgGrid> -->
   </div>
 </template>

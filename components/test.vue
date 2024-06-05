@@ -1,65 +1,264 @@
-<script setup lang="ts">
-import { ref, onMounted } from "vue";
-import "../assets/css/heroSingleProject.css";
-import ArrowHeroDown from "../assets/img/svg/arrowDown.svg";
-
-const projects = ref([]);
-
-const fetchData = async () => {
-  try {
-    const response = await fetch(
-      `https://api.storyblok.com/v2/cdn/stories${
-        location.pathname
-      }?version=draft&cv=1717427707&token=${
-        import.meta.env.VITE_STORYBLOK_TOKEN
-      }`
-    );
-    const { story } = await response.json();
-    const content = story.content;
-    console.log("Dati recuperati da Storyblok:", content);
-
-    projects.value = content.body
-      .filter((project) => project.title && project.img)
-      .map((project) => {
-        console.log("Mapping project:", project);
-        return {
-          title: project.title,
-          img: project.img,
-        };
-      });
-  } catch (error) {
-    console.error("Errore nel recupero dei dati da Storyblok:", error);
-  }
-};
-
-onMounted(async () => {
-  console.log("onMounted - Fetching data");
-  await fetchData();
-  console.log("Data fetched", projects.value);
-});
-</script>
-
 <template>
   <div>
-    <div class="heroSingleProject-container">
-      <img
-        v-for="(project, index) in projects"
-        :key="index"
-        class="img-singleProject"
-        :src="project.img"
-      />
-      <h3
-        v-for="(project, index) in projects"
-        :key="index"
-        class="title-singleProject"
+    <!-- sezione che include le immagini grandi -->
+    <button class="prev-btn" @click="plusSlides(-1)">
+      <svg
+        width="60"
+        height="60"
+        viewBox="0 0 60 60"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        {{ project.title }}
-      </h3>
-      <img
-        class="svg-heroSingleProject"
-        src="../assets/img/svg/arrowDown.svg"
-        alt="Navigate Down"
-      />
+        <path
+          d="M8.96387 38.7866L29.8235 17.927L51.0367 39.1402"
+          stroke="#7C809B"
+          stroke-width="5"
+        />
+      </svg>
+    </button>
+
+    <div>
+      <div class="leftTop_side_container">
+        <div
+          class="single-image"
+          :class="{ active: index === currentActiveImage }"
+          v-for="(info, index) in projectsList"
+          :key="index"
+        >
+          <!-- foto prima e la 5 in poi -->
+          <img
+            v-show="index % 4 === 0"
+            :src="info.src"
+            :alt="'indice ' + (index + 1)"
+          />
+          <div class="image-text-container">
+            <!-- titolo immagini -->
+            <p>{{ index }}{{ info.name }}</p>
+
+            <!-- descrizione -->
+          </div>
+        </div>
+      </div>
+      <div class="leftBottom_side_container">
+        <div
+          class="single-image"
+          :class="{ active: index === currentActiveImage }"
+          v-for="(info, index) in projectsList"
+          :key="index"
+        >
+          <img
+            v-show="(index - 1) % 4 === 0"
+            :src="info.src"
+            :alt="'indice ' + index"
+          />
+          <div class="image-text-container">
+            <p>{{ index }}{{ info.name }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rightTop_side_container">
+        <div
+          class="single-image"
+          :class="{ active: index === currentActiveImage }"
+          v-for="(info, index) in projectsList"
+          :key="index"
+        >
+          <img
+            v-show="(index - 2) % 4 === 0"
+            :src="info.src"
+            :alt="'indice ' + (index + 1)"
+          />
+          <div class="image-text-container">
+            <p>{{ index }} {{ info.name }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="rightBottom_side_container">
+        <div
+          class="single-image"
+          :class="{ active: index === currentActiveImage }"
+          v-for="(info, index) in projectsList"
+          :key="index"
+        >
+          <img
+            v-show="(index - 3) % 4 === 0"
+            :src="info.src"
+            :alt="'indice ' + (index + 1)"
+          />
+          <div class="image-text-container">
+            <p>{{ index }} {{ info.name }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-text-container">
+        <div
+          class="slider-tex"
+          :class="index === currentActiveImage ? 'active' : ''"
+          v-for="(info, index) in projectsList"
+        >
+          <div class="image-text-container">
+            <!-- titolo immagini -->
+            <h3>{{ info.name }} {{ index + 1 }}</h3>
+            <!-- descrizione -->
+          </div>
+        </div>
+      </div>
     </div>
+    <button class="next-btn" @click="plusSlides(+1)">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="60"
+        height="60"
+        viewBox="0 0 60 60"
+        fill="none"
+      >
+        <path
+          d="M51.0361 21.2134L30.1765 42.073L8.96328 20.8598"
+          stroke="#7C809B"
+          stroke-width="5"
+        />
+      </svg>
+    </button>
   </div>
 </template>
+
+<script setup lang="ts">
+import { ref, onMounted, nextTick, watch } from "vue";
+import "../assets/css/sliderText.css";
+import cardImage from "../assets/img/grid/image64.jpg";
+import cardImageOne from "../assets/img/imgSinglePro.jpeg";
+import cardImageTwo from "../assets/img/grid/image85.jpg";
+import cardImageThree from "../assets/img/grid/image91.jpg";
+import cardImageFor from "../assets/img/grid/image114.jpg";
+import cardImageFive from "../assets/img/grid/image124.jpg";
+import cardImageSixe from "../assets/img/grid/image135.jpg";
+import cardImageSeven from "../assets/img/grid/image140.jpg";
+import cardImageEight from "../assets/img/grid/image171.jpg";
+import cardImageNine from "../assets/img/grid/image70.jpg";
+
+let currentActiveImage = ref(0);
+// Immagini per lo slideshow
+const projectsList = ref([
+  { src: cardImageOne, name: "4c Superleggera" },
+  { src: cardImageThree, name: "cherry countach" },
+  { src: cardImageOne, name: "defender amaranth" },
+  { src: cardImageSixe, name: "bmw m3 e46" },
+  { src: cardImageFive, name: "4c Superleggera" },
+  { src: cardImageThree, name: "cherry countach" },
+  { src: cardImageSeven, name: "defender amaranth" },
+  { src: cardImageEight, name: "bmw m3 e46" },
+]);
+
+// Funzione per avanzare o retrocedere di una slide
+function plusSlides(n: number) {
+  currentActiveImage.value =
+    (currentActiveImage.value + n + projectsList.value.length) %
+    projectsList.value.length;
+
+  if (currentActiveImage.value < 0) {
+    currentActiveImage.value = projectsList.value.length - 1;
+  } else if (currentActiveImage.value > projectsList.value.length) {
+    currentActiveImage.value = projectsList.value.length;
+  }
+}
+
+/* per far scorrere le immagini in auto */
+/* onMounted: {
+  setInterval(() => {
+    plusSlides(1);
+  }, 3000);
+}
+ */
+// Sposta la logica di aggiornamento del centro qui
+</script>
+<style>
+.leftTop_side_container {
+  left: 10%;
+  top: 10%;
+}
+.leftBottom_side_container {
+  left: 10%;
+  bottom: 10%;
+}
+.rightBottom_side_container {
+  right: 10%;
+  bottom: 10%;
+}
+.rightTop_side_container {
+  right: 10%;
+  top: 10%;
+}
+.rightBottom_side_container,
+.rightTop_side_container,
+.leftBottom_side_container,
+.leftTop_side_container {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  z-index: -1;
+}
+.single-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.single-image.active {
+  opacity: 1;
+  color: blueviolet;
+}
+.slider-tex.active h3 {
+  color: var(--ADM-Yellow, #f3f90a);
+  text-align: center;
+  font-family: Superclarendon;
+  font-size: 5.625rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 5.125rem; /* 91.111% */
+  letter-spacing: -0.05625rem;
+  text-transform: uppercase;
+}
+
+.single-image.active p {
+  color: blueviolet;
+}
+.single-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.single-image .image-text-container {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  text-align: right;
+  color: blue;
+}
+
+.image-text-container {
+  text-align: center;
+}
+h3 {
+  color: var(--ADM-Grey, #7c809b);
+  text-align: center;
+  font-family: Superclarendon;
+  font-size: 5.625rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 5.125rem; /* 91.111% */
+  letter-spacing: -0.05625rem;
+  text-transform: uppercase;
+}
+.prev-btn,
+.next-btn {
+  margin: auto;
+  display: flex;
+}
+</style>

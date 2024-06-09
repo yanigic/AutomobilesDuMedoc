@@ -1,0 +1,267 @@
+<template>
+  <div class="slider-projects-container">
+    <button class="prev-btn" @click="plusSlides(-1)">
+      <svg
+        width="60"
+        height="60"
+        viewBox="0 0 60 60"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M8.96387 38.7866L29.8235 17.927L51.0367 39.1402"
+          stroke="#7C809B"
+          stroke-width="5"
+        />
+      </svg>
+    </button>
+
+    <div class="slider-content">
+      <div class="leftTop_side_container">
+        <div
+          class="single-image"
+          :class="{ active: index === currentVisibleIndex }"
+          v-for="(item, index) in items"
+          :key="index"
+        >
+          <img
+            v-show="index % 4 === 0"
+            :src="item.src"
+            :alt="'indice ' + (index + 1)"
+          />
+          <div class="image-text-container"></div>
+        </div>
+      </div>
+      <div class="leftBottom_side_container">
+        <div
+          class="single-image"
+          :class="{ active: index === currentVisibleIndex }"
+          v-for="(item, index) in items"
+          :key="index"
+        >
+          <img
+            v-show="(index - 1) % 4 === 0"
+            :src="item.src"
+            :alt="'indice ' + index"
+          />
+          <div class="image-text-container"></div>
+        </div>
+      </div>
+
+      <div class="rightTop_side_container">
+        <div
+          class="single-image"
+          :class="{ active: index === currentVisibleIndex }"
+          v-for="(item, index) in items"
+          :key="index"
+        >
+          <img
+            v-show="(index - 2) % 4 === 0"
+            :src="item.src"
+            :alt="'indice ' + (index + 1)"
+          />
+          <div class="image-text-container"></div>
+        </div>
+      </div>
+      <div class="rightBottom_side_container">
+        <div
+          class="single-image"
+          :class="{ active: index === currentVisibleIndex }"
+          v-for="(item, index) in items"
+          :key="index"
+        >
+          <img
+            v-show="(index - 3) % 4 === 0"
+            :src="item.src"
+            :alt="'indice ' + (index + 1)"
+          />
+          <div class="image-text-container"></div>
+        </div>
+      </div>
+
+      <div class="slider-text-container">
+        <ul id="infinite-list" @scroll="onScroll">
+          <li
+            class="li image-text-container"
+            v-for="(item, index) in items"
+            :key="index"
+            :class="{ visible: index === currentVisibleIndex }"
+          >
+            {{ item.name }}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <button class="next-btn" @click="plusSlides(+1)">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="60"
+        height="60"
+        viewBox="0 0 60 60"
+        fill="none"
+      >
+        <path
+          d="M51.0361 21.2134L30.1765 42.073L8.96328 20.8598"
+          stroke="#7C809B"
+          stroke-width="5"
+        />
+      </svg>
+    </button>
+  </div>
+</template>
+
+<script>
+import { ref, onMounted } from "vue";
+import cardImageOne from "../assets/img/imgSinglePro.jpeg";
+
+export default {
+  name: "App",
+  setup() {
+    const originalItems = [
+      { name: "first", src: cardImageOne },
+      { name: "gino", src: cardImageOne },
+      { name: "due", src: cardImageOne },
+      { name: "pesce", src: cardImageOne },
+      { name: "cane", src: cardImageOne },
+      { name: "gatto", src: cardImageOne },
+    ];
+
+    const items = ref([...originalItems]);
+    const currentVisibleIndex = ref(0);
+
+    // Function to load more items by repeating the existing items
+    const loadMore = () => {
+      items.value = items.value.concat(originalItems);
+    };
+
+    const onScroll = (event) => {
+      const listElm = event.target;
+      const listRect = listElm.getBoundingClientRect();
+
+      let visibleIndex = null;
+
+      items.value.forEach((_, index) => {
+        const item = listElm.children[index];
+        if (item) {
+          const itemRect = item.getBoundingClientRect();
+          if (itemRect.top <= listRect.top && itemRect.bottom > listRect.top) {
+            visibleIndex = index;
+            return; // Exit forEach when the first visible item is found
+          }
+        }
+      });
+
+      if (visibleIndex !== null) {
+        currentVisibleIndex.value = visibleIndex;
+      }
+
+      if (
+        listElm.scrollHeight - listElm.clientHeight <=
+        listElm.scrollTop + 1
+      ) {
+        // Scrolled to the bottom, load more items
+        loadMore();
+      }
+    };
+
+    // Function to scroll to the current visible index
+    const scrollToCurrentIndex = () => {
+      const listElm = document.getElementById("infinite-list");
+      if (listElm) {
+        const targetItem = listElm.children[currentVisibleIndex.value];
+        if (targetItem) {
+          listElm.scrollTo({
+            top: targetItem.offsetTop,
+            behavior: "smooth",
+          });
+        }
+      }
+    };
+
+    // Function to advance or go back one slide
+    const plusSlides = (n) => {
+      currentVisibleIndex.value =
+        (currentVisibleIndex.value + n + items.value.length) %
+        items.value.length;
+      scrollToCurrentIndex();
+    };
+
+    // Initial load of items
+    onMounted(() => {
+      loadMore();
+    });
+
+    return {
+      items,
+      onScroll,
+      currentVisibleIndex,
+      plusSlides,
+    };
+  },
+};
+</script>
+
+<style>
+#infinite-list {
+  width: 100%;
+  height: 400px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  margin: 20px auto;
+  padding: 0;
+  list-style-type: none;
+
+  scroll-behavior: smooth; /* Aggiungi una transizione smooth */
+}
+
+.li {
+  color: var(--ADM-Grey, #7c809b);
+  text-align: center;
+  font-family: var(--Superclarendon);
+  font-size: var(--font-size-text-one);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 4rem; /* 91.111% */
+  letter-spacing: -0.05625rem;
+  text-transform: uppercase;
+}
+.visible {
+  color: var(--ADM-Yellow, #f3f90a);
+  text-align: center;
+  font-family: var(--Superclarendon);
+  font-size: var(--font-size-text-one);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 4rem; /* 91.111% */
+  letter-spacing: -0.05625rem;
+  text-transform: uppercase;
+}
+
+.leftTop_side_container {
+  left: 5%;
+  top: -25%;
+}
+.leftBottom_side_container {
+  left: 5%;
+  bottom: -25%;
+}
+.rightBottom_side_container {
+  right: 5%;
+  bottom: -25%;
+}
+.rightTop_side_container {
+  right: 5%;
+  top: -25%;
+}
+
+.rightBottom_side_container,
+.rightTop_side_container,
+.leftBottom_side_container,
+.leftTop_side_container {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  z-index: -1;
+}
+</style>

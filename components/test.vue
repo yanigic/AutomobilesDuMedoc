@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <!-- sezione che include le immagini grandi -->
+  <div class="slider-projects-container">
     <button class="prev-btn" @click="plusSlides(-1)">
       <svg
         width="60"
@@ -17,7 +16,7 @@
       </svg>
     </button>
 
-    <div>
+    <div class="slider-content" @wheel="debouncedHandleWheel">
       <div class="leftTop_side_container">
         <div
           class="single-image"
@@ -33,7 +32,7 @@
           />
           <div class="image-text-container">
             <!-- titolo immagini -->
-            <p>{{ index }}{{ info.name }}</p>
+            <!--  <p>{{ index }}{{ info.name }}</p> -->
 
             <!-- descrizione -->
           </div>
@@ -52,7 +51,7 @@
             :alt="'indice ' + index"
           />
           <div class="image-text-container">
-            <p>{{ index }}{{ info.name }}</p>
+            <!--  <p>{{ index }}{{ info.name }}</p> -->
           </div>
         </div>
       </div>
@@ -70,7 +69,7 @@
             :alt="'indice ' + (index + 1)"
           />
           <div class="image-text-container">
-            <p>{{ index }} {{ info.name }}</p>
+            <!--  <p>{{ index }} {{ info.name }}</p> -->
           </div>
         </div>
       </div>
@@ -87,7 +86,7 @@
             :alt="'indice ' + (index + 1)"
           />
           <div class="image-text-container">
-            <p>{{ index }} {{ info.name }}</p>
+            <!--  <p>{{ index }} {{ info.name }}</p> -->
           </div>
         </div>
       </div>
@@ -100,7 +99,7 @@
         >
           <div class="image-text-container">
             <!-- titolo immagini -->
-            <h3>{{ info.name }} {{ index + 1 }}</h3>
+            <h3>{{ info.name }}</h3>
             <!-- descrizione -->
           </div>
         </div>
@@ -148,7 +147,7 @@ const projectsList = ref([
   { src: cardImageFive, name: "4c Superleggera" },
   { src: cardImageThree, name: "cherry countach" },
   { src: cardImageSeven, name: "defender amaranth" },
-  { src: cardImageEight, name: "bmw m3 e46" },
+  /* { src: cardImageEight, name: "bmw m3 e46" }, */
 ]);
 
 // Funzione per avanzare o retrocedere di una slide
@@ -164,6 +163,27 @@ function plusSlides(n: number) {
   }
 }
 
+/* scroll */
+/* function handleWheel(event: WheelEvent) {
+  if (event.deltaY > 0) {
+    plusSlides(1);
+  } else {
+    plusSlides(-1);
+  }
+}
+
+// Funzione debounce
+function debounce(func: Function, wait: number) {
+  let timeout: ReturnType<typeof setTimeout>;
+  return function (...args: any[]) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), wait);
+  };
+}
+
+// Applica il debounce all'evento wheel
+const debouncedHandleWheel = debounce(handleWheel, 25);
+ */
 /* per far scorrere le immagini in auto */
 /* onMounted: {
   setInterval(() => {
@@ -171,24 +191,23 @@ function plusSlides(n: number) {
   }, 3000);
 }
  */
-// Sposta la logica di aggiornamento del centro qui
 </script>
 <style>
 .leftTop_side_container {
-  left: 10%;
-  top: 10%;
+  left: 5%;
+  top: -25%;
 }
 .leftBottom_side_container {
-  left: 10%;
-  bottom: 10%;
+  left: 5%;
+  bottom: -25%;
 }
 .rightBottom_side_container {
-  right: 10%;
-  bottom: 10%;
+  right: 5%;
+  bottom: -25%;
 }
 .rightTop_side_container {
-  right: 10%;
-  top: 10%;
+  right: 5%;
+  top: -25%;
 }
 .rightBottom_side_container,
 .rightTop_side_container,
@@ -217,11 +236,11 @@ function plusSlides(n: number) {
 .slider-tex.active h3 {
   color: var(--ADM-Yellow, #f3f90a);
   text-align: center;
-  font-family: Superclarendon;
-  font-size: 5.625rem;
+  font-family: var(--Superclarendon);
+  font-size: var(--font-size-text-one);
   font-style: normal;
   font-weight: 300;
-  line-height: 5.125rem; /* 91.111% */
+  line-height: 4rem; /* 91.111% */
   letter-spacing: -0.05625rem;
   text-transform: uppercase;
 }
@@ -248,11 +267,11 @@ function plusSlides(n: number) {
 h3 {
   color: var(--ADM-Grey, #7c809b);
   text-align: center;
-  font-family: Superclarendon;
-  font-size: 5.625rem;
+  font-family: var(--Superclarendon);
+  font-size: var(--font-size-text-one);
   font-style: normal;
   font-weight: 300;
-  line-height: 5.125rem; /* 91.111% */
+  line-height: 4rem; /* 91.111% */
   letter-spacing: -0.05625rem;
   text-transform: uppercase;
 }
@@ -260,5 +279,25 @@ h3 {
 .next-btn {
   margin: auto;
   display: flex;
+}
+.slider-projects-container {
+  background-color: var(--burnout-black);
+  padding-top: var(--vertical-space-xlarg);
+  padding-bottom: var(--vertical-space-xlarg);
+  position: relative;
+}
+.prev-btn {
+  margin-bottom: var(--vertical-space-larg);
+}
+.next-btn {
+  margin-top: var(--vertical-space-larg);
+}
+.prev-btn:hover svg path,
+.next-btn:hover svg path {
+  stroke: var(--beam-yellow);
+}
+.slider-content {
+  position: relative;
+  z-index: 0;
 }
 </style>

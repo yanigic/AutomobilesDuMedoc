@@ -31,7 +31,6 @@ v-list-item {
   z-index: 1;
 }
 .bg-nav-desktop {
-  /* background-color: var(--beam-yellow); */
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
@@ -118,6 +117,31 @@ v-list-item {
   color: var(--gta-bourdeaux);
   background-color: var(--pearl-white);
   fill: var(--gta-bourdeaux);
+}
+
+/* sfondo scuro in posizione 0 */
+.backgroundBlack,
+.backgroundBlack .navContainer,
+.backgroundBlack .svg-icon > g > path,
+.backgroundBlack .svg-logo > g > path {
+  background-color: var(--burnout-black);
+  color: var(--beam-yellow);
+  fill: var(--beam-yellow);
+}
+.backgroundBlack .svg-logo.adm {
+  height: 3.3125rem;
+}
+
+/* se scrolla */
+.backgroundBlack .navbar-scrolled-beam-yellow .bg-nav-desktop,
+.backgroundBlack .navbar-scrolled-beam-yellow .navContainer,
+.backgroundBlack .navbar-scrolled-beam-yellow .svg-icon > g > path {
+  color: var(--burnout-black);
+  background-color: var(--beam-yellow);
+  fill: var(--burnout-black);
+}
+.backgroundBlack .navbar-scrolled-beam-yellow .svg-logo.adm {
+  height: 1.3125rem;
 }
 
 @media only screen and (max-width: 768px) {

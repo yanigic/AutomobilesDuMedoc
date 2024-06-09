@@ -6,8 +6,8 @@ export default {
     drawer: false,
     pages: [
       { title: "Projects", href: "/project" },
-      { title: "Cars for sale", href: "/" },
-      { title: "Conciergerie", href: "/" },
+      /*       { title: "Cars for sale", href: "/" },
+      { title: "Conciergerie", href: "/" }, */
       /* { title: "Services", href: "/" }, */
       { title: "About", href: "/About" },
       { title: "Contact", href: "/contacts" },

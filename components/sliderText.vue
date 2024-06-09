@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div>
     <div class="container-SliderText">
       <div v-for="(image, index) in images" :key="index" class="mySlides">
@@ -120,3 +120,4 @@ onMounted(() => {
 
 watch(slideIndex, centerActiveText); // Aggiorna la vista quando slideIndex cambia
 </script>
+ -->

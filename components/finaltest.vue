@@ -113,18 +113,19 @@
 
 <script>
 import { ref, onMounted } from "vue";
-import cardImageOne from "../assets/img/imgSinglePro.jpeg";
+import cheryCountach from "../assets/img/imgSinglePro.jpeg";
+import defender from "../assets/img/grid/image64.jpg";
 
 export default {
   name: "App",
   setup() {
     const originalItems = [
-      { name: "first", src: cardImageOne, href: "singleProject" },
-      { name: "gino", src: cardImageOne, href: "singleProject" },
-      { name: "due", src: cardImageOne, href: "singleProject" },
-      { name: "pesce", src: cardImageOne, href: "singleProject" },
-      { name: "cane", src: cardImageOne, href: "singleProject" },
-      { name: "gatto", src: cardImageOne, href: "singleProject" },
+      { name: "4c Superleggera", src: cheryCountach, href: "singleProject" },
+      { name: "benz v12", src: cheryCountach, href: "singleProject" },
+      { name: "cherry countach", src: cheryCountach, href: "singleProject" },
+      { name: "defender amaranth", src: defender, href: "singleProject" },
+      { name: "cane", src: cheryCountach, href: "singleProject" },
+      { name: "defender amaranth", src: defender, href: "singleProject" },
     ];
 
     const items = ref([...originalItems]);

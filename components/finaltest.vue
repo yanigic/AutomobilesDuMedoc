@@ -225,6 +225,11 @@ export default {
   letter-spacing: -0.05625rem;
   text-transform: uppercase;
 }
+.prev-btn,
+.next-btn {
+  margin: auto;
+  display: flex;
+}
 .visible {
   color: var(--ADM-Yellow, #f3f90a);
   text-align: center;

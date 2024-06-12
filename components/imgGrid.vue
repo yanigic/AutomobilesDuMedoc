@@ -12,22 +12,22 @@ import cardImageEight from "../assets/img/grid/image171.jpg";
 import cardImageNine from "../assets/img/grid/image70.jpg";
 
 const images = [
-  { src: cardImageFive, name: "nome progetto" },
-  { src: cardImageThree, name: "nome progetto" },
-  { src: cardImageOne, name: "nome progetto" },
+  { src: cardImageFive, name: "volvo Plateau" },
+  { src: cardImageThree, name: "retrowave aim" },
+  { src: cardImageOne, name: "another vision of lacoste" },
 ];
 
 const imagesTwo = [
-  { src: cardImage, name: "nome progetto" },
-  { src: cardImageSeven, name: "nome progetto" },
-  { src: cardImageSixe, name: "nome progetto" },
-  { src: cardImageNine, name: "nome progetto" },
+  { src: cardImage, name: "defender amaranth" },
+  { src: cardImageSeven, name: "ultra pantera" },
+  { src: cardImageSixe, name: "turbo 5" },
+  { src: cardImageNine, name: "226 Pantera" },
 ];
 
 const imagesThree = [
-  { src: cardImageEight, name: "nome progetto" },
-  { src: cardImageFor, name: "nome progetto" },
-  { src: cardImageTwo, name: "nome progetto" },
+  { src: cardImageEight, name: "cherry countach" },
+  { src: cardImageFor, name: "honda twincam" },
+  { src: cardImageTwo, name: "in the middle of the night, 911" },
 ];
 </script>
 

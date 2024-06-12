@@ -82,13 +82,12 @@
       <div class="slider-text-container">
         <ul id="infinite-list" @scroll="onScroll">
           <li
-            :href="item.href"
             class="li image-text-container"
             v-for="(item, index) in items"
             :key="index"
             :class="{ visible: index === currentVisibleIndex }"
           >
-            <a href="singleProject"> {{ item.name }} </a>
+            <a :href="item.href"> {{ item.name }} </a>
           </li>
         </ul>
       </div>
@@ -113,18 +112,21 @@
 
 <script>
 import { ref, onMounted } from "vue";
-import cheryCountach from "../assets/img/imgSinglePro.jpeg";
-import defender from "../assets/img/grid/image64.jpg";
+import cheryCountach from "../assets/img/Cherry_Countach.jpeg";
+import Superleggera from "../assets/img/4C_Superleggera.jpeg";
+import BenzV12 from "../assets/img/Benz_V12.jpeg";
+import defender from "../assets/img/Defender_Amaranth.jpeg";
+import BMWM3E46 from "../assets/img/BMW_M3_E46.jpeg";
 
 export default {
   name: "App",
   setup() {
     const originalItems = [
-      { name: "4c Superleggera", src: cheryCountach, href: "singleProject" },
-      { name: "benz v12", src: cheryCountach, href: "singleProject" },
+      { name: "4c Superleggera", src: Superleggera, href: "singleProject" },
+      { name: "benz v12", src: BenzV12, href: "singleProject" },
       { name: "cherry countach", src: cheryCountach, href: "singleProject" },
-      { name: "defender amaranth", src: defender, href: "singleProject" },
-      { name: "cane", src: cheryCountach, href: "singleProject" },
+      { name: "bmw m3 e46", src: BMWM3E46, href: "singleProject" },
+      { name: "cherry countach", src: cheryCountach, href: "singleProject" },
       { name: "defender amaranth", src: defender, href: "singleProject" },
     ];
 

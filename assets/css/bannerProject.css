@@ -9,6 +9,9 @@
   letter-spacing: -0.04063rem;
   text-transform: uppercase;
 }
+.title-bannerProject path {
+  fill: var(--burnout-black);
+}
 .title-banner {
   margin: auto;
   display: flex;
@@ -62,11 +65,13 @@
   scroll-snap-align: start;
 }
 
-.title-banner:hover .title-bannerProject {
+.title-banner:hover .title-bannerProject,
+.title-banner:hover .title-bannerProject path {
   color: var(--beam-yellow);
+  fill: var(--beam-yellow);
 }
 .title-banner:hover .bg-banner {
-  background-color: rgb(0, 255, 76);
+  background-color: var(--burnout-black);
 }
 
 @media only screen and (max-width: 635px) {

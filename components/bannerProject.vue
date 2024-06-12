@@ -39,10 +39,12 @@ const projects = ref([]);
 
 const fetchData = async () => {
   try {
-    const response = await fetch("https://api.storyblok.com/v2/cdn/stories/home?version=draft&token=rtQ2x4beDja31itQRyGRTAtt");
+    const response = await fetch(
+      "https://api.storyblok.com/v2/cdn/stories/home?version=draft&token=rtQ2x4beDja31itQRyGRTAtt"
+    );
     const { story } = await response.json();
     const content = story.content;
-    
+
     // Mappare i dati ottenuti da Storyblok nel formato richiesto
     projects.value = content.body.map((project) => ({
       title: project.title,
@@ -55,8 +57,20 @@ const fetchData = async () => {
 
 onMounted(() => {
   fetchData();
-});
+  const titleBanners = document.querySelectorAll(".title-banner");
 
+  titleBanners.forEach((titleBanner) => {
+    const bgBanner = titleBanner.closest(".bg-banner");
+
+    titleBanner.addEventListener("mouseenter", () => {
+      bgBanner.classList.add("hover");
+    });
+
+    titleBanner.addEventListener("mouseleave", () => {
+      bgBanner.classList.remove("hover");
+    });
+  });
+});
 </script>
 
 <template>

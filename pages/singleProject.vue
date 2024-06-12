@@ -12,6 +12,8 @@ import BannerContact from "../components/bannerContact.vue";
 import Grid from "../components/grid.vue";
 import SliderGrid from "../components/sliderGrid.vue";
 import Test from "../components/test.vue";
+import Lightgallery from "../components/lightgallery.vue";
+
 import SingleProjectParagraph from "../components/singleProjectParagraph.vue";
 
 /* const SingleProjectInfoText = [
@@ -66,7 +68,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="backgroundLight">
+  <div class="backgroundLight singleProject">
     <Nav
       class="nav-position"
       :class="[
@@ -98,7 +100,9 @@ onUnmounted(() => {
     ></SingleImg> -->
     <SingleProjectParagraph></SingleProjectParagraph>
     <SingleImg></SingleImg>
-    <SliderGrid></SliderGrid>
+    <Lightgallery></Lightgallery>
+
+    <!--  <SliderGrid></SliderGrid> -->
 
     <!--  <BannerContact
       class="container-banner-single-project"

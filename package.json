@@ -21,6 +21,9 @@
     "@vueuse/core": "^10.10.0",
     "axios": "^1.7.2",
     "intersection-observer": "^0.12.2",
+    "lg-fullscreen": "^1.2.1",
+    "lg-thumbnail": "^1.2.1",
+    "lightgallery": "^2.7.2",
     "swiper": "^11.1.3"
   }
 }

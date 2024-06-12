@@ -78,6 +78,13 @@
   .bg-card-imgText {
     padding: var(--Three) var(--two);
   }
+  .bg-card-imgText-text-container {
+    position: relative;
+    top: 10rem;
+    height: 100%;
+    margin-top: -10rem;
+    padding-bottom: 10rem;
+  }
   .text-card-imgText:nth-child(2n) {
     position: unset;
   }

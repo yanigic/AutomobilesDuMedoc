@@ -6,6 +6,8 @@ import BannerProject from "../components/bannerProject.vue";
 import titleDescription from "../components/titleDescription.vue";
 import Nav from "../components/nav.vue";
 import BannerContact from "../components/bannerContact.vue";
+import Footer from "../components/footer.vue";
+
 /* const story = await useAsyncStoryblok(
   "home",
   { version: "draft" },
@@ -63,10 +65,18 @@ onUnmounted(() => {
     <Nav
       class="nav-position"
       :class="[
-        'navbar',
-        isScrolled ? 'navbar-scrolled-beam-yellow' : 'navbar-initial',
+        'backgroundYellow',
+        isScrolled ? 'navbar-scrolled-yellow' : 'backgroundYellow',
       ]"
     ></Nav>
+
+    <!--  <Nav
+      class="nav-position"
+      :class="[
+        'backgroundBlack',
+        isScrolled ? 'navbar-scrolled-beam-yellow' : 'backgroundBlack',
+      ]"
+    ></Nav> -->
     <!--  <Default></Default> -->
 
     <!--  <BannerProject></BannerProject>
@@ -87,6 +97,8 @@ onUnmounted(() => {
       :paragraph="text.paragraph"
       :cta="text.cta"
     ></BannerContact>
+    <Footer></Footer>
   </div>
+
   <!-- <StoryblokComponent v-if="story" :blok="story.content" /> -->
 </template>

@@ -197,7 +197,6 @@ export default {
   width: 100%;
   height: 400px;
   overflow-y: scroll;
-  border: 1px solid #ccc;
   margin: 20px auto;
   padding: 0;
   list-style-type: none;

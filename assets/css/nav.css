@@ -144,6 +144,35 @@ v-list-item {
   height: 1.3125rem;
 }
 
+/* sfondo sfondo giallo in posizione 0 */
+.backgroundYellow,
+.backgroundYellow .navContainer,
+.backgroundYellow .svg-icon > g > path,
+.backgroundYellow .svg-logo > g > path {
+  color: var(--burnout-black);
+  background-color: var(--beam-yellow);
+  fill: var(--burnout-black);
+}
+.backgroundYellow .svg-logo.adm {
+  height: 3.3125rem;
+}
+.navbar-scrolled-yellow,
+.navbar-scrolled-yellow .navContainer,
+.navbar-scrolled-yellow .svg-icon > g > path,
+.navbar-scrolled-yellow .svg-logo > g > path {
+  color: var(--burnout-black);
+  background-color: var(--beam-yellow);
+  fill: var(--burnout-black);
+}
+
+/* se scrolla il giallo */
+.navbar-scrolled-yellow .svg-logo.adm {
+  height: 1.3125rem;
+}
+.navbar-scrolled-yellow .svg-logo.adm #Vector {
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
   .bg-nav-mobile {
     color: var(--burnout-black);
@@ -151,6 +180,22 @@ v-list-item {
     padding: 3rem 2rem;
     align-items: center;
     display: block;
+  }
+
+  .backgroundBlack .bg-nav-mobile,
+  .backgroundBlack .topnav rect {
+    background-color: var(--burnout-black);
+    color: var(--beam-yellow);
+    fill: var(--beam-yellow);
+  }
+  .svg-logo {
+    width: 4rem;
+  }
+
+  .singleProject .bg-nav-mobile {
+    background-color: var(--pearl-white);
+    color: var(--gta-bourdeaux);
+    fill: var(--gta-bourdeaux);
   }
   .bg-nav-desktop {
     display: none;

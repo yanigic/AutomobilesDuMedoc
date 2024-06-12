@@ -43,21 +43,26 @@
   letter-spacing: -0.04063rem;
   text-transform: uppercase;
 }
+
+.container-banner-single-project .title-banner-contact {
+  color: var(--gta-bourdeaux);
+}
+.container-banner-home .title-banner-contact {
+  color: var(--beam-yellow);
+}
 @media only screen and (max-width: 735px) {
-  .title-banner-contact{
+  .title-banner-contact {
     font-size: var(--font-size-title-mobile);
     line-height: 1.875rem; /* 85.714% */
-
   }
   /* .text-container-banner{
     width: var(--col10);
 
   } */
-  .cta-banner-contact{
-    font-size: var( --font-size-title-mobile-s);
+  .cta-banner-contact {
+    font-size: var(--font-size-title-mobile-s);
   }
   .container-banner-single-project .cta-banner-contact {
-  border: 0.15rem solid var(--gta-bourdeaux);
+    border: 0.15rem solid var(--gta-bourdeaux);
   }
-
 }

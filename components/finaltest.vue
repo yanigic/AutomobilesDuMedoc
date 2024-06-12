@@ -206,7 +206,7 @@ export default {
   width: 100%;
   height: 400px;
   overflow-y: scroll;
-  border: 1px solid #ccc;
+
   margin: 20px auto;
   padding: 0;
   list-style-type: none;
@@ -263,5 +263,48 @@ export default {
   width: 300px;
   margin: auto;
   z-index: -1;
+}
+@media only screen and (max-width: 735px) {
+  .slider-projects-container .prev-btn,
+  .slider-projects-container .next-btn {
+    display: none;
+  }
+
+  .single-image.active {
+    opacity: 0.5;
+  }
+  .rightBottom_side_container,
+  .rightTop_side_container,
+  .leftBottom_side_container,
+  .leftTop_side_container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    z-index: -1;
+  }
+  .single-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #infinite-list {
+    margin: 0px auto;
+    height: 90vh;
+  }
+
+  .slider-projects-container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .rightBottom_side_container,
+  .rightTop_side_container,
+  .leftBottom_side_container,
+  .leftTop_side_container {
+    right: 0%;
+    bottom: 0%;
+    top: 0%;
+    left: 0%;
+  }
 }
 </style>

@@ -1,7 +1,56 @@
-.container-layouts {
+/* .container-layouts {
   background-image: url("../img/svg/maskGroup.svg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+} */
+
+/* .bg-im-parallax {
+  position: relative;
+  overflow: hidden;
+} */
+
+/* .bg-im-parallax img {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+} */
+
+/* realizza il movimento dell'immagine di sfondo */
+.container-layouts {
+  width: 100vw;
+  height: 100vh;
+  perspective: 1px;
+  perspective-origin: center center;
+  overflow-x: hidden;
+}
+#keyart-8 {
+  background-image: url("../img/Background2.png");
+  background-color: black;
+  transform: translate3d(0, 180px, 0.45px) /* scale(0.1) */;
+  width: 102vw; /* 
+  top: 50vh; */
+  background-repeat: repeat-y;
+}
+.keyart_layer {
+  background-position: bottom center;
+  background-size: contain;
+  background-repeat: repeat-y;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 4000px;
+
+  z-index: -1;
+}
+#parallax {
+  transform-style: preserve-3d;
+  height: 120vh;
 }

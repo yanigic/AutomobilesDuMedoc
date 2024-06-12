@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import "../assets/css/contacts.css";
+import { ref, onMounted, onUnmounted } from "vue";
+
 const options = ref([
   { label: "Customization", value: "Customization", selected: false },
   { label: "Conciergerie", value: "Conciergerie", selected: false },
@@ -18,20 +20,44 @@ function toggleActiveEmailPermission() {
 function toggleActivePrivacy() {
   isActivePrivacy.value = !isActivePrivacy.value; // Inverte lo stato attivo/disattivo al click
 }
+
+const isScrolled = ref(false);
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 0;
+  console.log("isScrolled:", isScrolled.value); // Aggiungi questo per verificare lo scroll
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <template>
-  <div class=" bg-contacts">
-    <h3 class="title-contacts "> <span class="mobile-line-break">Ready</span>  to start something unique?</h3>
+  <div class="bg-contacts">
+    <Nav
+      class="nav-position"
+      :class="[
+        'backgroundYellow',
+        isScrolled ? 'navbar-scrolled-yellow' : 'backgroundYellow',
+      ]"
+    ></Nav>
+    <h3 class="title-contacts">
+      <span class="mobile-line-break">Ready</span> to start something unique?
+    </h3>
     <div class="box-information-contacts">
       <div class="contactForm">
         <form action="action_page.php">
           <div class="label-title">What can we do for you?*</div>
-          <select  class="select-service-btn-box" name="cars" id="cars">
-            
-             <option v-for="option in options" :value="option.label">{{ option.label }}</option>
+          <select class="select-service-btn-box" name="cars" id="cars">
+            <option v-for="option in options" :value="option.label">
+              {{ option.label }}
+            </option>
           </select>
-          
 
           <div class="service-btn-box">
             <button
@@ -79,7 +105,7 @@ function toggleActivePrivacy() {
                 />
                 <span
                   class="checkmark"
-                  :class="{ active: isActiveEmailPermission }"
+                  :class="{ activeContact: isActiveEmailPermission }"
                   @click="toggleActiveEmailPermission"
                 ></span>
 

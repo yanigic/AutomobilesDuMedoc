@@ -282,15 +282,15 @@ h3 {
 }
 .slider-projects-container {
   background-color: var(--burnout-black);
-  padding-top: var(--vertical-space-xlarg);
-  padding-bottom: var(--vertical-space-xlarg);
+  padding-top: var(--vertical-space-medium);
+  padding-bottom: var(--vertical-space-medium);
   position: relative;
 }
 .prev-btn {
-  margin-bottom: var(--vertical-space-larg);
+  margin-bottom: var(--vertical-space-medium);
 }
 .next-btn {
-  margin-top: var(--vertical-space-larg);
+  margin-top: var(--vertical-space-medium);
 }
 .prev-btn:hover svg path,
 .next-btn:hover svg path {
@@ -299,5 +299,10 @@ h3 {
 .slider-content {
   position: relative;
   z-index: 0;
+}
+@media only screen and (max-width: 735px) {
+  .single-image.active {
+    opacity: 0.5;
+  }
 }
 </style>

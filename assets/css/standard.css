@@ -21,13 +21,10 @@ body {
   --font-size-larg-title: 9.6rem;
   --font-size-big-title: 11.6rem;
 
-   --font-size-title-mobile-s: 0.9rem;
+  --font-size-title-mobile-s: 0.9rem;
 
   --font-size-title-mobile: 2.1875rem;
   --font-size-title-mobile-m: 2.8125rem;
-
-
-
 
   /* color */
   --beam-yellow: #f3f90a;
@@ -56,17 +53,16 @@ body {
   /* margin/pad */
   --margsix: 6rem;
   --twelve: 12rem;
+  --one: 1rem;
   --two: 2rem;
   --four: 4rem;
   --eight: 8rem;
   --Three: 3rem;
   --sixteen: 16rem;
 
-
-
-  --vertical-space-xsmall:0.5rem;
-  --vertical-space-small:1.5rem;
-  --vertical-space-medium:2.5rem;
-  --vertical-space-larg:3.5rem;
-  --vertical-space-xlarg:6.5rem;
+  --vertical-space-xsmall: 0.5rem;
+  --vertical-space-small: 1.5rem;
+  --vertical-space-medium: 2.5rem;
+  --vertical-space-larg: 3.5rem;
+  --vertical-space-xlarg: 6.5rem;
 }

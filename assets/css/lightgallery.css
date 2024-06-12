@@ -1,4 +1,4 @@
-/* .bg-SliderGrid {
+.bg-SliderGrid {
   background-color: var(--pearl-white);
   padding: var(--four) 0;
 }
@@ -37,21 +37,21 @@
   background-color: aqua;
 }
 
-.square-SliderGrid > div > img {
+.lightgallery-item > img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
-.square-SliderGrid:last-child {
+.lightgallery-item:last-child {
   margin-right: 0px;
-} */
+}
 
-/* .square-SliderGrid:hover {
+/* .lightgallery-item:hover {
   background-color: #ffffff27;
   border-color: #f4f4f4;
   color: #d2d2d2;
 } */
-/* 
+
 .buttons-SliderGrid {
   display: flex;
   flex-wrap: wrap;
@@ -84,21 +84,34 @@
   margin-top: 2rem;
 }
 
+/* Utilizzo di un'icona come bullet */
 .bullet-SliderGrid::before {
   content: "";
   display: inline-block;
   width: 2rem;
   height: 2rem;
   background-image: url("../img/svg/iconBullet.svg");
-  background-size: contain;  background-repeat: no-repeat;
+  /*  background-size: cover; */
+  background-size: contain; /* Ridimensiona l'immagine per adattarla al contenitore mantenendone le proporzioni */
+  background-repeat: no-repeat;
 }
 .bullets-SliderGrid {
   display: flex;
   justify-content: center;
 }
+#lg-download-1 {
+  display: none;
+}
+.lg-outer .lg-thumb-item.active,
+.lg-outer .lg-thumb-item:hover {
+  border-color: var(
+    --beam-yellow
+  ); /* Assicurati di usare !important per garantire che questa regola abbia priorità */
+}
 
 .bullet-SliderGrid.activeB::before {
-  background-image: url("../img/svg/iconBulletActive.svg");}
+  background-image: url("../img/svg/iconBulletActive.svg"); /* Nuova immagine del bullet quando è attivo */
+}
 @media only screen and (max-width: 768px) {
   .square-SliderGrid > div {
     width: calc((100% - (4 - 1) * 1.5rem) / 2);
@@ -108,4 +121,3 @@
     padding: 0;
   }
 }
- */

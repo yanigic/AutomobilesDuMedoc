@@ -37,7 +37,9 @@
   width: calc(100% / 2);
 }
 .container-layout {
-  padding: 0 0 5rem 0;
+  /* padding: 0 0 5rem 0; */
+  padding-top: var(--two);
+  padding-bottom: var(--two);
   background-color: var(--beam-yellow);
 }
 

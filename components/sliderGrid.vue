@@ -1,4 +1,4 @@
-<!-- <script setup lang="ts">
+<!-- <!-- <script setup lang="ts">
 /* Modal Image per far comparire l'immagine tipo pop up
  */
 import { onMounted } from "vue";
@@ -250,3 +250,4 @@ onBeforeUnmount(() => {
     </ul>
   </div>
 </template>
+-->

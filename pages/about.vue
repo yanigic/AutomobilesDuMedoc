@@ -7,6 +7,7 @@ import TitleDescription from "../components/titleDescription.vue";
 import Slider from "../components/slider.vue";
 import CardImageText from "../components/cardImageText.vue";
 import PartnersCard from "../components/partnersCard.vue";
+import imgG from "../assets/img/backgroundgia.png";
 
 const titlesDescriptions = [
   {
@@ -25,16 +26,43 @@ const titlesDescriptions = [
       "The brand's cornerstone, reflected in the high caliber of workmanship and the exceptional experience offered to clients. This value is about being part of an exclusive club where every detail is meticulously crafted to deliver beyond the standard.",
   },
 ];
+
+const isScrolled = ref(false);
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 0;
+  console.log("isScrolled:", isScrolled.value); // Aggiungi questo per verificare lo scroll
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <template>
-  <div class="container-layouts">
+  <div class="container-layouts" id="parallax">
+    <div class="keyart_layer" id="keyart-8"></div>
+    <Nav
+      class="nav-position"
+      :class="[
+        'backgroundBlack',
+        isScrolled ? 'navbar-scrolled-yellow' : 'backgroundBlack',
+      ]"
+    ></Nav>
     <HeroAbout></HeroAbout>
     <Paragraph></Paragraph>
     <TitleParagraph></TitleParagraph>
-    <span class="title-description-about" v-for="(item, index) in titlesDescriptions" :key="index">
+    <span
+      class="title-description-about"
+      v-for="(item, index) in titlesDescriptions"
+      :key="index"
+    >
       <TitleDescription
-        class="container-layout "
+        class="container-layout"
         :title="item.title"
         :description="item.description"
       ></TitleDescription>

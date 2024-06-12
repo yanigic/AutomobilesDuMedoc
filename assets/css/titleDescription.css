@@ -42,6 +42,10 @@
   padding-bottom: var(--two);
   background-color: var(--beam-yellow);
 }
+.homepage .text-container:hover {
+  background-color: var(--burnout-black);
+  color: var(--beam-yellow);
+}
 
 .title-description-about:nth-of-type(odd) .text-container,
 .title-description-about:nth-of-type(odd) .container-layout {

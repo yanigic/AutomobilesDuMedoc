@@ -58,18 +58,6 @@ const fetchData = async () => {
 onMounted(() => {
   fetchData();
   const titleBanners = document.querySelectorAll(".title-banner");
-
-  titleBanners.forEach((titleBanner) => {
-    const bgBanner = titleBanner.closest(".bg-banner");
-
-    titleBanner.addEventListener("mouseenter", () => {
-      bgBanner.classList.add("hover");
-    });
-
-    titleBanner.addEventListener("mouseleave", () => {
-      bgBanner.classList.remove("hover");
-    });
-  });
 });
 </script>
 

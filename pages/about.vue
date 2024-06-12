@@ -45,7 +45,6 @@ onUnmounted(() => {
 
 <template>
   <div class="container-layouts" id="parallax">
-    <div class="keyart_layer" id="keyart-8"></div>
     <Nav
       class="nav-position"
       :class="[
@@ -53,6 +52,7 @@ onUnmounted(() => {
         isScrolled ? 'navbar-scrolled-yellow' : 'backgroundBlack',
       ]"
     ></Nav>
+    <div class="keyart_layer" id="keyart-8"></div>
     <HeroAbout></HeroAbout>
     <Paragraph></Paragraph>
     <TitleParagraph></TitleParagraph>

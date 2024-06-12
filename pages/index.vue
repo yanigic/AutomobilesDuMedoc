@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
-import Default from "../layouts/default.vue";
-
 import BannerProject from "../components/bannerProject.vue";
 import titleDescription from "../components/titleDescription.vue";
 import Nav from "../components/nav.vue";
@@ -69,22 +67,14 @@ onUnmounted(() => {
         isScrolled ? 'navbar-scrolled-yellow' : 'backgroundYellow',
       ]"
     ></Nav>
-
-    <!--  <Nav
-      class="nav-position"
-      :class="[
-        'backgroundBlack',
-        isScrolled ? 'navbar-scrolled-beam-yellow' : 'backgroundBlack',
-      ]"
-    ></Nav> -->
-    <!--  <Default></Default> -->
-
-    <!--  <BannerProject></BannerProject>
-    <BannerProject></BannerProject> -->
     <span class="BannerProject-container">
       <BannerProject></BannerProject>
     </span>
-    <span v-for="(item, index) in titlesDescriptions" :key="index">
+    <span
+      class="homepage"
+      v-for="(item, index) in titlesDescriptions"
+      :key="index"
+    >
       <titleDescription
         :title="item.title"
         :description="item.description"
@@ -99,6 +89,4 @@ onUnmounted(() => {
     ></BannerContact>
     <Footer></Footer>
   </div>
-
-  <!-- <StoryblokComponent v-if="story" :blok="story.content" /> -->
 </template>

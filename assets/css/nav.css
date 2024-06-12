@@ -140,7 +140,7 @@ v-list-item {
   background-color: var(--beam-yellow);
   fill: var(--burnout-black);
 }
-.backgroundBlack .navbar-scrolled-beam-yellow .svg-logo.adm {
+.navbar-scrolled-beam-yellow .svg-logo.adm {
   height: 1.3125rem;
 }
 

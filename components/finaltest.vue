@@ -81,16 +81,15 @@
 
       <div class="slider-text-container">
         <ul id="infinite-list" @scroll="onScroll">
-          <a href="singleProject">
-            <li
-              class="li image-text-container"
-              v-for="(item, index) in items"
-              :key="index"
-              :class="{ visible: index === currentVisibleIndex }"
-            >
-              {{ item.name }}
-            </li>
-          </a>
+          <li
+            :href="item.href"
+            class="li image-text-container"
+            v-for="(item, index) in items"
+            :key="index"
+            :class="{ visible: index === currentVisibleIndex }"
+          >
+            <a href="singleProject"> {{ item.name }} </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -114,19 +113,18 @@
 
 <script>
 import { ref, onMounted } from "vue";
-import cherryCountach from "../assets/img/imgSinglePro.jpeg";
-import defender from "../assets/img/grid/image64.jpg";
+import cardImageOne from "../assets/img/imgSinglePro.jpeg";
 
 export default {
   name: "App",
   setup() {
     const originalItems = [
-      { name: "4c Superleggera", src: cherryCountach },
-      { name: "benz v12", src: cherryCountach },
-      { name: "cherry countach", src: cherryCountach },
-      { name: "defender amaranth", src: defender },
-      { name: "bmw m3 e46", src: cherryCountach },
-      { name: "Abarth 695 corsa", src: cherryCountach },
+      { name: "first", src: cardImageOne, href: "singleProject" },
+      { name: "gino", src: cardImageOne, href: "singleProject" },
+      { name: "due", src: cardImageOne, href: "singleProject" },
+      { name: "pesce", src: cardImageOne, href: "singleProject" },
+      { name: "cane", src: cardImageOne, href: "singleProject" },
+      { name: "gatto", src: cardImageOne, href: "singleProject" },
     ];
 
     const items = ref([...originalItems]);

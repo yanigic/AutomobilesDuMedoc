@@ -33,7 +33,7 @@ onUnmounted(() => {
       ]"
     ></Nav>
     <Finaltest></Finaltest>
-    <!-- <NewTest></NewTest> -->
+    <!--    <NewTest></NewTest> -->
     <!-- <StestVis></StestVis> -->
     <!--  <Test></Test> -->
     <!--  <SliderText></SliderText> -->

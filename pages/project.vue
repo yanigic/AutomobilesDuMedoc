@@ -3,6 +3,7 @@ import ImgGrid from "../components/imgGrid.vue";
 import SliderText from "../components/sliderText.vue";
 import Test from "../components/test.vue";
 import StestVis from "../components/stestVis.vue";
+import Footer from "../components/footer.vue";
 
 import { ref, onMounted, onUnmounted } from "vue";
 import NewTest from "../components/newTest.vue";
@@ -37,5 +38,6 @@ onUnmounted(() => {
     <!--  <Test></Test> -->
     <!--  <SliderText></SliderText> -->
     <ImgGrid></ImgGrid>
+    <Footer></Footer>
   </div>
 </template>

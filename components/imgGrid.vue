@@ -35,56 +35,62 @@ const imagesThree = [
   <div>
     <div class="row-imgGrid">
       <div class="column-imgGrid">
-        <div
-          class="container-imgGrid"
-          v-for="(item, index) in images"
-          :key="index"
-        >
-          <img class="image" :src="item.src" style="width: 100%" />
-          <div class="middle">
-            <!-- <div>
+        <a href="singleProject">
+          <div
+            class="container-imgGrid"
+            v-for="(item, index) in images"
+            :key="index"
+          >
+            <img class="image" :src="item.src" style="width: 100%" />
+            <div class="middle">
+              <!-- <div>
               <div>{{ item.name }}</div>
             </div> -->
-            <div class="name-project">
-              <div class="box-nameProject">{{ item.name }}</div>
+              <div class="name-project">
+                <div class="box-nameProject">{{ item.name }}</div>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
 
       <div class="column-imgGrid">
-        <div
-          class="container-imgGrid"
-          v-for="(item, index) in imagesTwo"
-          :key="index"
-        >
-          <img class="image" :src="item.src" style="width: 100%" />
-          <div class="middle">
-            <!-- <div>
+        <a href="singleProject">
+          <div
+            class="container-imgGrid"
+            v-for="(item, index) in imagesTwo"
+            :key="index"
+          >
+            <img class="image" :src="item.src" style="width: 100%" />
+            <div class="middle">
+              <!-- <div>
               <div>{{ item.name }}</div>
             </div> -->
-            <div class="name-project">
-              <div class="box-nameProject">{{ item.name }}</div>
+              <div class="name-project">
+                <div class="box-nameProject">{{ item.name }}</div>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
       <div class="column-imgGrid">
-        <div
-          class="container-imgGrid"
-          v-for="(item, index) in imagesThree"
-          :key="index"
-        >
-          <img class="image" :src="item.src" style="width: 100%" />
-          <div class="middle">
-            <!-- <div>
+        <a href="singleProject">
+          <div
+            class="container-imgGrid"
+            v-for="(item, index) in imagesThree"
+            :key="index"
+          >
+            <img class="image" :src="item.src" style="width: 100%" />
+            <div class="middle">
+              <!-- <div>
               <div>{{ item.name }}</div>
             </div> -->
-            <div class="name-project">
-              <div class="box-nameProject">{{ item.name }}</div>
+              <div class="name-project">
+                <div class="box-nameProject">{{ item.name }}</div>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>

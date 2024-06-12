@@ -14,24 +14,19 @@ import Footer from "../components/footer.vue";
 
 const titlesDescriptions = [
   {
-    title: "Customization",
+    title: "Projects",
     description:
-      "Our customization service enhances vehicles with unique designs and advanced materials, tailored to client specifications for a distinctive, improved driving experience and enhancing aesthetics.",
+      "The customization projects enhances vehicles with unique designs and advanced materials, tailored to client specifications for a distinctive, improved driving experience and enhancing aesthetics.",
   },
   {
-    title: "Restomod",
+    title: "Showroom",
     description:
-      "Restomod blends classic design with modern technology, enhancing historic vehicles with custom details and upgrades for improved performance and comfort while preserving their vintage charm.",
+      "Automobiles du Médoc showroom features a curated selection of luxury and collector cars, each with detailed information on its history and specifications. Every customer can find and acquire a vehicle that exceeds their expectations.",
   },
   {
-    title: "service",
+    title: "Conciergerie",
     description:
-      "Our vehicle maintenance service keeps your car performing optimally through routine check-ups, fluid replacements, and diagnostics, improving its reliability and longevity.",
-  },
-  {
-    title: "restoration",
-    description:
-      "Our auto restoration service revitalizes classic cars by combining  original features with modern enhancements, ensuring each vehicle is  authentically restored to its original condition for improved  performance and reliability.",
+      "Our concierge service offers secure storage solutions, where every vehicle is maintained under the highest standards of care and surveillance. We ensure that each car remains in pristine condition, safeguarded by advanced security measures.",
   },
 ];
 

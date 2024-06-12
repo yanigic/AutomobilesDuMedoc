@@ -37,6 +37,11 @@
   background-color: var(--beam-yellow);
   display: flex;
   flex-direction: column;
+  height: 88vh;
+  scroll-snap-align: start;
+}
+.bg-banner:has(.title-banner:nth-of-type(1):hover) {
+  background-color: var(--burnout-black);
 }
 .img-container {
   height: 80vh;
@@ -46,9 +51,7 @@
   height: 100%;
   object-fit: cover;
 }
-.bg-banner:has(.title-banner:nth-of-type(1):hover) {
-  background-color: var(--burnout-black);
-}
+
 .text-container-banner {
   width: var(--col8);
   margin: auto;
@@ -61,10 +64,6 @@
   display: flow-root;
   height: 100vh;
   scroll-snap-type: y mandatory;
-}
-.bg-banner {
-  height: 100vh;
-  scroll-snap-align: start;
 }
 
 .title-banner:hover .title-bannerProject,

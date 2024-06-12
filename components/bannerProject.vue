@@ -63,30 +63,34 @@ onMounted(() => {
 
 <template>
   <div v-if="projects.length > 0">
-    <div class="bg-banner" v-for="(project, index) in projects" :key="index">
-      <div class="title-banner">
-        <h2 class="title-bannerProject">
-          {{ project.title }}
-          <svg
-            class="svg-banner"
-            xmlns="http://www.w3.org/2000/svg"
-            width="36"
-            height="35"
-            viewBox="0 0 36 35"
-            fill="none"
-          >
-            <path
-              id="Union"
-              d="M26.5984 5.73224H3.13398V0.732239H35.134V33.2322H30.134V9.26777L4.40174 35L0.866211 31.4645L26.5984 5.73224Z"
-              fill="#02020B"
-            />
-          </svg>
-        </h2>
-        <div class="btn-bannerProject-cta">SEE THE PROJECT</div>
+    <a href="singleProject">
+      <!-- <a v-for="(project, index) in projects" :key="index" :href="project.link"> -->
+
+      <div class="bg-banner" v-for="(project, index) in projects" :key="index">
+        <div class="title-banner">
+          <h2 class="title-bannerProject">
+            {{ project.title }}
+            <svg
+              class="svg-banner"
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="35"
+              viewBox="0 0 36 35"
+              fill="none"
+            >
+              <path
+                id="Union"
+                d="M26.5984 5.73224H3.13398V0.732239H35.134V33.2322H30.134V9.26777L4.40174 35L0.866211 31.4645L26.5984 5.73224Z"
+                fill="#02020B"
+              />
+            </svg>
+          </h2>
+          <div class="btn-bannerProject-cta">SEE THE PROJECT</div>
+        </div>
+        <div class="img-container">
+          <img :src="project.image" alt="Project Image" />
+        </div>
       </div>
-      <div class="img-container">
-        <img :src="project.image" alt="Project Image" />
-      </div>
-    </div>
+    </a>
   </div>
 </template>

@@ -1,6 +1,3 @@
-[submodule "ADM"]
-    path = ADM
-    url = https://github.com/yanigic/AutomobilesDuMedoc.git
 [submodule "AutomobilesDuMedoc"]
 	path = AutomobilesDuMedoc
 	url = https://github.com/yanigic/AutomobilesDuMedoc.git

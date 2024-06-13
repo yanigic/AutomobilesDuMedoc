@@ -96,7 +96,7 @@ const goToSlide = (index) => {
 const calculateNumImagesPerSlide = () => {
   numImagesPerSlide = window.innerWidth < 768 ? 4 : 12; // Cambia il numero di immagini per slide in base alla larghezza della finestra
 };
-</script>
+</script>s
 <template>
   <div class="bg-SliderGrid">
     <div id="wrapper-SliderGrid">

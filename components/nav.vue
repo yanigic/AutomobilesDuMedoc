@@ -16,8 +16,10 @@ export default {
   methods: {
     navigateToPage(href) {
       // Reindirizza alla pagina corrispondente al link cliccato
+      console.log("Navigating to page:", href); // Aggiungiamo un console.log qui
 
       window.location.href = href;
+      this.drawer = false;
     },
 
     closedOpen() {

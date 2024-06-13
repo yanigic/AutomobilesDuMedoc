@@ -174,12 +174,21 @@ v-list-item {
 }
 
 @media only screen and (max-width: 768px) {
-  .bg-nav-mobile {
+  /*   .bg-nav-mobile {
     color: var(--burnout-black);
     background-color: var(--beam-yellow);
     padding: 3rem 2rem;
     align-items: center;
     display: block;
+  } */
+  .bg-nav-mobile {
+    color: var(--burnout-black);
+
+    background-color: var(--beam-yellow);
+    padding: 3rem 2rem;
+    align-items: center;
+    display: flex; /* Utilizza flex per centrare gli elementi verticalmente */
+    justify-content: center; /* Spazia gli elementi alla fine */
   }
 
   .backgroundBlack .bg-nav-mobile,

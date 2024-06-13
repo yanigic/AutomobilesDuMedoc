@@ -82,7 +82,6 @@
   }
   .title-banner {
     padding: 0;
-    width: var(--col10);
   }
   .svg-banner {
     margin-bottom: 0.6rem;
@@ -90,10 +89,13 @@
     vertical-align: middle;
     height: 0.91544rem;
   }
+  .img-container {
+    height: 70%;
+  }
   .bg-banner {
     display: flex;
     flex-direction: column-reverse;
-    height: 88vh;
+    /*  height: 88vh; */
   }
   .btn-bannerProject-cta {
     text-align: center;

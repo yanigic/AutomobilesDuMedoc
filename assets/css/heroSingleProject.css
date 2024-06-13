@@ -1,8 +1,8 @@
 .heroSingleProject-container {
   width: var(--col10);
   margin: auto;
-  padding-top:var(--vertical-space-xlarg) ;
-  padding-bottom:var(--vertical-space-xlarg) ;
+  padding-top: var(--vertical-space-xlarg);
+  padding-bottom: var(--vertical-space-xlarg);
   text-align: center;
 }
 
@@ -15,7 +15,7 @@
   line-height: 9.5rem;
   letter-spacing: -0.225rem;
   color: var(--gta-bourdeaux);
-
+  text-transform: capitalize;
   position: relative;
   top: -6rem;
 }
@@ -25,27 +25,26 @@
 .img-singleProject {
   margin: auto;
 }
-@media only screen and (max-width: 1150px){
-  .title-singleProject{
+@media only screen and (max-width: 1150px) {
+  .title-singleProject {
     line-height: 8.5rem;
-    font-size:var(--font-size-larg-title)
+    font-size: var(--font-size-larg-title);
   }
 }
 @media only screen and (min-width: 735px) and (max-width: 900px) {
-  .title-singleProject{
+  .title-singleProject {
     line-height: 6.5rem;
-    font-size:var( --font-size-medium-title)
+    font-size: var(--font-size-medium-title);
   }
 }
 
-@media only screen and (max-width: 735px){
+@media only screen and (max-width: 735px) {
+  .heroSingleProject-container {
+    margin: 0 auto;
 
-  .heroSingleProject-container{
-        margin: 0 auto;
-         
-        width: 100%;
+    width: 100%;
   }
-  .title-singleProject{
+  .title-singleProject {
     font-size: var(--font-size-title-mobile-m);
     text-align: start;
     line-height: 103%;
@@ -53,20 +52,19 @@
     position: unset;
     margin-left: var(--laterl-space);
     margin-right: var(--laterl-space);
-    padding-top:var(    --vertical-space-medium);
+    padding-top: var(--vertical-space-medium);
   }
 
-  .heroSingleProject-container > img{
+  .heroSingleProject-container > img {
     width: var(--col12);
     height: 70vh;
     object-fit: cover;
   }
-  .heroSingleProject-container{
+  .heroSingleProject-container {
     padding-top: 0;
-    padding-bottom:var(    --vertical-space-medium);
+    padding-bottom: var(--vertical-space-medium);
   }
-  .svg-heroSingleProject{
+  .svg-heroSingleProject {
     display: none;
   }
- 
 }

@@ -15,7 +15,8 @@
   width: 100%;
 }
 
-#carousel, #carousel-imgTwoColumns {
+#carousel,
+#carousel-imgTwoColumns {
   position: relative;
   display: flex;
   overflow: hidden;
@@ -69,34 +70,34 @@
   border-color: #f4f4f4;
   color: #f4f4f4;
 }
-.square > img{
+.square > img {
   object-fit: cover;
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 .singleProject-slider.bg-slider {
-background-color: var( --pearl-white);
-padding-bottom: var(--vertical-space-larg);
-padding-top: var(--vertical-space-larg);
+  background-color: var(--pearl-white);
+  padding-bottom: var(--vertical-space-larg);
+  padding-top: var(--vertical-space-larg);
 }
 
-.singleProject-slider >.text-big-title, .singleProject-slider path{
+.singleProject-slider > .text-big-title,
+.singleProject-slider path {
   color: var(--gta-bourdeaux);
   fill: var(--gta-bourdeaux);
-
+  font-weight: 400;
 }
 
-
-
 @media only screen and (max-width: 600px) {
-  .text-big-title{
+  .text-big-title {
     font-size: var(--font-size-text-two);
-    padding:var( --vertical-space-small) 0;
+    padding: var(--vertical-space-small) 0;
+    font-weight: 400;
   }
   .square {
     max-width: var(--col10);
   }
-  .buttons-slider{
+  .buttons-slider {
     display: none;
   }
 }

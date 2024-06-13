@@ -247,20 +247,20 @@ export default {
 }
 
 .leftTop_side_container {
-  left: 5%;
-  top: -25%;
+  left: 15%;
+  top: -15%;
 }
 .leftBottom_side_container {
-  left: 5%;
-  bottom: -25%;
+  left: 15%;
+  bottom: -15%;
 }
 .rightBottom_side_container {
-  right: 5%;
-  bottom: -25%;
+  right: 15%;
+  bottom: -15%;
 }
 .rightTop_side_container {
-  right: 5%;
-  top: -25%;
+  right: 15%;
+  top: -15%;
 }
 
 .rightBottom_side_container,

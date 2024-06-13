@@ -5,6 +5,7 @@ import titleDescription from "../components/titleDescription.vue";
 import Nav from "../components/nav.vue";
 import BannerContact from "../components/bannerContact.vue";
 import Footer from "../components/footer.vue";
+import HeroHomePage from "../components/heroHomePage.vue";
 
 /* const story = await useAsyncStoryblok(
   "home",
@@ -62,6 +63,7 @@ onUnmounted(() => {
         isScrolled ? 'navbar-scrolled-yellow' : 'backgroundYellow',
       ]"
     ></Nav>
+    <HeroHomePage></HeroHomePage>
     <span class="BannerProject-container">
       <BannerProject></BannerProject>
     </span>

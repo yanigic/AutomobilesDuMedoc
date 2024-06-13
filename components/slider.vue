@@ -1,5 +1,4 @@
-<script setup >
-
+<script setup>
 import arrow from "../assets/img/svg/arrowRight.svg";
 import "../assets/css/slider.css";
 
@@ -8,7 +7,6 @@ const isDragging = ref(false);
 const startX = ref(0);
 const scrollLeft = ref(0);
 const projects = ref([]);
-
 
 function handleMouseDown(event) {
   isDragging.value = true;
@@ -28,39 +26,40 @@ function handleMouseUp() {
   isDragging.value = false;
 }
 
-
-onMounted(async() => {
+onMounted(async () => {
   await fetchData();
 
   carousel.value = document.getElementById("carousel"); // Assumi che `#carousel` sia l'ID del div da scrollare
-  carousel.value.addEventListener('mousedown', handleMouseDown);
-  document.addEventListener('mousemove', handleMouseMove);
-  document.addEventListener('mouseup', handleMouseUp);
+  carousel.value.addEventListener("mousedown", handleMouseDown);
+  document.addEventListener("mousemove", handleMouseMove);
+  document.addEventListener("mouseup", handleMouseUp);
 });
 
 const fetchData = async () => {
   try {
-    const response = await fetch("https://api.storyblok.com/v2/cdn/stories/singleproject?version=draft&token=CgdxbCXc3SKuMrQjSOH0NAtt");
+    const response = await fetch(
+      "https://api.storyblok.com/v2/cdn/stories/singleproject?version=draft&token=CgdxbCXc3SKuMrQjSOH0NAtt"
+    );
     const { story } = await response.json();
     const content = story.content;
 
-   projects.value = content.body.filter(project => project.imgSlider).map((project) => {
-      console.log(" imgSlider Mapping project:", project.imgSlider);
-      return {
-       imgSlider: project.imgSlider.map(img => img.filename),
-    
-      };
-    });
-    
+    projects.value = content.body
+      .filter((project) => project.imgSlider)
+      .map((project) => {
+        console.log(" imgSlider Mapping project:", project.imgSlider);
+        return {
+          imgSlider: project.imgSlider.map((img) => img.filename),
+        };
+      });
   } catch (error) {
     console.error("Errore nel recupero dei dati da Storyblok:", error);
   }
 };
 
 onUnmounted(() => {
-  carousel.value.removeEventListener('mousedown', handleMouseDown);
-  document.removeEventListener('mousemove', handleMouseMove);
-  document.removeEventListener('mouseup', handleMouseUp);
+  carousel.value.removeEventListener("mousedown", handleMouseDown);
+  document.removeEventListener("mousemove", handleMouseMove);
+  document.removeEventListener("mouseup", handleMouseUp);
 });
 
 const willLeftLessThan40pxToScrollEnd = (nextStep) => {
@@ -98,35 +97,53 @@ const handleClickGoBack = () => {
     <h3 class="text-big-title">Explore More</h3>
     <div id="wrapper">
       <div id="carousel" v-for="(project, index) in projects" :key="index">
-        <div class="square" v-for="(img, idx) in project.imgSlider" :key="idx"  >
-          <img :src="img" alt=""></div>
-        <!-- <div class="square"><img src="../assets/img/grid/image142.jpg" alt=""></div>
-        <div class="square"><img src="../assets/img/grid/image140.jpg" alt=""></div>
-        <div class="square"><img src="../assets/img/grid/image135.jpg" alt=""></div>
-        <div class="square"><img src="../assets/img/grid/image171.jpg" alt=""></div>
-        <div class="square"><img src="../assets/img/grid/image142.jpg" alt=""></div>
-        <div class="square"><img src="../assets/img/grid/image73.jpg" alt=""></div>
-        <div class="square"><img src="../assets/img/grid/image142.jpg" alt=""></div>
-        -->
+        <div class="square" v-for="(img, idx) in project.imgSlider" :key="idx">
+          <a href="singleProject">
+            <img :src="img" alt="" />
+          </a>
+        </div>
       </div>
     </div>
     <div class="buttons-slider">
       <button class="btn-slider" @click="handleClickGoBack()">
         <!-- <img src="../assets/img/svg/arrowRight.svg" alt="" /> -->
-         <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          width="39"
+          height="39"
+          viewBox="0 0 39 39"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <g id="Group 1775">
-          <path id="Vector 7 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M31.7695 19.3406L16.4645 4.03553L20 0.5L38.8406 19.3406L19.7106 38.4705L16.1751 34.9349L31.7695 19.3406Z" fill="#F3F90A"/>
+            <path
+              id="Vector 7 (Stroke)"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M31.7695 19.3406L16.4645 4.03553L20 0.5L38.8406 19.3406L19.7106 38.4705L16.1751 34.9349L31.7695 19.3406Z"
+              fill="#F3F90A"
+            />
           </g>
         </svg>
       </button>
       <button class="btn-slider" @click="handleClickGoAhead()">
         <!-- <img src="../assets/img/svg/arrowRight.svg" alt="" /> -->
-        <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          width="39"
+          height="39"
+          viewBox="0 0 39 39"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <g id="Group 1775">
-          <path id="Vector 7 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M31.7695 19.3406L16.4645 4.03553L20 0.5L38.8406 19.3406L19.7106 38.4705L16.1751 34.9349L31.7695 19.3406Z" fill="#F3F90A"/>
+            <path
+              id="Vector 7 (Stroke)"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M31.7695 19.3406L16.4645 4.03553L20 0.5L38.8406 19.3406L19.7106 38.4705L16.1751 34.9349L31.7695 19.3406Z"
+              fill="#F3F90A"
+            />
           </g>
         </svg>
-
       </button>
     </div>
   </div>

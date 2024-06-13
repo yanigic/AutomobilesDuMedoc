@@ -13,12 +13,11 @@
   fill: var(--burnout-black);
 }
 .title-banner {
-  margin: auto;
   display: flex;
-
+  background: var(--beam-yellow);
   height: 17.75rem;
-  width: var(--col10);
-  /* padding: 9rem 23rem 4rem 23rem; */
+  /* width: var(--col10); */
+  padding: 9rem 6rem 4rem 6rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -34,15 +33,16 @@
  height: 100px;
 } */
 .bg-banner {
-  background-color: var(--beam-yellow);
+  /* background-color: var(--beam-yellow); */
   display: flex;
   flex-direction: column;
-  /*  height: 88vh; */
+  height: 95vh;
+  /*   height: 40vh; */
   scroll-snap-align: start;
 }
-.bg-banner:has(.title-banner:nth-of-type(1):hover) {
+/* .bg-banner:has(.title-banner:nth-of-type(1):hover) {
   background-color: var(--burnout-black);
-}
+} */
 .img-container {
   height: 80vh;
 }
@@ -62,7 +62,7 @@
 .BannerProject-container {
   overflow: auto;
   display: flow-root;
-  height: 100vh;
+  /*  height: 100vh; */
   scroll-snap-type: y mandatory;
 }
 
@@ -71,7 +71,7 @@
   color: var(--beam-yellow);
   fill: var(--beam-yellow);
 }
-.title-banner:hover .bg-banner {
+.title-banner:hover {
   background-color: var(--burnout-black);
 }
 

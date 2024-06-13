@@ -94,7 +94,7 @@
 
 .box-permission {
   color: var(--burnout-black);
-
+  margin: 0.4rem;
   font-family: var(--OpenSans);
   font-size: var(--font-size-small-text);
   text-align: start;

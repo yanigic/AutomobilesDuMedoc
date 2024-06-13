@@ -12,14 +12,9 @@
     "startCommand": "npm run stackblitz"
   },
   "devDependencies": {
-    "@eslint/js": "^9.4.0",
     "@nuxtjs/tailwindcss": "^6.11.4",
     "@storyblok/nuxt": "^6.0.10",
-    "eslint": "^9.4.0",
-    "eslint-plugin-vue": "^9.26.0",
-    "globals": "^15.4.0",
-    "nuxt": "^3.10.2",
-    "typescript-eslint": "^7.13.0"
+    "nuxt": "^3.10.2"
   },
   "dependencies": {
     "@vueuse/components": "^10.10.0",

@@ -27,12 +27,12 @@
   text-align: justify;
   padding: var(--Three) var(--two);
   background-color: var(--beam-yellow);
-  align-items: start;
+  align-items: flex-start;
 }
 .text-container > p {
   flex-grow: 1;
   flex-shrink: 0;
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   width: calc(100% / 2);
 }

@@ -13,14 +13,11 @@
     <div class="container-img-animated container-img-animated-desktop">
       <img
         v-if="!showVideo"
-        src="/Users/yanilettetejeda/Documents/Code/projects/adm/assets/img/IntroADM_Desktop_FrameFnale.png"
+        src="@/assets/img/IntroADM_Desktop_FrameFnale.png"
         alt=""
       />
       <video v-else ref="videoElement" muted>
-        <source
-          src="/Users/yanilettetejeda/Documents/Code/projects/adm/assets/video/IntroADM_Desktop.mp4"
-          type="video/mp4"
-        />
+        <source src="@/assets/video/IntroADM_Desktop.mp4" type="video/mp4" />
         Il tuo browser non supporta l'elemento video.
       </video>
     </div>

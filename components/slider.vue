@@ -26,6 +26,25 @@ function handleMouseUp() {
   isDragging.value = false;
 }
 
+/* drag */
+function handleTouchStart(event) {
+  isDragging.value = true;
+  startX.value = event.touches[0].pageX - carousel.value.offsetLeft;
+  scrollLeft.value = carousel.value.scrollLeft;
+}
+
+function handleTouchMove(event) {
+  if (!isDragging.value) return;
+  event.preventDefault();
+  const x = event.touches[0].pageX - carousel.value.offsetLeft;
+  const walk = (x - startX.value) * 3; // Il fattore 3 aumenta la sensibilità del trascinamento
+  carousel.value.scrollLeft = scrollLeft.value - walk;
+}
+
+function handleTouchEnd() {
+  isDragging.value = false;
+}
+
 onMounted(async () => {
   await fetchData();
 
@@ -33,6 +52,10 @@ onMounted(async () => {
   carousel.value.addEventListener("mousedown", handleMouseDown);
   document.addEventListener("mousemove", handleMouseMove);
   document.addEventListener("mouseup", handleMouseUp);
+
+  carousel.value.addEventListener("touchstart", handleTouchStart);
+  document.addEventListener("touchmove", handleTouchMove);
+  document.addEventListener("touchend", handleTouchEnd);
 });
 
 const fetchData = async () => {
@@ -60,6 +83,10 @@ onUnmounted(() => {
   carousel.value.removeEventListener("mousedown", handleMouseDown);
   document.removeEventListener("mousemove", handleMouseMove);
   document.removeEventListener("mouseup", handleMouseUp);
+
+  carousel.value.removeEventListener("touchstart", handleTouchStart);
+  document.removeEventListener("touchmove", handleTouchMove);
+  document.removeEventListener("touchend", handleTouchEnd);
 });
 
 const willLeftLessThan40pxToScrollEnd = (nextStep) => {

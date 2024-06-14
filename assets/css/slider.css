@@ -80,6 +80,11 @@
   padding-bottom: var(--vertical-space-larg);
   padding-top: var(--vertical-space-larg);
 }
+.square > .singleProject > img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
 
 .singleProject-slider > .text-big-title,
 .singleProject-slider path {

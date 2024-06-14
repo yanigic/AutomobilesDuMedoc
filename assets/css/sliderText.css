@@ -4,6 +4,9 @@
 
 img {
   vertical-align: middle;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
 }
 
 /* Position the image container (needed to position the left and right arrows) */

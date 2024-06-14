@@ -329,11 +329,16 @@ export default {
   #infinite-list {
     margin: 0px auto;
     height: 100vh;
+    overflow: scroll;
+    padding: 10px 20px;
   }
   .image-text-container {
-    padding-top: 25px;
+    padding-top: 5px;
+    font-size: var(--font-size-title-mobile);
   }
-
+  .slider-text-container {
+    padding: 50px 0px;
+  }
   .slider-projects-container {
     padding-top: 0;
     padding-bottom: 0;

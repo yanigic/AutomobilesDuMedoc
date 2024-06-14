@@ -302,7 +302,7 @@ export default {
 .single-image.active {
   opacity: 1;
 }
-/* @media only screen and (max-width: 735px) {
+@media only screen and (max-width: 735px) {
   .slider-projects-container .prev-btn,
   .slider-projects-container .next-btn {
     display: none;
@@ -328,7 +328,10 @@ export default {
   }
   #infinite-list {
     margin: 0px auto;
-    height: 90vh;
+    height: 100vh;
+  }
+  .image-text-container {
+    padding-top: 25px;
   }
 
   .slider-projects-container {
@@ -344,5 +347,5 @@ export default {
     top: 0%;
     left: 0%;
   }
-} */
+}
 </style>

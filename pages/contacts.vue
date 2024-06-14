@@ -2,6 +2,7 @@
 import "../assets/css/contacts.css";
 import Footer from "../components/footer.vue";
 import { ref, onMounted, onUnmounted } from "vue";
+import NavMobile from "../components/navMobile.vue";
 
 const options = ref([
   { label: "Customization", value: "Customization", selected: false },
@@ -40,6 +41,7 @@ onUnmounted(() => {
 
 <template>
   <div class="bg-contacts">
+    <NavMobile class="navMobile-yellow"></NavMobile>
     <Nav
       class="nav-position"
       :class="[

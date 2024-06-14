@@ -142,7 +142,7 @@ export default {
       </div>
     </div>
 
-    <div class="bg-nav-mobile">
+    <!-- <div class="bg-nav-mobile">
       <div>
         <v-app class="navContainer">
           <v-app-bar app>
@@ -242,6 +242,6 @@ export default {
           </span>
         </v-app>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>

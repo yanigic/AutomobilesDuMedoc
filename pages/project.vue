@@ -8,6 +8,7 @@ import Footer from "../components/footer.vue";
 import { ref, onMounted, onUnmounted } from "vue";
 import NewTest from "../components/newTest.vue";
 import Finaltest from "../components/finaltest.vue";
+import NavMobile from "../components/navMobile.vue";
 const isScrolled = ref(false);
 
 const handleScroll = () => {
@@ -25,6 +26,7 @@ onUnmounted(() => {
 
 <template>
   <div class="backgroundBlack">
+    <NavMobile class="navMobile-black"></NavMobile>
     <Nav
       class="nav-position"
       :class="[

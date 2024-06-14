@@ -16,6 +16,7 @@ import Test from "../components/test.vue";
 import Lightgallery from "../components/lightgallery.vue";
 
 import SingleProjectParagraph from "../components/singleProjectParagraph.vue";
+import NavMobile from "../components/navMobile.vue";
 
 /* const SingleProjectInfoText = [
   {
@@ -70,6 +71,7 @@ onUnmounted(() => {
 
 <template>
   <div class="backgroundLight singleProject">
+    <NavMobile class="navMobile-white"></NavMobile>
     <Nav
       class="nav-position"
       :class="[

@@ -47,7 +47,7 @@ onUnmounted(() => {
 
 <template>
   <div class="container-layouts" id="parallax">
-    <NavMobile></NavMobile>
+    <NavMobile class="navMobile-yellow"></NavMobile>
     <!-- <Nav
       class="nav-position"
       :class="[

@@ -57,14 +57,14 @@ onUnmounted(() => {
 
 <template>
   <div class="container-layouts">
-    <NavMobile></NavMobile>
-    <!--  <Nav
+    <NavMobile class="navMobile-yellow"></NavMobile>
+    <Nav
       class="nav-position"
       :class="[
         'backgroundYellow',
         isScrolled ? 'navbar-scrolled-yellow' : 'backgroundYellow',
       ]"
-    ></Nav> -->
+    ></Nav>
     <HeroHomePage></HeroHomePage>
     <span class="BannerProject-container">
       <BannerProject></BannerProject>

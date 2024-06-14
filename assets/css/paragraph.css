@@ -20,14 +20,15 @@
   text-transform: uppercase;
   text-align: center;
 }
+.paragraph-logo {
+  width: 18rem;
+  margin: auto;
+}
 
 @media only screen and (max-width: 600px) {
-  .p-description{
-   font-size: var( --font-size-title-mobile);
-   line-height: 1.875rem; /* 85.714% */
+  .p-description {
+    font-size: var(--font-size-title-mobile);
+    line-height: 1.875rem; /* 85.714% */
     width: var(--col10);
   }
-
-
- 
 }

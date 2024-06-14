@@ -13,10 +13,10 @@ const texts = [
 
 <template>
   <div class="bg-description">
-    <div><img :src="emptyLogo" alt="" /></div>
+    <div class="paragraph-logo"><img :src="emptyLogo" alt="" /></div>
     <p class="p-description" v-for="(text, index) in texts" :key="index">
       {{ text.description }}
     </p>
-    <div><img :src="emptyLogo" alt="" /></div>
+    <div class="paragraph-logo"><img :src="emptyLogo" alt="" /></div>
   </div>
 </template>

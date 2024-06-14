@@ -13,19 +13,21 @@ const institutionalInformation = [
   },
 ];
 
-
 const pages = [
   {
-    label: "Projects", path: '/project'
+    label: "Projects",
+    path: "/project",
   },
   /* {
     label: "Services",  path: '/services'
   }, */
   {
-    label: "About", path: '/about'
+    label: "About",
+    path: "/about",
   },
   {
-    label: "Contact", path: '/contacts'
+    label: "Contact",
+    path: "/contacts",
   },
 ];
 const policy = [
@@ -61,13 +63,6 @@ const social = [
     icon: INSTAGRAM,
   },
 ];
-
-
-
-
-
-
-
 </script>
 <!-- <div class="text-container" v-for="(title, index) in titles" :key="index">
       <p class="title">{{ title.service }}</p> -->
@@ -77,7 +72,14 @@ const social = [
       <ul class="cols-footer footer-font">
         <li class="col-3">
           <ul v-for="(title, index) in institutionalInformation" :key="index">
-            <li><img style="margin-bottom: 2rem" :src="title.logo" alt="" /></li>
+            <li>
+              <img
+                class="logo"
+                style="margin-bottom: 2rem"
+                :src="title.logo"
+                alt=""
+              />
+            </li>
             <li>
               {{ title.description }}
             </li>
@@ -114,19 +116,13 @@ const social = [
 
     <div class="bg-footer-mobile">
       <ul class="cols-footer footer-font">
-       
-        <li
-          
-          class="cols-footer-mobile social"
-        >
-         
+        <li class="cols-footer-mobile social">
           <ul v-for="(title, index) in social" :key="index">
             <li>
               <img style="margin-bottom: 1.8rem" :src="title.icon" alt="" />
             </li>
           </ul>
         </li>
-
 
         <li class="cols-footer-mobile information">
           <ul v-for="(title, index) in pages" :key="index">
@@ -138,18 +134,14 @@ const social = [
             <li>{{ title.label }}</li>
           </ul>
         </li>
-         <li class="cols-footer-mobile">
+        <li class="cols-footer-mobile">
           <ul v-for="(title, index) in institutionalInformation" :key="index">
-            <li><img  :src="title.logo" alt="" /></li>
+            <li><img :src="title.logo" alt="" /></li>
             <li>
               {{ title.description }}
             </li>
           </ul>
         </li>
-
-       
-
-        
       </ul>
       <p class="footer-p">© 2024 Automobiles du Médoc. All Rights Reserved</p>
     </div>

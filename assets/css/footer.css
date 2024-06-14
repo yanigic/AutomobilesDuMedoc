@@ -42,7 +42,9 @@
 .bg-footer-mobile {
   display: none;
 }
-
+.footer-font ul li .logo {
+  width: 5rem;
+}
 @media only screen and (max-width: 768px) {
   .bg-footer-desktop {
     display: none;

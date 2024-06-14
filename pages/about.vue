@@ -55,8 +55,8 @@ onUnmounted(() => {
         isScrolled ? 'navbar-scrolled-yellow' : 'backgroundBlack',
       ]"
     ></Nav>
-    <div class="keyart_layer" id="keyart-8"></div>
     <HeroAbout></HeroAbout>
+    <div class="keyart_layer" id="keyart-8"></div>
     <Paragraph></Paragraph>
     <TitleParagraph></TitleParagraph>
     <span

@@ -33,8 +33,7 @@
   background-image: url("../img/Background2.png");
   background-color: black;
   transform: translate3d(0, 180px, 0.45px) /* scale(0.1) */;
-  /* 
-  top: 50vh; */
+  top: 0;
   background-repeat: repeat-y;
   z-index: -1;
 }
@@ -48,11 +47,23 @@
   right: 0;
   bottom: 0;
   left: 0;
-  height: 3050px;
+  height: 4000px;
 
   z-index: -1;
 }
 #parallax {
   transform-style: preserve-3d;
   /*  height: 120vh; */
+}
+@media only screen and (max-width: 700px) {
+  .container-layouts {
+    background-image: url(/_nuxt/assets/img/Background2.png);
+    position: absolute;
+    background-size: cover;
+    background-color: black;
+    background-repeat: repeat-y;
+  }
+  #keyart-8 {
+    display: none;
+  }
 }

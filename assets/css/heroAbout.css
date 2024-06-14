@@ -5,13 +5,11 @@
   width: 100%;
 }
 .height-hero-about {
-  height: 100vh;
+  height: 120vh;
 }
 @media only screen and (max-width: 600px) {
-  .height-hero-about{
+  .height-hero-about {
     display: flex;
     align-items: center;
   }
-
- 
 }

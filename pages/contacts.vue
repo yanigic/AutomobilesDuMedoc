@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import "../assets/css/contacts.css";
+import Footer from "../components/footer.vue";
 import { ref, onMounted, onUnmounted } from "vue";
 
 const options = ref([
@@ -163,5 +164,6 @@ onUnmounted(() => {
         <div class="contact-details-info">Company legal data:000000000</div>
       </div>
     </div>
+    <Footer></Footer>
   </div>
 </template>

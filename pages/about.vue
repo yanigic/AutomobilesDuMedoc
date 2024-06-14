@@ -1,6 +1,7 @@
 <script setup>
 import HeroAbout from "../components/heroAbout.vue";
 import Paragraph from "../components/paragraph.vue";
+import Footer from "../components/footer.vue";
 import "../assets/css/about.css";
 import TitleParagraph from "../components/titleParagraph.vue";
 import TitleDescription from "../components/titleDescription.vue";
@@ -8,6 +9,7 @@ import Slider from "../components/slider.vue";
 import CardImageText from "../components/cardImageText.vue";
 import PartnersCard from "../components/partnersCard.vue";
 import imgG from "../assets/img/backgroundgia.png";
+import NavMobile from "../components/navMobile.vue";
 
 const titlesDescriptions = [
   {
@@ -45,13 +47,14 @@ onUnmounted(() => {
 
 <template>
   <div class="container-layouts" id="parallax">
-    <Nav
+    <NavMobile></NavMobile>
+    <!-- <Nav
       class="nav-position"
       :class="[
         'backgroundBlack',
         isScrolled ? 'navbar-scrolled-yellow' : 'backgroundBlack',
       ]"
-    ></Nav>
+    ></Nav> -->
     <div class="keyart_layer" id="keyart-8"></div>
     <HeroAbout></HeroAbout>
     <Paragraph></Paragraph>
@@ -71,5 +74,6 @@ onUnmounted(() => {
     <CardImageText></CardImageText>
     <PartnersCard></PartnersCard>
     <Slider></Slider>
+    <Footer></Footer>
   </div>
 </template>

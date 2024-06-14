@@ -1,5 +1,5 @@
 <script>
-import "../assets/css/nav.css";
+import "@/assets/css/nav.css";
 
 export default {
   data: () => ({
@@ -22,6 +22,18 @@ export default {
       this.drawer = false;
     },
 
+    /* per i tasti */
+    close() {
+      const x = document.getElementById("myLinks");
+      const titlenav = document.getElementById("title-nav");
+      // Aggiungi un event listener per ascoltare il click su titlenav
+      titlenav.addEventListener("click", function () {
+        // Imposta il display di x a none al click di titlenav
+        x.style.display = "none";
+      });
+    },
+
+    /* per l'hambuer menu */
     closedOpen() {
       var x = document.getElementById("myLinks");
       if (x.style.display === "block") {
@@ -90,6 +102,7 @@ export default {
           <v-navigation-drawer v-model="drawer" app>
             <v-list dense>
               <v-list-item
+                class="btn-nav"
                 link
                 v-for="item in pages"
                 :key="item.title"
@@ -171,7 +184,9 @@ export default {
                   @click="navigateToPage(item.href)"
                 >
                   <v-list-item-content>
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                    <v-list-item-title @click="close" id="title-nav">{{
+                      item.title
+                    }}</v-list-item-title>
                   </v-list-item-content>
                 </v-list-item>
                 <v-app-bar app>

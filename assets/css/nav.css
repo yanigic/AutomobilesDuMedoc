@@ -13,11 +13,6 @@
   text-transform: none;
 }
 
-v-list-item {
-  margin: 0 2rem;
-  cursor: pointer;
-}
-
 .hambugerMenu svg {
   width: 1.5rem;
 }
@@ -31,7 +26,8 @@ v-list-item {
   z-index: 1;
 }
 .bg-nav-desktop {
-  padding: 1rem 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   position: sticky;
   top: 0;
   z-index: 2;
@@ -172,6 +168,28 @@ v-list-item {
 .navbar-scrolled-yellow .svg-logo.adm #Vector {
   display: none;
 }
+.btn-nav {
+  /*   padding-left: 30px;
+  padding-right: 30px; */
+  padding: 2rem 28px;
+}
+
+.btn-nav:hover {
+  cursor: pointer;
+  background: var(--burnout-black);
+  color: var(--beam-yellow);
+  padding: 1rem 28px;
+}
+#myLinks:has(#title-nav:nth-of-type(1):hover) {
+  color: red;
+  background-color: red;
+}
+/* #myLinks:has(#title-nav:nth-of-type(1):target) {
+  display: none;
+} */
+/* .bg-banner:has(.title-banner:nth-of-type(1):hover) {
+  background-color: var(--burnout-black);
+} */
 
 @media only screen and (max-width: 768px) {
   /*   .bg-nav-mobile {

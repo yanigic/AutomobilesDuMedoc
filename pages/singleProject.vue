@@ -2,6 +2,7 @@
 import imgTwoColumsOne from "../assets/img/imgone.jpg";
 import imgTwoColumsTwo from "../assets/img/imagetwo.jpg";
 import imgTwoColumsThree from "../assets/img/imagethree.jpg";
+import Footer from "../components/footer.vue";
 
 import HeroSingleProject from "../components/heroSingleProject.vue";
 import ImgTwoColumns from "../components/imgTwoColumns.vue";
@@ -115,5 +116,6 @@ onUnmounted(() => {
     <!--  <Grid></Grid> -->
 
     <Slider class="singleProject-slider"></Slider>
+    <Footer></Footer>
   </div>
 </template>

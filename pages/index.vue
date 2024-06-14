@@ -6,6 +6,7 @@ import Nav from "../components/nav.vue";
 import BannerContact from "../components/bannerContact.vue";
 import Footer from "../components/footer.vue";
 import HeroHomePage from "../components/heroHomePage.vue";
+import NavMobile from "../components/navMobile.vue";
 
 /* const story = await useAsyncStoryblok(
   "home",
@@ -56,13 +57,14 @@ onUnmounted(() => {
 
 <template>
   <div class="container-layouts">
-    <Nav
+    <NavMobile></NavMobile>
+    <!--  <Nav
       class="nav-position"
       :class="[
         'backgroundYellow',
         isScrolled ? 'navbar-scrolled-yellow' : 'backgroundYellow',
       ]"
-    ></Nav>
+    ></Nav> -->
     <HeroHomePage></HeroHomePage>
     <span class="BannerProject-container">
       <BannerProject></BannerProject>

@@ -38,6 +38,5 @@ onUnmounted(() => {
     <!--  <Test></Test> -->
     <!--  <SliderText></SliderText> -->
     <ImgGrid></ImgGrid>
-    <Footer></Footer>
   </div>
 </template>

@@ -50,10 +50,11 @@ const fetchData = async () => {
     >
       <!-- <h3 v-html="paragraph" class="title-banner-contact">{{ props.paragraph }} </h3> -->
       <h3 v-html="project.paragraph" class="title-banner-contact"></h3>
-
-      <button class="cta-banner-contact">
-        {{ project.cta }}
-      </button>
+      <a href="/contacts">
+        <button class="cta-banner-contact">
+          {{ project.cta }}
+        </button>
+      </a>
     </div>
   </div>
 </template>

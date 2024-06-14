@@ -210,12 +210,10 @@ export default {
   width: 100%;
   height: 400px;
   overflow-y: scroll;
-
   margin: 20px auto;
   padding: 0;
   list-style-type: none;
-
-  scroll-behavior: smooth; /* Aggiungi una transizione smooth */
+  scroll-behavior: smooth;
 }
 
 .li {
@@ -225,7 +223,7 @@ export default {
   font-size: var(--font-size-text-one);
   font-style: normal;
   font-weight: 300;
-  line-height: 4rem; /* 91.111% */
+  line-height: 4rem;
   letter-spacing: -0.05625rem;
   text-transform: uppercase;
 }
@@ -241,39 +239,70 @@ export default {
   font-size: var(--font-size-text-one);
   font-style: normal;
   font-weight: 300;
-  line-height: 4rem; /* 91.111% */
+  line-height: 4rem;
   letter-spacing: -0.05625rem;
   text-transform: uppercase;
 }
 
 .leftTop_side_container {
+  position: absolute;
   left: 15%;
-  top: -15%;
+  top: 0;
 }
 .leftBottom_side_container {
+  position: absolute;
   left: 15%;
-  bottom: -15%;
+  bottom: 0;
 }
 .rightBottom_side_container {
+  position: absolute;
   right: 15%;
-  bottom: -15%;
+  bottom: 0;
 }
 .rightTop_side_container {
+  position: absolute;
   right: 15%;
-  top: -15%;
+  top: 0;
+}
+.slider-content {
+  position: relative;
+  z-index: 0;
 }
 
 .rightBottom_side_container,
 .rightTop_side_container,
 .leftBottom_side_container,
 .leftTop_side_container {
+  /* margin: auto; */
+  z-index: -1;
   position: absolute;
+
   height: 300px;
   width: 300px;
-  margin: auto;
-  z-index: -1;
 }
-@media only screen and (max-width: 735px) {
+.single-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.single-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.active.single-image {
+  opacity: 1;
+}
+.single-image.active {
+  opacity: 1;
+}
+/* @media only screen and (max-width: 735px) {
   .slider-projects-container .prev-btn,
   .slider-projects-container .next-btn {
     display: none;
@@ -315,5 +344,5 @@ export default {
     top: 0%;
     left: 0%;
   }
-}
+} */
 </style>

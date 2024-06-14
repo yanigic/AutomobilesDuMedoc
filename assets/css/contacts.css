@@ -191,7 +191,7 @@
 }
 
 .activeContact::after,
-.active::after {
+.activePrivacy::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -204,7 +204,7 @@
 }
 
 .activeContact,
-.active {
+.activePrivacy {
   background-color: var(--burnout-black);
   border: 2px solid var(--burnout-black) !important;
 }

@@ -132,7 +132,7 @@ onUnmounted(() => {
                 <input type="checkbox" id="privacy" name="privacy" />
                 <span
                   class="checkmark"
-                  :class="{ active: isActivePrivacy }"
+                  :class="{ activePrivacy: isActivePrivacy }"
                   @click="toggleActivePrivacy"
                 ></span>
 

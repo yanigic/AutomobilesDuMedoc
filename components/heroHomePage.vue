@@ -1,11 +1,7 @@
 <template>
   <div class="box-video">
     <div class="container-img-animated container-img-animated-mobile">
-      <img
-        v-if="showVideo"
-        src="@/assets/img/IntroADM_Mobile_FrameFnale.png"
-        alt=""
-      />
+      <img src="@/assets/img/IntroADM_Mobile_FrameFnale.png" alt="" />
       <!--  <video v-else ref="videoElement" muted>
         <source
           src="/Users/yanilettetejeda/Documents/Code/projects/adm/assets/video/IntroADMMobile.mp4"

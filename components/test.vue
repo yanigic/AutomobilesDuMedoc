@@ -73,7 +73,7 @@
           </div>
         </div>
       </div>
-      <div class="rightBottom_side_container">
+      <!--  <div class="rightBottom_side_container">
         <div
           class="single-image"
           :class="{ active: index === currentActiveImage }"
@@ -86,10 +86,10 @@
             :alt="'indice ' + (index + 1)"
           />
           <div class="image-text-container">
-            <!--  <p>{{ index }} {{ info.name }}</p> -->
+           
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div class="slider-text-container">
         <div
@@ -193,6 +193,7 @@ const debouncedHandleWheel = debounce(handleWheel, 25);
  */
 </script>
 <style>
+/*
 .leftTop_side_container {
   left: 5%;
   top: -25%;
@@ -208,7 +209,7 @@ const debouncedHandleWheel = debounce(handleWheel, 25);
 .rightTop_side_container {
   right: 5%;
   top: -25%;
-}
+}*/
 .rightBottom_side_container,
 .rightTop_side_container,
 .leftBottom_side_container,
@@ -219,7 +220,7 @@ const debouncedHandleWheel = debounce(handleWheel, 25);
   margin: auto;
   z-index: -1;
 }
-.single-image {
+/* .single-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -232,7 +233,7 @@ const debouncedHandleWheel = debounce(handleWheel, 25);
 .single-image.active {
   opacity: 1;
   color: blueviolet;
-}
+} */
 .slider-tex.active h3 {
   color: var(--ADM-Yellow, #f3f90a);
   text-align: center;

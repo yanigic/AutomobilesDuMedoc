@@ -48,13 +48,13 @@ onUnmounted(() => {
 <template>
   <div class="container-layouts" id="parallax">
     <NavMobile class="navMobile-yellow"></NavMobile>
-    <!-- <Nav
+    <Nav
       class="nav-position"
       :class="[
         'backgroundBlack',
         isScrolled ? 'navbar-scrolled-yellow' : 'backgroundBlack',
       ]"
-    ></Nav> -->
+    ></Nav>
     <div class="keyart_layer" id="keyart-8"></div>
     <HeroAbout></HeroAbout>
     <Paragraph></Paragraph>

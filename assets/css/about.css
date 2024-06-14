@@ -33,24 +33,26 @@
   background-image: url("../img/Background2.png");
   background-color: black;
   transform: translate3d(0, 180px, 0.45px) /* scale(0.1) */;
-  width: 102vw; /* 
+  /* 
   top: 50vh; */
   background-repeat: repeat-y;
+  z-index: -1;
 }
 .keyart_layer {
   background-position: bottom center;
-  background-size: contain;
+
+  background-size: cover;
   background-repeat: repeat-y;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  height: 4000px;
+  height: 3050px;
 
   z-index: -1;
 }
 #parallax {
   transform-style: preserve-3d;
-  height: 120vh;
+  /*  height: 120vh; */
 }

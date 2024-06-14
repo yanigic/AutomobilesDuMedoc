@@ -7,9 +7,22 @@
 .height-hero-about {
   height: 120vh;
 }
-@media only screen and (max-width: 600px) {
+.bg-img-about-mobile {
+  display: none;
+}
+@media only screen and (max-width: 730px) {
   .height-hero-about {
     display: flex;
     align-items: center;
+  }
+  .bg-img-about {
+    display: none;
+  }
+  .bg-img-about-mobile,
+  .bg-img-about-mobile img {
+    width: 100%;
+  }
+  .bg-img-about-mobile {
+    display: block;
   }
 }

@@ -9,6 +9,7 @@ const isScrolled = ref(false);
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 0;
   const imgSfondo = document.getElementById("imgSfondo");
+  const imgSfondomobile = document.getElementById("imgSfondoMobile");
 
   if (imgSfondo) {
     let value = window.scrollY;
@@ -16,6 +17,13 @@ const handleScroll = () => {
     /* imgSfondo.style.left = value * -1.5 + "px"; */
     console.log("isScrolled:", isScrolled.value); // Verify scroll
     console.log("valore:", imgSfondo.style.left); // Verify scroll
+  }
+
+  if (imgSfondomobile) {
+    let value = window.scrollY;
+    imgSfondomobile.style.top = value * -1.5 + "px";
+    console.log("isScrolled:", isScrolled.value); // Verify scroll
+    console.log("valore:", imgSfondomobile.style.left); // Verify scroll
   }
 };
 
@@ -57,7 +65,8 @@ h1 {
   overflow: hidden;
   position: relative;
 }
-.heroAboutScroll-container #imgSfondo {
+.heroAboutScroll-container #imgSfondo,
+.heroAboutScroll-container #imgSfondoMobile {
   position: absolute;
   top: 0;
   left: 0;
@@ -86,6 +95,10 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+  }
+  #imgSfondo {
+    object-fit: cover;
+    height: 250vh;
   }
 }
 </style>

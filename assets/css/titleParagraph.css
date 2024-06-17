@@ -1,3 +1,10 @@
+.bg-paragraph-container {
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+  z-index: -2;
+}
 .blockText {
   display: flex;
   justify-content: space-between;
@@ -37,10 +44,40 @@
   justify-content: space-between;
 }
 .bg-paragraph {
-  margin-bottom: var(--sixteen);
+  /* margin-bottom: var(--sixteen); */
   background-color: var(--beam-yellow);
+  position: relative;
 }
-@media only screen and (max-width: 600px) {
+
+#imgSfondo-paragraph {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: -1;
+  /* z-index: 0; */
+  object-fit: cover;
+
+  /* transform: translate(-0%, 50%);
+  top: 0; */
+}
+@media only screen and (max-width: 700px) {
+  .bg-paragraph-container {
+    height: 100%;
+  }
+  /* #imgSfondo-paragraph {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: -1;
+  object-fit: cover;
+
+  transform: translate(-0%, 50%);
+  top: 0;
+} */
   .container-layout-paragraph {
     flex-wrap: wrap;
     width: var(--col12);

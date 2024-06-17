@@ -10,6 +10,7 @@ import CardImageText from "../components/cardImageText.vue";
 import PartnersCard from "../components/partnersCard.vue";
 import imgG from "../assets/img/backgroundgia.png";
 import NavMobile from "../components/navMobile.vue";
+import HeroAboutScroll from "../components/heroAboutScroll.vue";
 
 const titlesDescriptions = [
   {
@@ -46,7 +47,8 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="container-layouts" id="parallax">
+  <!-- <div class="container-layouts" id="parallax"> -->
+  <div>
     <NavMobile class="navMobile-yellow"></NavMobile>
     <Nav
       class="nav-position"
@@ -55,8 +57,9 @@ onUnmounted(() => {
         isScrolled ? 'navbar-scrolled-yellow' : 'backgroundBlack',
       ]"
     ></Nav>
-    <HeroAbout></HeroAbout>
-    <div class="keyart_layer" id="keyart-8"></div>
+    <HeroAboutScroll></HeroAboutScroll>
+    <!--  <HeroAbout></HeroAbout> -->
+    <!--  <div class="keyart_layer" id="keyart-8"></div> -->
     <Paragraph></Paragraph>
     <TitleParagraph></TitleParagraph>
     <span

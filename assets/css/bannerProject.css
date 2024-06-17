@@ -63,7 +63,7 @@
   overflow: auto;
   display: flow-root;
   /*  height: 100vh; */
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
 }
 
 .title-banner:hover .title-bannerProject,

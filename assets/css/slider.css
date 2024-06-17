@@ -45,6 +45,14 @@
   border-color: #f4f4f4;
   color: #d2d2d2;
 }
+.square a {
+  height: 100%;
+  width: 100%;
+}
+.square a img {
+  height: 100%;
+  width: 100%;
+}
 
 .buttons-slider {
   display: flex;

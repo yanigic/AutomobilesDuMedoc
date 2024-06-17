@@ -60,7 +60,7 @@
   display: none;
 }
 .BannerProject-container {
-  overflow: auto;
+  overflow: hidden;
   display: flow-root;
   /*  height: 100vh; */
   /* scroll-snap-type: y mandatory; */

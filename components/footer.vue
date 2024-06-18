@@ -45,22 +45,27 @@ const social = [
   {
     title: "TikTok",
     icon: tiktok,
+    path: "https://www.instagram.com/lesautomobilesdumedoc/?utm_source=ig_web_button_share_sheet",
   },
   {
     title: "Twitter",
     icon: Twitter,
+    path: "https://www.instagram.com/lesautomobilesdumedoc/?utm_source=ig_web_button_share_sheet",
   },
   {
     title: "Linkedin",
     icon: LINKEDIN,
+    path: "https://www.instagram.com/lesautomobilesdumedoc/?utm_source=ig_web_button_share_sheet",
   },
   {
     title: "Facebook",
     icon: FACEBOOK,
+    path: "https://www.instagram.com/lesautomobilesdumedoc/?utm_source=ig_web_button_share_sheet",
   },
   {
     title: "Instagram",
     icon: INSTAGRAM,
+    path: "https://www.instagram.com/lesautomobilesdumedoc/?utm_source=ig_web_button_share_sheet",
   },
 ];
 </script>
@@ -106,7 +111,9 @@ const social = [
           Follow us:
           <ul v-for="(title, index) in social" :key="index">
             <li>
-              <img style="margin-bottom: 1.8rem" :src="title.icon" alt="" />
+              <a target="_blank" :href="title.path">
+                <img style="margin-bottom: 1.8rem" :src="title.icon" alt="" />
+              </a>
             </li>
           </ul>
         </li>
@@ -134,9 +141,13 @@ const social = [
             <li>{{ title.label }}</li>
           </ul>
         </li>
-        <li class="cols-footer-mobile">
+        <li class="cols-footer-mobile adm-logo">
           <ul v-for="(title, index) in institutionalInformation" :key="index">
-            <li><img :src="title.logo" alt="" /></li>
+            <li>
+              <router-link to="/">
+                <img :src="title.logo" alt="" />
+              </router-link>
+            </li>
             <li>
               {{ title.description }}
             </li>

@@ -85,7 +85,7 @@
 .btn-contacts:hover {
   background-color: var(--burnout-black);
 
-  border: var(--burnout-black);
+  border: 2px solid var(--burnout-black);
   color: var(--beam-yellow);
 }
 .btn-selected {

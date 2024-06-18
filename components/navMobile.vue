@@ -119,7 +119,7 @@
     bottom: 0;
     background: var(--beam-yellow);
     color: var(--burnout-black);
-    z-index: 1;
+    z-index: 2;
     text-align: center;
   }
   .nav-mobile a {

@@ -14,13 +14,24 @@
 .container-banner-home .cta-banner-contact {
   border: 0.2rem solid var(--beam-yellow);
 }
+.container-banner-home .cta-banner-contact:hover {
+  border: 0.2rem solid var(--burnout-black);
+  color: var(--burnout-black);
+  background-color: var(--beam-yellow);
+}
 
 .container-banner-single-project {
   color: var(--gta-bourdeaux);
   background-color: var(--pearl-white);
+  justify-content: center;
 }
 .container-banner-single-project .cta-banner-contact {
   border: 0.2rem solid var(--gta-bourdeaux);
+}
+.container-banner-single-project .cta-banner-contact:hover {
+  border: 0.2rem solid var(--pearl-white);
+  color: var(--pearl-white);
+  background-color: var(--gta-bourdeaux);
 }
 
 .cta-banner-contact {

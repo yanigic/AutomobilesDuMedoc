@@ -61,6 +61,7 @@
   .text-container {
     flex-direction: column;
     text-align: start;
+    padding: var(--two);
   }
   .text-container > p {
     width: var(--col12);

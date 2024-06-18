@@ -283,8 +283,8 @@ h3 {
 }
 .slider-projects-container {
   background-color: var(--burnout-black);
-  padding-top: var(--vertical-space-medium);
-  padding-bottom: var(--vertical-space-medium);
+  padding-top: var(--vertical-space-xlarg);
+  padding-bottom: var(--vertical-space-xlarg);
   position: relative;
 }
 .prev-btn {
@@ -303,7 +303,7 @@ h3 {
 }
 @media only screen and (max-width: 735px) {
   .single-image.active {
-    opacity: 0.5;
+    opacity: 0.2;
   }
 }
 </style>

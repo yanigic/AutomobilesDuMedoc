@@ -24,6 +24,7 @@
   text-align: justify;
   padding-bottom: 5rem;
   padding-top: 3rem;
+  color: var(--burnout-black);
 }
 .bg-footer-desktop {
   padding: 1rem 2rem;
@@ -45,7 +46,13 @@
 .footer-font ul li .logo {
   width: 5rem;
 }
+.display-mobile-none {
+  display: unset;
+}
 @media only screen and (max-width: 768px) {
+  .display-mobile-none {
+    display: none;
+  }
   .bg-footer-desktop {
     display: none;
   }
@@ -66,6 +73,7 @@
     justify-content: center;
     width: var(--col8);
     margin: auto;
+    color: var(--burnout-black);
     margin-top: var(--vertical-space-small);
   }
 
@@ -87,6 +95,9 @@
   .footer-p {
     width: var(--col6);
     margin: auto;
+  }
+  .adm-logo img {
+    width: 6rem;
   }
   .footer-font {
     padding-bottom: var(--vertical-space-larg);

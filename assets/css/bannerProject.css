@@ -74,6 +74,10 @@
 .title-banner:hover {
   background-color: var(--burnout-black);
 }
+.title-banner:hover .btn-bannerProject-cta {
+  border: 0.15rem solid var(--beam-yellow);
+  color: var(--beam-yellow);
+}
 
 @media only screen and (max-width: 635px) {
   .title-bannerProject {

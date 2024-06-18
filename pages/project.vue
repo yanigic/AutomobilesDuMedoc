@@ -40,5 +40,6 @@ onUnmounted(() => {
     <!--  <Test></Test> -->
     <!--  <SliderText></SliderText> -->
     <ImgGrid></ImgGrid>
+    <Footer class="display-mobile-none"></Footer>
   </div>
 </template>

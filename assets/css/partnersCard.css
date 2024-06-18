@@ -55,6 +55,7 @@
   .box-img-partnersCard {
     display: flex;
     flex-direction: column;
+    height: auto;
   }
   .box-img-partnersCard > img {
     margin: var(--vertical-space-medium) 0;

@@ -35,6 +35,7 @@
   justify-content: space-between;
   width: var(--col10);
   margin: auto;
+  height: 9rem;
 }
 @media only screen and (max-width: 735px) {
   .title-partnersCard {

@@ -3,7 +3,6 @@ import "../assets/css/contacts.css";
 import Footer from "../components/footer.vue";
 import { ref, onMounted, onUnmounted } from "vue";
 import NavMobile from "../components/navMobile.vue";
-import HeroAboutScroll from "../components/heroAboutScroll.vue";
 
 const options = ref([
   { label: "Customization", value: "Customization", selected: false },
@@ -50,7 +49,7 @@ onUnmounted(() => {
         isScrolled ? 'navbar-scrolled-yellow' : 'backgroundYellow',
       ]"
     ></Nav>
-    <HeroAboutScroll></HeroAboutScroll>
+
     <h3 class="title-contacts">
       <span class="mobile-line-break">Ready</span> to start something unique?
     </h3>

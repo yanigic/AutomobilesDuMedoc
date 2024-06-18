@@ -52,6 +52,10 @@
   background-color: var(--burnout-black);
   color: var(--beam-yellow);
 }
+.container-titleDescription {
+  background: var(--beam-yellow);
+  padding: var(--Three) 0;
+}
 
 @media only screen and (max-width: 768px) {
   .text-container {

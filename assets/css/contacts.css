@@ -70,6 +70,7 @@
   font-family: var(--OpenSans);
   font-size: var(--font-size-text-three);
   text-transform: none;
+  margin-bottom: 1.2rem;
 }
 
 .btn-contacts {
@@ -186,7 +187,7 @@
   transition: border 0.3s;
 }
 .box-permission .checkmark:hover {
-  background-color: var(--burnout-black) !important;
+  /*   background-color: var(--burnout-black) !important; */
   border: 2px solid var(--burnout-black) !important;
 }
 
@@ -213,6 +214,9 @@
 }
 .service-btn-box {
   display: inline-flex;
+}
+.btn-contacts.submit {
+  margin-top: 1.6rem;
 }
 @media only screen and (max-width: 735px) {
   .mobile-line-break {
@@ -290,12 +294,12 @@
   .select-wrapper::after {
     content: "";
     position: absolute;
-    top: 40%;
-    right: 30px; /* Adjust the position as needed */
-    width: 10px; /* Width of the custom arrow */
+    top: 30%;
+    right: 0; /* Adjust the position as needed */
+    width: 5rem; /* Width of the custom arrow */
     height: 10px; /* Height of the custom arrow */
     pointer-events: none; /* Prevent pointer events on the arrow */
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
     background: url("../img/svg/ArrowDSelect.svg") no-repeat;
     background-size: contain;
   }

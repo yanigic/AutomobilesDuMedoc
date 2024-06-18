@@ -310,6 +310,7 @@ export default {
 
   .single-image.active {
     opacity: 0.5;
+    filter: grayscale(1);
   }
   .rightBottom_side_container,
   .rightTop_side_container,

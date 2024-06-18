@@ -69,16 +69,18 @@ onUnmounted(() => {
     <span class="BannerProject-container">
       <BannerProject></BannerProject>
     </span>
-    <span
-      class="homepage"
-      v-for="(item, index) in titlesDescriptions"
-      :key="index"
-    >
-      <titleDescription
-        :title="item.title"
-        :description="item.description"
-      ></titleDescription>
-    </span>
+    <div class="container-titleDescription">
+      <span
+        class="homepage"
+        v-for="(item, index) in titlesDescriptions"
+        :key="index"
+      >
+        <titleDescription
+          :title="item.title"
+          :description="item.description"
+        ></titleDescription>
+      </span>
+    </div>
     <BannerContact
       class="container-banner-home"
       v-for="(text, index) in ctaContent"

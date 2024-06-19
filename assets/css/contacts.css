@@ -92,6 +92,9 @@
   background-color: var(--beam-yellow);
   border: var(--beam-yellow);
 }
+.form-box input {
+  border: 2px solid #000;
+}
 
 .box-permission {
   color: var(--burnout-black);

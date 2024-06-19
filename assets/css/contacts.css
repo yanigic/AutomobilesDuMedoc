@@ -76,7 +76,7 @@
 .btn-contacts {
   border: 2px solid var(--burnout-black);
   color: var(--burnout-black);
-  width: var(--col4);
+  padding: 0.3rem 4rem;
   padding: 5px 0;
   text-align: center;
   font-family: var(--Superclarendon);
@@ -92,7 +92,8 @@
   background-color: var(--beam-yellow);
   border: var(--beam-yellow);
 }
-.form-box input {
+.form-box input,
+.form-box textarea {
   border-radius: 0;
   border: 2px solid #000;
 }

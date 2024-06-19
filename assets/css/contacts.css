@@ -76,7 +76,8 @@
 .btn-contacts {
   border: 2px solid var(--burnout-black);
   color: var(--burnout-black);
-  padding: 0.3rem 4rem;
+
+  width: var(--col4);
   padding: 5px 0;
   text-align: center;
   font-family: var(--Superclarendon);
@@ -252,6 +253,7 @@
   .btn-contacts {
     margin-left: auto;
     margin-right: auto;
+    width: var(--col8);
     font-size: var(--font-size-title-mobile-s);
   }
   .box-textarea {

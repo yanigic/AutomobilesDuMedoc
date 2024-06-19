@@ -93,6 +93,7 @@
   border: var(--beam-yellow);
 }
 .form-box input {
+  border-radius: 0;
   border: 2px solid #000;
 }
 

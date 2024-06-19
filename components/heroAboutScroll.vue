@@ -40,12 +40,7 @@ onUnmounted(() => {
   <div class="sfondo">
     <div class="heroAboutScroll-container">
       <img class="desktop-logo" id="imgLogo" :src="imgHero" alt="Hero Image" />
-      <img
-        class="mobile"
-        id="imgLogo "
-        src="/Users/yanilettetejeda/Documents/Code/projects/adm/assets/img/svg/admHeroMobile.svg"
-        alt="Hero Image"
-      />
+      <img class="mobile" id="imgLogo " :src="imgHeroMobile" alt="Hero Image" />
       <img
         id="imgSfondo"
         src="../assets/img/Background2.png"

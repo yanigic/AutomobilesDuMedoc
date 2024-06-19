@@ -56,12 +56,6 @@
   /*  height: 120vh; */
 }
 @media only screen and (max-width: 700px) {
-  .container-layouts {
-    position: absolute;
-    background-size: cover;
-    background-color: black;
-    background-repeat: repeat-y;
-  }
   #keyart-8 {
     display: none;
   }

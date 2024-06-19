@@ -58,7 +58,7 @@
 @media only screen and (max-width: 700px) {
   .container-layouts {
     /* background-image: url(/_nuxt/assets/img/Background2.png);*/
-    background-image: url(/_nuxt/Background2.mSLR4WoN.png);
+    /* background-image: url(/_nuxt/Background2.mSLR4WoN.png); */
     position: absolute;
     background-size: cover;
     background-color: black;

@@ -2,7 +2,7 @@
 .navContainer {
   display: flex;
   justify-content: space-between;
-
+  height: 3.3125rem;
   align-items: center;
   font-family: var(--Superclarendon);
   font-size: var(--font-size-text-three);
@@ -32,10 +32,27 @@
   top: 0;
   z-index: 2;
 }
+/* con nav bianca hover magenta */
+
 .singleProject .btn-nav:hover {
   cursor: pointer;
   background: var(--gta-bourdeaux);
   color: var(--pearl-white);
+  padding: 1rem 28px;
+}
+
+/* con nav nero hover giallo */
+.backgroundBlack .btn-nav:hover {
+  cursor: pointer;
+  background: var(--beam-yellow);
+  color: var(--burnout-black);
+  padding: 1rem 28px;
+}
+.navbar-scrolled-beam-yellow .btn-nav:hover,
+.navbar-scrolled-yellow .btn-nav:hover {
+  cursor: pointer;
+  background: var(--burnout-black);
+  color: var(--beam-yellow);
   padding: 1rem 28px;
 }
 

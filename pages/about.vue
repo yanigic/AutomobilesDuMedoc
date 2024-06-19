@@ -11,6 +11,7 @@ import PartnersCard from "../components/partnersCard.vue";
 import imgG from "../assets/img/backgroundgia.png";
 import NavMobile from "../components/navMobile.vue";
 import HeroAboutScroll from "../components/heroAboutScroll.vue";
+import TestTitleParagraph from "../components/testTitleParagraph.vue";
 
 const titlesDescriptions = [
   {
@@ -57,11 +58,14 @@ onUnmounted(() => {
         isScrolled ? 'navbar-scrolled-yellow' : 'backgroundBlack',
       ]"
     ></Nav>
+
     <HeroAboutScroll></HeroAboutScroll>
     <!--  <HeroAbout></HeroAbout> -->
     <!--  <div class="keyart_layer" id="keyart-8"></div> -->
     <Paragraph></Paragraph>
-    <TitleParagraph></TitleParagraph>
+
+    <!-- <TitleParagraph></TitleParagraph> -->
+    <TestTitleParagraph></TestTitleParagraph>
     <span
       class="title-description-about"
       v-for="(item, index) in titlesDescriptions"
@@ -73,7 +77,6 @@ onUnmounted(() => {
         :description="item.description"
       ></TitleDescription>
     </span>
-
     <CardImageText></CardImageText>
     <PartnersCard></PartnersCard>
     <Slider></Slider>

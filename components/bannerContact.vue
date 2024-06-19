@@ -6,7 +6,7 @@ import "../assets/css/bannerContact.css";
     cta: "CONTACT US",
   },
 ]; */
-import { onMounted, ref } from "vue";
+/* import { onMounted, ref } from "vue";
 const projects = ref([]);
 
 onMounted(async () => {
@@ -24,9 +24,7 @@ const fetchData = async () => {
     projects.value = content.body
       .filter((project) => project.paragraph && project.cta)
       .map((project) => {
-        /*  console.log("banner Mapping project:", project);
-        console.log("banner Mapping project:", project.cta);
-       */ return {
+         return {
           paragraph: project.paragraph,
           cta: project.cta,
         };
@@ -34,25 +32,21 @@ const fetchData = async () => {
   } catch (error) {
     console.error("Errore nel recupero dei dati da Storyblok:", error);
   }
-};
-/* const props = defineProps({
+}; */
+const props = defineProps({
   paragraph: String,
   cta: String,
-}); */
+});
 </script>
 
 <template>
   <div class="">
-    <div
-      class="text-container-banner"
-      v-for="(project, index) in projects"
-      :key="index"
-    >
+    <div class="text-container-banner">
       <!-- <h3 v-html="paragraph" class="title-banner-contact">{{ props.paragraph }} </h3> -->
-      <h3 v-html="project.paragraph" class="title-banner-contact"></h3>
+      <h3 v-html="props.paragraph" class="title-banner-contact"></h3>
       <a href="/contacts">
         <button class="cta-banner-contact">
-          {{ project.cta }}
+          {{ props.cta }}
         </button>
       </a>
     </div>

@@ -98,6 +98,7 @@
   }
   .bg-banner {
     display: flex;
+    height: 98vh;
     flex-direction: column-reverse;
     /*  height: 88vh; */
   }

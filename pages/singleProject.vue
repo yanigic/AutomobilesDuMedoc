@@ -44,12 +44,12 @@ import NavMobile from "../components/navMobile.vue";
   },
 ]; */
 
-/* const ctaContent = [
+const ctaContent = [
   {
     paragraph: "Want to customize yours?",
     cta: "CONTACT US",
   },
-]; */
+];
 
 /* const singleImg = [{ img: imgTwoColumsOne }, { img: imgTwoColumsOne }];
  */
@@ -107,14 +107,15 @@ onUnmounted(() => {
 
     <!--  <SliderGrid></SliderGrid> -->
 
-    <!--  <BannerContact
+    <BannerContact
       class="container-banner-single-project"
       v-for="(text, index) in ctaContent"
       :key="index"
       :paragraph="text.paragraph"
       :cta="text.cta"
-    ></BannerContact> -->
-    <BannerContact class="container-banner-single-project"></BannerContact>
+    ></BannerContact>
+    <!--  <BannerContact class="container-banner-single-project"></BannerContact>
+    -->
     <!--  <Grid></Grid> -->
 
     <Slider class="singleProject-slider"></Slider>

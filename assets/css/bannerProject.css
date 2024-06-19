@@ -44,7 +44,7 @@
   background-color: var(--burnout-black);
 } */
 .img-container {
-  height: 80vh;
+  height: 85vh;
 }
 .img-container > img {
   width: 100%;
@@ -94,7 +94,7 @@
     height: 0.91544rem;
   }
   .img-container {
-    height: 70%;
+    height: 90%;
   }
   .bg-banner {
     display: flex;

@@ -14,4 +14,9 @@ export default defineNuxtConfig({
     ],
     "@nuxtjs/tailwindcss",
   ],
+  build: {
+    rollupOptions: {
+      external: ["/Users/yanilettetejeda/Documents/Code/projects/adm/asset"],
+    },
+  },
 });

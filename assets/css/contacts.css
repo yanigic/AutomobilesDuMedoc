@@ -90,8 +90,9 @@
   color: var(--beam-yellow);
 }
 .btn-selected {
-  background-color: var(--beam-yellow);
-  border: var(--beam-yellow);
+  background-color: var(--burnout-black);
+  border: var(--burnout-black);
+  color: var(--beam-yellow);
 }
 .form-box input,
 .form-box textarea {

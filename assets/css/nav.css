@@ -38,7 +38,7 @@
   cursor: pointer;
   background: var(--gta-bourdeaux);
   color: var(--pearl-white);
-  padding: 1rem 28px;
+  padding: 1.1rem 28px;
 }
 
 /* con nav nero hover giallo */
@@ -46,14 +46,14 @@
   cursor: pointer;
   background: var(--beam-yellow);
   color: var(--burnout-black);
-  padding: 1rem 28px;
+  padding: 1.1rem 28px;
 }
 .navbar-scrolled-beam-yellow .btn-nav:hover,
 .navbar-scrolled-yellow .btn-nav:hover {
   cursor: pointer;
   background: var(--burnout-black);
   color: var(--beam-yellow);
-  padding: 1rem 28px;
+  padding: 1.1rem 28px;
 }
 
 /* .projects > .bg-nav-desktop {
@@ -201,7 +201,7 @@
   cursor: pointer;
   background: var(--burnout-black);
   color: var(--beam-yellow);
-  padding: 1rem 28px;
+  padding: 1.1rem 28px;
 }
 #myLinks:has(#title-nav:nth-of-type(1):hover) {
   color: red;

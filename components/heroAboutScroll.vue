@@ -21,7 +21,7 @@ const handleScroll = () => {
 
   if (imgSfondomobile) {
     let value = window.scrollY;
-    imgSfondomobile.style.top = value * -1.5 + "px";
+    imgSfondomobile.style.top = value * -0.2 + "px";
     console.log("isScrolled:", isScrolled.value); // Verify scroll
     console.log("valore:", imgSfondomobile.style.left); // Verify scroll
   }

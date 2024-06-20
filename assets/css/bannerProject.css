@@ -65,6 +65,16 @@
   /*  height: 100vh; */
   /* scroll-snap-type: y mandatory; */
 }
+.BannerProject-container div a {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  display: block;
+  height: 100vh;
+  overflow: auto;
+}
+.BannerProject-container a .bg-banner {
+  scroll-snap-align: start;
+}
 
 .title-banner:hover .title-bannerProject,
 .title-banner:hover .title-bannerProject path {
@@ -80,6 +90,13 @@
 }
 
 @media only screen and (max-width: 635px) {
+  .BannerProject-container div a {
+    scroll-behavior: unset;
+    scroll-snap-type: none;
+    display: block;
+    height: auto;
+    overflow: auto;
+  }
   .title-bannerProject {
     font-size: var(--font-size-title-mobile);
     line-height: 1.875rem;

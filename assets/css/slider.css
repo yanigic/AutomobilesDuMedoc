@@ -139,11 +139,23 @@
   }
   .square {
     max-width: var(--col10);
+    scroll-snap-align: center;
   }
   .buttons-slider {
     display: none;
   }
-  ..container-slider-nameProject {
+  .container-slider-nameProject {
     display: none;
+  }
+  #carousel {
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+  #carousel-imgTwoColumns {
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+  #carousel-imgTwoColumns .square {
+    scroll-snap-align: center;
   }
 }

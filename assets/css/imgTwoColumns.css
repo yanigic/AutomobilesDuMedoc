@@ -28,15 +28,19 @@
 /* .sidebar-imgTwoColumns > div {
   width: var(--col6);
 } */
-@media only screen and (max-width: 735px){
-.container-imgTwoColumns{
-display: none;
-}
-.carousel-imgTwoColumns{
-  display: block;
-}
+@media only screen and (max-width: 735px) {
+  .container-imgTwoColumns {
+    display: none;
+  }
+  .carousel-imgTwoColumns {
+    display: block;
+  }
 }
 @media (min-width: 768px) {
-  .container-imgTwoColumns{  display: flex;}
-  .carousel-imgTwoColumns{display: none!important;}
+  .container-imgTwoColumns {
+    display: flex;
+  }
+  .carousel-imgTwoColumns {
+    display: none !important;
+  }
 }

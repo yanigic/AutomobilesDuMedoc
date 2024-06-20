@@ -113,6 +113,13 @@
   background-image: url("../img/svg/iconBulletActive.svg"); /* Nuova immagine del bullet quando è attivo */
 }
 @media only screen and (max-width: 768px) {
+  .bullet-SliderGrid {
+    width: 20px;
+    height: 10px;
+    margin: 0 0.9rem;
+    cursor: pointer;
+    margin-top: 2rem;
+  }
   .square-SliderGrid > div {
     aspect-ratio: 1 / 1;
     width: calc((100% - (4 - 1) * 0.5rem) / 2);

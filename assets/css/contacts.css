@@ -303,7 +303,7 @@
     content: "";
     position: absolute;
     top: 30%;
-    right: 0; /* Adjust the position as needed */
+    right: -45px; /* Adjust the position as needed */
     width: 5rem; /* Width of the custom arrow */
     height: 10px; /* Height of the custom arrow */
     pointer-events: none; /* Prevent pointer events on the arrow */

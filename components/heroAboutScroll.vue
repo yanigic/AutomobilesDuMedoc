@@ -83,14 +83,18 @@ h1 {
   .desktop-logo {
     display: none;
   }
-  .mobile {
+  .heroAboutScroll-container .mobile {
     display: inline;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    width: 102vw;
+    height: auto;
+    max-width: none;
   }
+
   #imgSfondo {
     object-fit: cover;
     height: 250vh;

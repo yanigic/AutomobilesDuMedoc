@@ -436,6 +436,9 @@ export default {
   opacity: 1;
 }
 @media only screen and (max-width: 735px) {
+  .li {
+    line-height: 2rem;
+  }
   .slider-projects-container .prev-btn,
   .slider-projects-container .next-btn {
     display: none;
@@ -460,18 +463,22 @@ export default {
     height: 100%;
     object-fit: cover;
   }
+
   #infinite-list {
     margin: 0px auto;
-    height: 100vh;
+    /*   height: 100vh; */
+    height: 80vh;
     overflow: scroll;
     padding: 10px 20px;
   }
   .image-text-container {
-    padding-top: 5px;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
     font-size: var(--font-size-title-mobile);
   }
   .slider-text-container {
-    padding: 50px 0px;
+    padding: 40px 0px;
+    height: 100vh;
   }
   .slider-projects-container {
     padding-top: 0;

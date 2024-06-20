@@ -22,6 +22,7 @@
   letter-spacing: -0.04063rem;
   text-transform: uppercase;
 }
+
 .text-container {
   display: flex;
   text-align: justify;
@@ -54,6 +55,8 @@
 }
 .container-titleDescription {
   background: var(--beam-yellow);
+  padding-top: var(--vertical-space-xlarg);
+  padding-bottom: var(--vertical-space-xlarg);
 }
 
 @media only screen and (max-width: 768px) {

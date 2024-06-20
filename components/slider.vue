@@ -70,8 +70,10 @@ const fetchData = async () => {
       .filter((project) => project.imgSlider)
       .map((project) => {
         console.log(" imgSlider Mapping project:", project.imgSlider);
+        console.log(" name Mapping project:", project.imgSlider[0].name);
         return {
           imgSlider: project.imgSlider.map((img) => img.filename),
+          name: project.imgSlider.map((img) => img.name),
         };
       });
   } catch (error) {
@@ -118,6 +120,14 @@ const handleClickGoBack = () => {
     behavior: "smooth",
   });
 };
+
+const nameProjects = ref([
+  { name: "another vision of lacoste" },
+  { name: "ultra pantera" },
+  { name: "in the middle of the night, 911" },
+  { name: "Cherry Countach" },
+  { name: "Abarth 695 corsa" },
+]);
 </script>
 <template>
   <div class="bg-slider">
@@ -128,6 +138,11 @@ const handleClickGoBack = () => {
           <a href="singleProject">
             <img :src="img" alt="" />
           </a>
+          <div class="container-slider-nameProject">
+            <div class="slider-nameProject">
+              {{ project.name[idx] }}
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -60,6 +60,7 @@
 }
 .container-banner-home .title-banner-contact {
   color: var(--beam-yellow);
+  text-align: center;
 }
 @media only screen and (max-width: 735px) {
   .title-banner-contact {

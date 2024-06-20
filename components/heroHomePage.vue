@@ -18,7 +18,7 @@
         src="@/assets/img/IntroADM_Desktop_FrameFnale.png"
         alt=""
       />
-      <video v-else ref="videoElement" muted>
+      <video v-else ref="videoElement" muted autoplay>
         <source
           src="@/assets/video/Video_Spiaggina_edit_down.mp4"
           type="video/mp4"

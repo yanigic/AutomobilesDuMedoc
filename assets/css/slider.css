@@ -55,6 +55,10 @@
   background-size: 100%;
 }
 .slider-nameProject {
+  font-family: var(--Superclarendon);
+  font-size: var(--font-size-text-two);
+  text-transform: uppercase;
+
   position: absolute;
   bottom: 1.2rem;
   display: flex;
@@ -62,7 +66,6 @@
   left: 0;
   right: 0;
   line-height: 1.4rem;
-  font-size: var(--font-size-text-three);
   text-transform: capitalize;
 }
 .square:last-child {
@@ -133,7 +136,7 @@
 
 @media only screen and (max-width: 600px) {
   .text-big-title {
-    font-size: var(--font-size-text-two);
+    font-size: var(--font-size-title-mobile);
     padding: var(--vertical-space-small) 0;
     font-weight: 400;
   }

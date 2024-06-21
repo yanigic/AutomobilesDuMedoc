@@ -64,8 +64,11 @@
 }
 @media only screen and (max-width: 735px) {
   .title-banner-contact {
-    font-size: var(--font-size-title-mobile);
+    /*  font-size: var(--font-size-title-mobile); */
+    font-size: 1.9rem;
     line-height: 1.875rem; /* 85.714% */
+    display: flex;
+    justify-content: center;
   }
   /* .text-container-banner{
     width: var(--col10);

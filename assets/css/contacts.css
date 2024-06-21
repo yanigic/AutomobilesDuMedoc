@@ -3,6 +3,18 @@
 .box-textarea-text {
   background-color: var(--beam-yellow);
 }
+.bg-contacts {
+  overflow-y: scroll;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.bg-contacts .bg-nav-desktop {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+}
 
 .title-contacts {
   font-family: var(--Superclarendon);

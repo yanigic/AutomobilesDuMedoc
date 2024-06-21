@@ -112,6 +112,9 @@
 .bullet-SliderGrid.activeB::before {
   background-image: url("../img/svg/iconBulletActive.svg"); /* Nuova immagine del bullet quando è attivo */
 }
+.bullet-SliderGrid:hover::before {
+  background-image: url("../img/svg/iconBulletHover.svg"); /* Nuova immagine del bullet quando è attivo */
+}
 @media only screen and (max-width: 768px) {
   .bullet-SliderGrid {
     width: 20px;

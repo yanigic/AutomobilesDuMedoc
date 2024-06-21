@@ -98,8 +98,9 @@
     overflow: auto;
   }
   .title-bannerProject {
-    font-size: var(--font-size-title-mobile);
+    font-size: 1.8rem;
     line-height: 1.875rem;
+    padding: 0 2rem;
   }
   .title-banner {
     padding: 0;

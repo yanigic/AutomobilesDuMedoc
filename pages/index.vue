@@ -34,7 +34,7 @@ const titlesDescriptions = [
 
 const ctaContent = [
   {
-    paragraph: `Discover <br> all the possibilities for your car`,
+    paragraph: `Discover<br>all the possibilities for your car`,
     cta: "CONTACT US",
   },
 ];

@@ -445,7 +445,7 @@ export default {
   }
 
   .single-image.active {
-    opacity: 0.2;
+    opacity: 0.7;
     filter: grayscale(1);
   }
   .rightBottom_side_container,

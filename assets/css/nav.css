@@ -139,6 +139,20 @@
 }
 
 /* sfondo scuro in posizione 0 */
+.backgroundBlack .navContainer,
+.nav-position.backgroundYellow.backgroundYellow .navContainer,
+.nav-position.backgroundLight.navbar-scrolled-burnout-black .navContainer {
+  height: 5rem;
+}
+
+.backgroundBlack .navContainer .btn-nav:hover,
+.nav-position.backgroundYellow.backgroundYellow .navContainer .btn-nav:hover,
+.nav-position.backgroundLight.navbar-scrolled-burnout-black
+  .navContainer
+  .btn-nav:hover {
+  padding: 1.9rem 28px;
+}
+
 .backgroundBlack,
 .backgroundBlack .navContainer,
 .backgroundBlack .svg-icon > g > path,
@@ -152,6 +166,7 @@
 }
 
 /* se scrolla */
+
 .backgroundBlack .navbar-scrolled-beam-yellow .bg-nav-desktop,
 .backgroundBlack .navbar-scrolled-beam-yellow .navContainer,
 .backgroundBlack .navbar-scrolled-beam-yellow .svg-icon > g > path {
@@ -183,7 +198,21 @@
   background-color: var(--beam-yellow);
   fill: var(--burnout-black);
 }
+.navbar-scrolled-yellow .navContainer,
+.backgroundBlack.navbar-scrolled-beam-yellow .navContainer,
+.nav-position.backgroundYellow.navbar-scrolled-yellow .navContainer {
+  height: 3.3125rem;
+}
+.backgroundBlack.navbar-scrolled-beam-yellow .btn-nav:hover,
+.nav-position.backgroundYellow.navbar-scrolled-yellow
+  .navContainer
+  .btn-nav:hover {
+  padding: 1.1rem 28px;
+}
 
+.navbar-scrolled-yellow .navContainer .btn-nav:hover {
+  padding: 1.1rem 28px;
+}
 /* se scrolla il giallo */
 .navbar-scrolled-yellow .svg-logo.adm {
   height: 1.3125rem;
@@ -196,7 +225,10 @@
   padding-right: 30px; */
   padding: 2rem 28px;
 }
-
+.bg-nav-desktop .navContainer .svg-logo,
+.bg-nav-desktop .navContainer .svg-icon {
+  width: 4rem;
+}
 .btn-nav:hover {
   cursor: pointer;
   background: var(--burnout-black);

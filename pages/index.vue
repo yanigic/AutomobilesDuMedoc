@@ -66,6 +66,23 @@ onUnmounted(() => {
       ]"
     ></Nav>
     <HeroHomePage></HeroHomePage>
+    <div class="arrowHomepage">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="60"
+        height="60"
+        viewBox="0 0 60 60"
+        fill="none"
+        data-v-inspector="components/finaltest.vue:96:7"
+      >
+        <path
+          d="M51.0361 21.2134L30.1765 42.073L8.96328 20.8598"
+          stroke="#7C809B"
+          stroke-width="5"
+          data-v-inspector="components/finaltest.vue:103:9"
+        ></path>
+      </svg>
+    </div>
     <span class="BannerProject-container">
       <BannerProject></BannerProject>
     </span>
@@ -91,3 +108,14 @@ onUnmounted(() => {
     <Footer></Footer>
   </div>
 </template>
+<style>
+.arrowHomepage {
+  display: flex;
+  justify-content: center;
+  background-color: var(--beam-yellow);
+  padding-top: 5rem;
+}
+.arrowHomepage svg path {
+  stroke: var(--burnout-black);
+}
+</style>

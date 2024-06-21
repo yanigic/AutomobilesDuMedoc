@@ -71,8 +71,8 @@
 
 .square:hover {
   background-color: #ffffff27;
-  border-color: #f4f4f4;
-  color: #d2d2d2;
+  /* border-color: #f4f4f4; */
+  color: var(--beam-yellow);
 }
 .square a {
   height: 100%;

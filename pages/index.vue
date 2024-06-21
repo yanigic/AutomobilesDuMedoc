@@ -118,4 +118,9 @@ onUnmounted(() => {
 .arrowHomepage svg path {
   stroke: var(--burnout-black);
 }
+@media only screen and (max-width: 768px) {
+  .arrowHomepage {
+    padding-bottom: 5rem;
+  }
+}
 </style>

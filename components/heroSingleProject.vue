@@ -85,11 +85,11 @@ onMounted(async () => {
       >
         {{ project.title }}
       </h3>
-      <img
+      <!--  <img
         class="svg-heroSingleProject"
         src="../assets/img/svg/arrowDown.svg"
         alt="Navigate Down"
-      />
+      /> -->
     </div>
   </div>
 </template>

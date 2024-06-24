@@ -67,6 +67,12 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener("scroll", handleScroll);
 });
+const scrollToNextSectionProject = () => {
+  const nextSection = document.getElementById("nextSectionProject");
+  if (nextSection) {
+    nextSection.scrollIntoView({ behavior: "smooth" });
+  }
+};
 </script>
 
 <template>
@@ -83,8 +89,13 @@ onUnmounted(() => {
     ></Nav>
     <!-- <Test></Test> -->
     <HeroSingleProject></HeroSingleProject>
-
-    <span>
+    <img
+      @click="scrollToNextSectionProject"
+      class="svg-heroSingleProject"
+      src="../assets/img/svg/arrowDown.svg"
+      alt="Navigate Down"
+    />
+    <span id="nextSectionProject">
       <SingleProjectText></SingleProjectText>
     </span>
     <span>

@@ -53,6 +53,13 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener("scroll", handleScroll);
 });
+
+const scrollToNextSection = () => {
+  const nextSection = document.getElementById("nextSection");
+  if (nextSection) {
+    nextSection.scrollIntoView({ behavior: "smooth" });
+  }
+};
 </script>
 
 <template>
@@ -66,7 +73,7 @@ onUnmounted(() => {
       ]"
     ></Nav>
     <HeroHomePage></HeroHomePage>
-    <div class="arrowHomepage">
+    <div class="arrowHomepage" @click="scrollToNextSection">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="60"
@@ -83,7 +90,7 @@ onUnmounted(() => {
         ></path>
       </svg>
     </div>
-    <span class="BannerProject-container">
+    <span class="BannerProject-container" id="nextSection">
       <BannerProject></BannerProject>
     </span>
     <div class="container-titleDescription">

@@ -2,7 +2,7 @@
   width: var(--col10);
   margin: auto;
   padding-top: var(--vertical-space-xlarg);
-  padding-bottom: var(--vertical-space-xlarg);
+  /*  padding-bottom: var(--vertical-space-xlarg); */
   text-align: center;
 }
 
@@ -22,6 +22,7 @@
 .svg-heroSingleProject {
   margin: auto;
   width: 3rem;
+  padding-bottom: 3.5rem;
 }
 .img-singleProject {
   margin: auto;

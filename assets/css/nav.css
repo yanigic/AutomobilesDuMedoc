@@ -115,6 +115,11 @@
 .backgroundLight .navbar-scrolled-beam-yellow .svg-logo.adm #Vector {
   display: none;
 }
+.svg-icon:hover #Vector,
+.svg-logo.adm:hover #Vector_2,
+.svg-logo.adm:hover #Vector {
+  fill: var(--millennium-silver);
+}
 .backgroundLight .navbar-scrolled-beam-yellow .bg-nav-desktop,
 .backgroundLight .navbar-scrolled-beam-yellow .navContainer,
 .backgroundLight .navbar-scrolled-beam-yellow .svg-icon > g > path {

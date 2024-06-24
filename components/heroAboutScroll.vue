@@ -100,6 +100,7 @@ h1 {
     height: 65vh;
   }
 }
+
 @media only screen and (max-width: 730px) {
   .desktop-logo {
     display: none;

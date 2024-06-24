@@ -56,6 +56,12 @@ export default {
 </script>
 
 <style scoped>
+@media only screen and (max-width: 1000px) {
+  .container-img-animated.container-img-animated-desktop,
+  .container-img-animated.container-img-animated-desktop[data-v-913b6db6] {
+    height: 70vh;
+  }
+}
 .container-img-animated.container-img-animated-desktop {
   height: 90vh;
 }

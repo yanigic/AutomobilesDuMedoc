@@ -62,6 +62,12 @@ export default {
     height: 70vh !important;
   }
 }
+@media only screen and (max-width: 750px) {
+  .container-img-animated.container-img-animated-desktop,
+  .container-img-animated.container-img-animated-desktop[data-v-913b6db6] {
+    height: 60vh !important;
+  }
+}
 .container-img-animated.container-img-animated-desktop {
   height: 90vh;
 }
@@ -74,7 +80,7 @@ export default {
   object-fit: cover;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 700px) {
   .container-img-animated-mobile {
     height: 90vh;
     display: block;

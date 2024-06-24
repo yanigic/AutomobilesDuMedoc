@@ -121,6 +121,7 @@ const scrollToNextSection = () => {
   justify-content: center;
   background-color: var(--beam-yellow);
   padding-top: 5rem;
+  cursor: pointer;
 }
 .arrowHomepage svg path {
   stroke: var(--burnout-black);

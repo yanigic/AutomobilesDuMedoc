@@ -89,12 +89,30 @@ const scrollToNextSectionProject = () => {
     ></Nav>
     <!-- <Test></Test> -->
     <HeroSingleProject></HeroSingleProject>
-    <img
+    <div @click="scrollToNextSectionProject" class="svg-heroSingleProject">
+      <svg
+        class="arrowHomepageP"
+        xmlns="http://www.w3.org/2000/svg"
+        width="60"
+        height="60"
+        viewBox="0 0 60 60"
+        fill="none"
+        data-v-inspector="components/finaltest.vue:96:7"
+      >
+        <path
+          d="M51.0361 21.2134L30.1765 42.073L8.96328 20.8598"
+          stroke="#7C809B"
+          stroke-width="5"
+          data-v-inspector="components/finaltest.vue:103:9"
+        ></path>
+      </svg>
+    </div>
+    <!--  <img
       @click="scrollToNextSectionProject"
       class="svg-heroSingleProject"
       src="../assets/img/svg/arrowDown.svg"
       alt="Navigate Down"
-    />
+    /> -->
     <span id="nextSectionProject">
       <SingleProjectText></SingleProjectText>
     </span>

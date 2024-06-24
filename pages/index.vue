@@ -75,6 +75,7 @@ const scrollToNextSection = () => {
     <HeroHomePage></HeroHomePage>
     <div class="arrowHomepage" @click="scrollToNextSection">
       <svg
+        class="arrowHomepageR"
         xmlns="http://www.w3.org/2000/svg"
         width="60"
         height="60"
@@ -123,9 +124,14 @@ const scrollToNextSection = () => {
   padding-top: 5rem;
   cursor: pointer;
 }
+
+.arrowHomepageR:hover path {
+  stroke: var(--millennium-silver);
+}
 .arrowHomepage svg path {
   stroke: var(--burnout-black);
 }
+
 @media only screen and (max-width: 768px) {
   .arrowHomepage {
     padding-bottom: 5rem;

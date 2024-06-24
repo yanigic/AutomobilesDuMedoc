@@ -25,6 +25,12 @@
   padding-bottom: 3.5rem;
   cursor: pointer;
 }
+.arrowHomepageP path {
+  stroke: var(--gta-bourdeaux);
+}
+.arrowHomepageP:hover path {
+  stroke: var(--beam-yellow);
+}
 .img-singleProject {
   margin: auto;
 }

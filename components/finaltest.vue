@@ -341,7 +341,7 @@ export default {
 <style>
 #infinite-list {
   width: 100%;
-  height: 400px;
+  height: 450px;
   overflow-y: scroll;
   margin: 20px auto;
   padding: 0;

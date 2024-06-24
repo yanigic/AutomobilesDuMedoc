@@ -78,12 +78,14 @@ const social = [
         <li class="col-3">
           <ul v-for="(title, index) in institutionalInformation" :key="index">
             <li>
-              <img
-                class="logo"
-                style="margin-bottom: 2rem"
-                :src="title.logo"
-                alt=""
-              />
+              <a href="/">
+                <img
+                  class="logo"
+                  style="margin-bottom: 2rem"
+                  :src="title.logo"
+                  alt=""
+                />
+              </a>
             </li>
             <li>
               {{ title.description }}

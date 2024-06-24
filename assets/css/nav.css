@@ -12,6 +12,9 @@
   color: var(--burnout-black);
   text-transform: none;
 }
+.svg-logo.adm {
+  cursor: pointer;
+}
 
 .hambugerMenu svg {
   width: 1.5rem;

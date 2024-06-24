@@ -79,6 +79,27 @@ h1 {
 .desktop-logo {
   width: 100%;
 }
+
+@media only screen and (max-width: 1330px) {
+  .sfondo {
+    height: 90vh;
+  }
+}
+@media only screen and (max-width: 1180px) {
+  .sfondo {
+    height: 85vh;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .sfondo {
+    height: 75vh;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .sfondo {
+    height: 65vh;
+  }
+}
 @media only screen and (max-width: 730px) {
   .desktop-logo {
     display: none;
@@ -93,6 +114,9 @@ h1 {
     width: 102vw;
     height: auto;
     max-width: none;
+  }
+  .sfondo {
+    height: 100vh;
   }
 
   #imgSfondo {

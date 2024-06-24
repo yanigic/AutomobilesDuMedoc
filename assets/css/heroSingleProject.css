@@ -23,6 +23,7 @@
   margin: auto;
   width: 3rem;
   padding-bottom: 3.5rem;
+  cursor: pointer;
 }
 .img-singleProject {
   margin: auto;

@@ -43,7 +43,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref, onBeforeUnmount, nextTick, onUnmounted } from "vue";
+import { onMounted, ref, onBeforeUnmount, nextTick } from "vue";
 import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-thumbnail.css";
 import "lightgallery/css/lg-fullscreen.css";
@@ -57,9 +57,6 @@ const projects = ref([]); // Array to store fetched images
 const carousel = ref(null);
 const items = ref([]);
 const activeIndex = ref(0);
-
-const isDragging = ref(false);
-const startX = ref(0);
 
 // Fetch images from the API
 const fetchImages = async () => {
@@ -145,40 +142,11 @@ onMounted(async () => {
     licenseKey: "your_license_key",
     speed: 500,
   });
-
-  carousel.value.addEventListener("touchstart", handleTouchStart);
-  document.addEventListener("touchmove", handleTouchMove);
-  document.addEventListener("touchend", handleTouchEnd);
-});
-onUnmounted(() => {
-  carousel.value.removeEventListener("touchstart", handleTouchStart);
-  document.removeEventListener("touchmove", handleTouchMove);
-  document.removeEventListener("touchend", handleTouchEnd);
 });
 
 onBeforeUnmount(() => {
   window.removeEventListener("resize", calculateNumImagesPerSlide);
 });
-
-/* drag mobile */
-/* drag */
-function handleTouchStart(event) {
-  isDragging.value = true;
-  startX.value = event.touches[0].pageX - carousel.value.offsetLeft;
-  scrollLeft.value = carousel.value.scrollLeft;
-}
-
-function handleTouchMove(event) {
-  if (!isDragging.value) return;
-  event.preventDefault();
-  const x = event.touches[0].pageX - carousel.value.offsetLeft;
-  const walk = (x - startX.value) * 3; // Il fattore 3 aumenta la sensibilità del trascinamento
-  carousel.value.scrollLeft = scrollLeft.value - walk;
-}
-
-function handleTouchEnd() {
-  isDragging.value = false;
-}
 </script>
 
 <style>

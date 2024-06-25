@@ -70,10 +70,11 @@
     display: flex;
     justify-content: center;
   }
-  /* .text-container-banner{
-    width: var(--col10);
 
-  } */
+  .text-container-banner {
+    width: 100%;
+    padding: 0 6rem;
+  }
   .cta-banner-contact {
     font-size: var(--font-size-title-mobile-s);
   }

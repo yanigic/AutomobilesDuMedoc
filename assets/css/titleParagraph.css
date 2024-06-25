@@ -67,7 +67,7 @@
 }
 @media only screen and (max-width: 700px) {
   .bg-paragraph-container {
-    height: 100vh;
+    min-height: 100vh;
     z-index: -2;
   }
   #imgSfondo-paragraph {
@@ -104,6 +104,6 @@
 }
 @media only screen and (max-width: 400px) {
   .bg-paragraph-container {
-    height: 110vh;
+    min-height: 110vh;
   }
 }

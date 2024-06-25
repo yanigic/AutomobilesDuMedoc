@@ -122,6 +122,7 @@ const scrollToNextSection = () => {
   justify-content: center;
   background-color: var(--beam-yellow);
   padding-top: 5rem;
+  padding-bottom: 5rem;
   cursor: pointer;
 }
 
@@ -134,7 +135,7 @@ const scrollToNextSection = () => {
 
 @media only screen and (max-width: 768px) {
   .arrowHomepage {
-    padding-bottom: 5rem;
+    display: none;
   }
 }
 </style>

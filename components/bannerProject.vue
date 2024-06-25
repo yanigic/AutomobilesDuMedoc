@@ -69,8 +69,8 @@ onMounted(() => {
       <div class="bg-banner" v-for="(project, index) in projects" :key="index">
         <div class="title-banner">
           <h2 class="title-bannerProject">
-            {{ project.title }}
-            <svg
+            {{ project.title
+            }}<svg
               class="svg-banner"
               xmlns="http://www.w3.org/2000/svg"
               width="36"

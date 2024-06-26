@@ -147,6 +147,7 @@
   .square-SliderGrid > div {
     aspect-ratio: 1 / 1;
     width: calc((100% - (4 - 1) * 0.2rem) / 2);
+    height: auto;
   }
   .square-SliderGrid {
     gap: 0.5rem;

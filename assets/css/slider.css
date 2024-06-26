@@ -141,8 +141,10 @@
     font-weight: 400;
   }
   .square {
-    max-width: var(--col10);
+    max-width: var(--col8);
     scroll-snap-align: center;
+    aspect-ratio: 1 / 1;
+    height: auto;
   }
   .buttons-slider {
     display: none;

@@ -438,7 +438,7 @@ body {
   }
 
   .single-image.active {
-    opacity: 0.5;
+    opacity: 0.4;
     filter: grayscale(1);
   }
   .rightBottom_side_container,
@@ -494,6 +494,7 @@ body {
   }
   .swiper-slide {
     font-size: 1.9rem;
+    color: var(--ADM-Grey, #81849b);
   }
   .swiper-slide a {
     line-height: 1.8rem;

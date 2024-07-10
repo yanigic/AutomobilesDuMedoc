@@ -494,7 +494,6 @@ body {
   }
   .swiper-slide {
     font-size: 1.9rem;
-    color: var(--ADM-Grey, #81849b);
   }
   .swiper-slide a {
     line-height: 1.8rem;

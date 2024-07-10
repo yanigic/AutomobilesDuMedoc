@@ -1,0 +1,98 @@
+.box {
+  width: 100%;
+  height: 90vh;
+  background-color: #000000;
+  /*  opacity: 0; */ /* 
+  animation: fadeIn 2s ease-in-out forwards; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  /*   animation: changeBackgroundColor 1s ease-out 3s forwards;
+ */
+  overflow: hidden;
+}
+.box1,
+.box2 {
+  width: 100rem;
+  position: relative;
+}
+.box1 img,
+.box2 img {
+  object-fit: fill;
+  height: 100%;
+}
+
+.box1 {
+  left: -40rem;
+  animation: enterLeft 1s ease-in forwards, pause 0.2s linear 1s forwards,
+    exitRight 1s ease-out 2s forwards;
+}
+
+* .box2 {
+  right: -30%;
+  animation: enterRight 1s ease-in forwards, pause 0.2s linear 1s forwards,
+    exitLeft 1s ease-out 2s forwards; /* Ritarda l'uscita * */
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffff00;
+  transform: translateY(100%);
+  z-index: 1; /* Assicura che sia sopra il contenuto della box */
+  animation: changeBackgroundColor 1s ease-out 3s forwards;
+}
+
+@keyframes changeBackgroundColor {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Animazione per far entrare l'elemento da destra */
+@keyframes enterRight {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Animazione per far uscire l'elemento a sinistra */
+@keyframes exitLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200vw);
+  }
+}
+
+/* Animazione per far entrare l'elemento da sinistra */
+@keyframes enterLeft {
+  from {
+    transform: translateX(-100vw);
+  }
+  to {
+    transform: translateX(0vw);
+  }
+}
+
+/* Animazione per far uscire l'elemento a destra */
+@keyframes exitRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(200vw);
+  }
+}

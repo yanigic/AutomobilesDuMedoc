@@ -13,13 +13,17 @@ import Grid from "../components/grid.vue";
 import SliderGrid from "../components/sliderGrid.vue";
 import Test from "../components/test.vue";
 import SingleProjectParagraph from "../components/singleProjectParagraph.vue";
+import HeroAnimation from "../components/heroAnimation.vue";
+import Endless from "../storyblok/endless.vue";
 </script>
 
 <template>
   <div class="">
     <Nav class="nav-position"></Nav>
+    <Endless></Endless>
+    <!--   <HeroAnimation></HeroAnimation> -->
     <!-- <Test></Test> -->
-    <HeroSingleProject></HeroSingleProject>
+    <!-- <HeroSingleProject></HeroSingleProject> -->
 
     <!-- <span>
       <SingleProjectText></SingleProjectText>

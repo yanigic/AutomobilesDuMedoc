@@ -63,6 +63,7 @@
           <div class="image-text-container"></div>
         </div>
       </div>
+
       <div class="rightBottom_side_container">
         <div
           class="single-image"
@@ -223,122 +224,7 @@ export default {
 };
 </script>
 
-<!-- originale di partenza -->
-<!-- <script>
-import { ref, onMounted } from "vue";
-import cheryCountach from "../assets/img/Cherry_Countach.jpeg";
-import Superleggera from "../assets/img/4C_Superleggera.jpeg";
-import BenzV12 from "../assets/img/Benz_V12.jpeg";
-import defender from "../assets/img/Defender_Amaranth.jpeg";
-import BMWM3E46 from "../assets/img/BMW_M3_E46.jpeg";
-
-export default {
-  name: "App",
-  setup() {
-    const originalItems = [
-      { name: "4c Superleggera", src: Superleggera, href: "singleProject" },
-      { name: "benz v12", src: BenzV12, href: "singleProject" },
-      { name: "cherry countach", src: cheryCountach, href: "singleProject" },
-      { name: "bmw m3 e46", src: BMWM3E46, href: "singleProject" },
-      { name: "cherry countach", src: cheryCountach, href: "singleProject" },
-      { name: "defender amaranth", src: defender, href: "singleProject" },
-    ];
-
-    const items = ref([...originalItems]);
-    const currentVisibleIndex = ref(0);
-
-    // Function to load more items by repeating the existing items
-    const loadMore = () => {
-      items.value = items.value.concat(originalItems);
-    };
-
-    const onScroll = (event) => {
-      const listElm = event.target;
-      const listRect = listElm.getBoundingClientRect();
-
-      let visibleIndex = null;
-
-      items.value.forEach((_, index) => {
-        const item = listElm.children[index];
-        if (item) {
-          const itemRect = item.getBoundingClientRect();
-          if (itemRect.top <= listRect.top && itemRect.bottom > listRect.top) {
-            visibleIndex = index;
-
-            // Calculate visibility percentage
-            const visibleHeight =
-              Math.min(itemRect.bottom, listRect.bottom) -
-              Math.max(itemRect.top, listRect.top);
-            const itemHeight = itemRect.height;
-            const visibilityPercentage = (visibleHeight / itemHeight) * 100;
-
-            // Log the visible element and its visibility percentage
-            console.log(
-              `Visible Element: ${
-                item.textContent
-              }, Visibility: ${visibilityPercentage.toFixed(2)}%`
-            );
-            if (visibilityPercentage >= 50) {
-              visibleIndex = index;
-              return; // Exit forEach when the first (at least 50%) visible item is found
-            }
-
-            return; // Exit forEach when the first visible item is found
-          }
-        }
-      });
-
-      if (visibleIndex !== null) {
-        currentVisibleIndex.value = visibleIndex;
-      }
-
-      if (
-        listElm.scrollHeight - listElm.clientHeight <=
-        listElm.scrollTop + 1
-      ) {
-        // Scrolled to the bottom, load more items
-        loadMore();
-      }
-    };
-
-    // Function to scroll to the current visible index
-    const scrollToCurrentIndex = () => {
-      const listElm = document.getElementById("infinite-list");
-      if (listElm) {
-        const targetItem = listElm.children[currentVisibleIndex.value];
-        if (targetItem) {
-          listElm.scrollTo({
-            top: targetItem.offsetTop,
-            behavior: "smooth",
-          });
-        }
-      }
-    };
-
-    // Function to advance or go back one slide
-    const plusSlides = (n) => {
-      currentVisibleIndex.value =
-        (currentVisibleIndex.value + n + items.value.length) %
-        items.value.length;
-      scrollToCurrentIndex();
-    };
-
-    // Initial load of items
-    onMounted(() => {
-      loadMore();
-    });
-
-    return {
-      items,
-      onScroll,
-      currentVisibleIndex,
-      plusSlides,
-    };
-  },
-};
-</script> -->
-
-<style>
+<!-- <style>
 #infinite-list {
   width: 100%;
   height: 450px;
@@ -494,4 +380,5 @@ export default {
     left: 0%;
   }
 }
-</style>
+</style> 
+-->

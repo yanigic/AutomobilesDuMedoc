@@ -9,6 +9,7 @@ import { ref, onMounted, onUnmounted } from "vue";
 import NewTest from "../components/newTest.vue";
 import Finaltest from "../components/finaltest.vue";
 import NavMobile from "../components/navMobile.vue";
+import Endless from "../storyblok/endless.vue";
 const isScrolled = ref(false);
 
 const handleScroll = () => {
@@ -25,8 +26,8 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="backgroundBlack">
-    <NavMobile class="navMobile-black"></NavMobile>
+  <div class="backgroundBlack bg-none">
+    <NavMobile class="navMobile-black bg-none"></NavMobile>
     <Nav
       class="nav-position"
       :class="[
@@ -34,7 +35,8 @@ onUnmounted(() => {
         isScrolled ? 'navbar-scrolled-beam-yellow' : 'backgroundBlack',
       ]"
     ></Nav>
-    <Finaltest></Finaltest>
+    <!--  <Finaltest></Finaltest> -->
+    <Endless></Endless>
     <!--    <NewTest></NewTest> -->
     <!-- <StestVis></StestVis> -->
     <!--  <Test></Test> -->
@@ -43,3 +45,9 @@ onUnmounted(() => {
     <Footer class="display-mobile-none"></Footer>
   </div>
 </template>
+<style>
+.bg-none,
+.navMobile.navMobile-black.bg-none {
+  background-color: unset;
+}
+</style>
